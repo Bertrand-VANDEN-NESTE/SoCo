@@ -10,9 +10,74 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_06_154425) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_06_164251) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "chatrooms", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_chatrooms_on_user_id"
+  end
+
+  create_table "event_ratings", force: :cascade do |t|
+    t.text "comment"
+    t.date "date"
+    t.bigint "user_id", null: false
+    t.bigint "event_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_event_ratings_on_event_id"
+    t.index ["user_id"], name: "index_event_ratings_on_user_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.string "theme"
+    t.date "date"
+    t.string "location"
+    t.text "description"
+    t.integer "capacity"
+    t.string "status"
+    t.string "tricount"
+    t.string "password"
+    t.bigint "user_id", null: false
+    t.bigint "chatroom_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chatroom_id"], name: "index_events_on_chatroom_id"
+    t.index ["user_id"], name: "index_events_on_user_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "content"
+    t.bigint "user_id", null: false
+    t.bigint "chatroom_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
+  create_table "participants", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "event_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_participants_on_event_id"
+    t.index ["user_id"], name: "index_participants_on_user_id"
+  end
+
+  create_table "user_ratings", force: :cascade do |t|
+    t.date "date"
+    t.integer "target_id"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_user_ratings_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,4 +91,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_06_154425) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "chatrooms", "users"
+  add_foreign_key "event_ratings", "events"
+  add_foreign_key "event_ratings", "users"
+  add_foreign_key "events", "chatrooms"
+  add_foreign_key "events", "users"
+  add_foreign_key "messages", "chatrooms"
+  add_foreign_key "messages", "users"
+  add_foreign_key "participants", "events"
+  add_foreign_key "participants", "users"
+  add_foreign_key "user_ratings", "users"
 end
