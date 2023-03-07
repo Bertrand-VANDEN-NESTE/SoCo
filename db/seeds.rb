@@ -86,3 +86,20 @@ user4 = User.create(first_name: "Sarah", last_name: "Lorea", gender: "F", birth_
 user4.save
 user5 = User.create(first_name: "Matthieu", last_name: "Delor", gender: "H", birth_date: Date.new(1998,09,08) , city: "Lille", phone_number: "0743231265", hobbies: "Gaming", email: "Delor.m22@gmail.com", username: "Delor66", password: "123456")
 user5.save
+
+Partricipant8 = User.create(first_name: "Beya", last_name: "Stambouli", gender: "F", birth_date: Date.new(1993,02,28) , city: "Nimes", phone_number: "0654169823", hobbies: "Gaming", email: "Beya.stambouli@gmail.com", username: "stambouli49", password: "123456")
+Participant8.save
+Participant9 = User.create(first_name: "Ines", last_name: "Aitdjebarra", gender: "F", birth_date: Date.new(1986,03,01) , city: "Paris", phone_number: "0759071234", hobbies: "Art", email: "Ait-ines@gmail.com", username: "DAitdje45", password: "123456")
+Participant9.save
+Participant10 = User.create(first_name: "Damien", last_name: "Dedin", gender: "H", birth_date: Date.new(1991,11,22) , city: "Marseille", phone_number: "0659074543", hobbies: "Danse", email: "Dedin.damien@gmail.com", username: "Dedin63", password: "123456")
+Participant10.save
+Participant11 = User.create(first_name: "Maxime", last_name: "Xany", gender: "H", birth_date: Date.new(1965,08,05) , city: "Lyon", phone_number: "0654238703", hobbies: "Musique", email: "Xany.maxime@gmail.com", username: "Xany56", password: "123456")
+Participant11.save
+Participant12 = User.create(first_name: "Rachina", last_name: "Doukali", gender: "F", birth_date: Date.new(1976,10,12) , city: "Cannes", phone_number: "0623946125", hobbies: "Culture", email: "Doukali.rachida@gmail.com", username: "Doukali23", password: "123456")
+Participant12.save
+Participant13 = User.create(first_name: "Many", last_name: "Trad", gender: "H", birth_date: Date.new(1996,07,03) , city: "Nice", phone_number: "0758076543", hobbies: "Cuisine", email: "Trad.many@gmail.com", username: "Trad45", password: "123456")
+Participant13.save
+Participant14 = User.create(first_name: "Vincent", last_name: "Protille", gender: "H", birth_date: Date.new(1994,02,08) , city: "Bordeaux", phone_number: "0776459823", hobbies: "Equitation", email: "Protille.Vincent@gmail.com", username: "Protille239", password: "123456")
+Participant14.save
+Participant15 = User.create(first_name: "Hanene", last_name: "Bensadock", gender: "F", birth_date: Date.new(1989,05,11) , city: "Lille", phone_number: "0645085672", hobbies: "Sport", email: "Bensadock.hanene@gmail.com", username: "Ben657", password: "123456")
+Partcipant15.save
