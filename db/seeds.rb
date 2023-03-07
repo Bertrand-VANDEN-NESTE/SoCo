@@ -30,3 +30,4 @@ user4 = User.create(first_name: "Sarah", last_name: "Lorea", gender: "F", birth_
 user4.save
 user5 = User.create(first_name: "Matthieu", last_name: "Delor", gender: "H", birth_date: Date.new(1998,09,08) , city: "Lille", phone_number: "0743231265", hobbies: "Gaming", email: "Delor.m22@gmail.com", username: "Delor66", password: "123456")
 user5.save
+
