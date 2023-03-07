@@ -104,7 +104,7 @@ file_event7 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v16781
 event7 = Event.new(title: "Société de Musique de Chambre de Marseille", theme: "Musique", date: Date.new(2023, 10, 18), location: "Auditorium Maurice Toga Faculté de Médecine La Timone 27 Boulevard Jean Moulin 13005 Marseille", description: "Rejoins-nous pour notre événement Bouge ton Réseau ! Le principe est simple, te permettre de rencontrer un maximum de Bougeuses (membres du réseau) et d&#x27;entrepreneur.e.s du département dans une ambiance fun et dynamique ! #inspiration #reseautage #entrepreneuriat", capacity: 120, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user2)
 event7.photo.attach(io: file_event7, filename: "event7.jpg", content_type: "image/jpg")
 event7.save
-=======
+
 file_event3 = URI.open("URL CLOUNDINARY")
 event3 = Event.new(title: "Comédie Club Vieux Port", theme: "Stand up", date: Date.new(2023,03,27), location: "16 Quai de Rive Neuve 13007 Marseille", description: "Des blagues et des bières, quoi de mieux pour commencer la semaine de bonne humeur ? 6 artistes se succéderont sur scène pour vous faire leurs meilleures blagues pendant une heure.", capacity: 70, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: "user3", chatroom: "chatroom_event3")
 event3.photo.attach(io: file_event3, filename: "event3.jpg", content_type: "image/jpg")
@@ -172,4 +172,3 @@ participant6 = User.create(first_name: "Nathalie", last_name: "Tournier", gender
 participant6.save
 participant7 = User.create(first_name: "Paul", last_name: "Rodier", gender: "H", birth_date: Date.new(1968,12,06), city: "Marseille", phone_number: "0752378963", hobbies: "Lecture", email: "pcordier@gmail.com", username: "pc", password: "123456")
 participant7.save
-
