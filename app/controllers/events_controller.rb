@@ -6,6 +6,7 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
+
   def show; end
 
   def new
@@ -36,4 +37,5 @@ class EventsController < ApplicationController
   def set_event
     @event = Event.find(params[:id])
   end
+
 end
