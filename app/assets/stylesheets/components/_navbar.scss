@@ -7,6 +7,24 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 5vw;
+.wi-size-logo {
+  width: 17vw;
+}
+
+.wi-size-photo {
+  width: 8vw;
+}
+
+.wi-size-chat {
+  width: 10vw;
+}
+
+
+.container-navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  a{
+    display: block;
+  }
 }
