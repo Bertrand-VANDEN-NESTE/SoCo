@@ -107,15 +107,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_150753) do
     t.index ["user_id"], name: "index_participants_on_user_id"
   end
 
-  create_table "user_ratings", force: :cascade do |t|
-    t.date "date"
-    t.integer "target_id"
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_user_ratings_on_user_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -148,5 +139,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_150753) do
   add_foreign_key "participant_ratings", "users", column: "target_id"
   add_foreign_key "participants", "events"
   add_foreign_key "participants", "users"
-  add_foreign_key "user_ratings", "users"
 end
