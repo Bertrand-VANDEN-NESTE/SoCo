@@ -1,8 +1,15 @@
 <div class="navbar navbar-expand-sm bg-light">
   <div class="container-navbar">
-    <%= link_to "#" do %>
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "wi-size-photo ms-3 mt-2 rounded-circle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+    <% if user_signed_in? %>
+      <%= link_to "#" do %>
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "wi-size-photo ms-3 mt-2 rounded-circle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      <% end %>
+    <% else %>
+      <%= link_to new_user_session_path do %>
+        <%= image_tag "SoCo__2_-removebg-preview.png", class: "wi-size-photo ms-3 mt-2 rounded-circle" %>
+      <% end %>
     <% end %>
+
     <%= link_to "#" do %>
       <%= image_tag "SoCo__2_-removebg-preview.png", class: "wi-size-logo mt-3" %>
     <% end %>
