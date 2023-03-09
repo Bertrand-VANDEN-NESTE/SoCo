@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   # root "articles#index"
   get "profile", to: "pages#profile"
   resources :events do
+    resources :participants, only: %i[show destroy]
     resources :event_ratings, only: %i[new create]
   end
+  resources :participants, only: %i[destroy]
 end

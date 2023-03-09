@@ -1,16 +1,19 @@
 class ParticipantsController < ApplicationController
-  before_action :set_participant, only: %i[show]
+  before_action :set_participant, only: %i[show destroy]
+
   def index
     @participants = Participant.all
   end
 
-  def show; end
+  def show
+  end
+
+  def destroy
+    @participant.destroy
+    redirect_to events_path, status: :see_other
+  end
 
   private
-
-  def participant_params
-    params.require(:participant).permit(:title, :theme, :date, :location, :description, :capacity, :status, :tricount, :password, :photo)
-  end
 
   def set_participant
     @participant = Participant.find(params[:id])
