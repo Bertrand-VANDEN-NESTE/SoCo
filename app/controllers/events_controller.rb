@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_event, only: %i[show destroy]
   def home; end
-  
+
   def index
     @events = Event.all
   end
@@ -15,8 +15,8 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    @event.user = current.user
-    if event.save
+    @event.user = current_user
+    if @event.save
       redirect_to events_path
     else
       render :new, status: :unprocessable_entity
