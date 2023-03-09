@@ -17,8 +17,6 @@ User.destroy_all
 # Chatroom.destroy_all
 # UserRating.destroy_all
 
-
-
 puts "Creating events, users, and participants"
 
 user1 = User.create(first_name: "Jaime", last_name: "Sortir", gender: "H", birth_date: Date.new(1996, 3, 3), city: "Marseille", phone_number: "0756432354", hobbies: " Dessin", email: "jaime.sortir@gmail.com", username: "Jaime_Sortir", password: "123456")
