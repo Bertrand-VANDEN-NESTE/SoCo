@@ -10,6 +10,9 @@
           <p class="card-text  text-center"><strong>Lieu :</strong> <br> <%= participant.event.location %> </p>
           <p class="card-text  text-center"><strong>Description :</strong> <br> <%= participant.event.description %></p>
           <p class="card-text  text-center"><strong>Statut : </strong><br> <%= participant.event.status %> </p>
+          <%= link_to "Supprimer", profile_path,
+            data: {turbo_method: :delete, turbo_confirm: "Voulez-vous supprimer votre inscription ?"}
+          %>
         </div>
       <% end %>
     </div>

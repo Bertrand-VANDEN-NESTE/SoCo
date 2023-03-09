@@ -139,9 +139,11 @@ event15.save
 event_rating1 = EventRating.create(comment: "event au top", rating: 4, user: user1, event: event1)
 event_rating1.save
 
-"Last ones..."
 
 participanttest = Participant.create(user: user1, event: event1)
 participanttest.save
+
+participanttest2 = Participant.create(user: user1, event: event2)
+participanttest2.save
 
 puts "Finished!"
