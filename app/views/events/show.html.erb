@@ -20,6 +20,14 @@
       <a href="https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount"> Tricount</a>
     </div>
   </div>
+    <%= link_to "S'inscrire",
+      profile_path(event),
+      data: {turbo_method: :new, turbo_confirm: "Validez"}
+    %>
+</div>
+
+
+
 
   <div>
     <% @event_ratings.each do |event_rating| %>

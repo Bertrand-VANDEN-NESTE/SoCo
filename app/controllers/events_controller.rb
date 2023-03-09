@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: %i[show destroy]
+  before_action :set_event, only: %i[show destroy edit update]
   def home; end
 
   def index
@@ -23,6 +23,13 @@ class EventsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+  def update
+    @event.update(event_params)
+    redirect_to event_path(@event)
+  end
+
+  def edit; end
 
   def destroy
     @event.destroy
