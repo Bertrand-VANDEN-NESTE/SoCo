@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row justify-content-evenly ms-5 me-5">
+    <h2 class=" mb-5">Evénements auxquels vous avez participés :</h2>
+    <% @events.each do |event| %>
+      <% if event.participant == current_user %>
+      <div class="profile col-6 mb-4 ms-4 me-4">
+        <div class="card-body">
+          <p class="card-text  text-center"><strong>Intitulé :</strong> <br> <%= participant.event.title %></p>
+          <p class="card-text  text-center"><strong>Thème :</strong> <br> <%= participant.event.theme %></p>
+          <p class="card-text  text-center"><strong>Date :</strong> <br> <%= participant.event.date %> </p>
+          <p class="card-text  text-center"><strong>Lieu :</strong> <br> <%= participant.event.location %> </p>
+          <p class="card-text  text-center"><strong>Description :</strong> <br> <%= participant.event.description %></p>
+          <p class="card-text  text-center"><strong>Statut : </strong><br> <%= participant.event.status %> </p>
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="row justify-content-evenly ms-5 me-5">
+    <h2 class=" mb-5">Evénements que vous avez proposés :</h2>
+    <% @events.each do |event| %>
+      <div class="profile col-6 mb-4 ms-4 me-4">
+        <% if event.photo.attached? %>
+        <%= cl_image_tag event.photo.key, height: 200, width: 200, crop: :fill, class: "margin-center" %>
+        <% end %>
+        <div class="card-body">
+          <h5 class="card-title text-center font-weight-bold mb-3"><%= link_to event.title, event_path(event), class: "text-deco"%></h5>
+          <p class="card-text text-center"><strong>Intitulé :</strong> <%= event.title %></p>
+          <p class="card-text text-center"><strong>Thème :</strong> <%= event.theme %></p>
+          <p class="card-text text-center"><strong>Date :</strong> <%= event.date %></p>
+          <p class="card-text text-center"><strong>Lieu :</strong> <%= event.location %></p>
+          <p class="card-text text-center"><strong>Description :</strong> <%= event.description %></p>
+          <p class="card-text text-center"><strong>Capacité :</strong> <%= event.capacity %> tickets</p>
+          <p class="card-text text-center"><strong>Statut :</strong> <%= event.status %></p>
+          <p class="card-text text-center"><strong>Cagnotte :</strong> <%= event.tricount %></p>
+          <div class="text-center">
+          <%= link_to "Supprimer",
+            event_path(event),
+            data: {turbo_method: :delete, turbo_confirm: "Etes-vous sûr ?"}
+          %>
+          <%= link_to "Modifier",
+            edit_event_path(event)%>
+
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div>
