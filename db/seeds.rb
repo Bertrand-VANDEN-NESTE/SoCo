@@ -9,12 +9,15 @@ require "open-uri"
 
 puts "Cleaning database..."
 
+Participant.destroy_all
+EventRating.destroy_all
 Event.destroy_all
 User.destroy_all
 # Message.destroy_all
 # Chatroom.destroy_all
 # UserRating.destroy_all
-EventRating.destroy_all
+
+
 
 puts "Creating events, users, and participants"
 
@@ -137,5 +140,10 @@ event15.save
 
 event_rating1 = EventRating.create(comment: "event au top", rating: 4, user: user1, event: event1)
 event_rating1.save
+
+"Last ones..."
+
+participanttest = Participant.create(user: user1, event: event1)
+participanttest.save
 
 puts "Finished!"
