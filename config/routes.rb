@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   get "profile", to: "pages#profile"
+  resources :events do
+    resources :event_ratings, only: %i[new create]
+  end
 end

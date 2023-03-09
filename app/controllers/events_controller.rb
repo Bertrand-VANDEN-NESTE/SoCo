@@ -6,7 +6,9 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
-  def show; end
+  def show
+    @event_ratings = @event.event_ratings
+  end
 
   def new
     @event = Event.new

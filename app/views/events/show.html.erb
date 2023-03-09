@@ -29,4 +29,14 @@
 
 
 
+  <div>
+    <% @event_ratings.each do |event_rating| %>
+      <div>
+        <h2> <%= event_rating.user.username %></h2>
+        <h2> <%= event_rating.comment %></h2>
+        <h2> <%= event_rating.rating %> /5</h2>
+      </div>
+    <% end %>
+  </div>
+</div>
 <!-- don't forget to add map + event rating once event date is passed + chat bubble at the top >
