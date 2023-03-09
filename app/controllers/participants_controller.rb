@@ -13,10 +13,11 @@ class ParticipantsController < ApplicationController
   end
 
   def create
-    @participant = Participant.new(participant_params)
-    @participant.user = current_user
+    @participant = Participant.new
+    @participant.user_id = params["participant"]["user_id"].to_i
+    @participant.event_id = params["participant"]["event_id"].to_i
     if @participant.save
-      redirect_to participants_path
+      redirect_to profile_path
     else
       render :new, status: :unprocessable_entity
     end

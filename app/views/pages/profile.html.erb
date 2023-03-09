@@ -44,6 +44,10 @@
         </div>
       </div>
     <% end %>
+
+  <div class="row justify-content-evenly ms-5 me-5">
+      <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete} %>
+
   </div>
 
 </div>

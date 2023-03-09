@@ -8,6 +8,7 @@ class EventsController < ApplicationController
 
   def show
     @event_ratings = @event.event_ratings
+    @participant = Participant.new
   end
 
   def new

@@ -20,10 +20,12 @@
       <a href="https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount"> Tricount</a>
     </div>
   </div>
-    <%= link_to "S'inscrire",
-      profile_path(event),
-      data: {turbo_method: :new, turbo_confirm: "Validez"}
-    %>
+  <%= form_with model: @participant do |f| %>
+    <%= f.text_field :event_id, value: @event.id, class: "d-none" %>
+    <%= f.text_field :user_id, value: current_user.id, class: "d-none" %>
+    <%= f.submit "S'inscrire" %>
+  <% end %>
+    <%# <%= link_to "S'inscrire", controller: "participants", action: "create" %>
 </div>
 
 
