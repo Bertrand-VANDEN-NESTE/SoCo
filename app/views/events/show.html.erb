@@ -20,5 +20,23 @@
       <a href="https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount"> Tricount</a>
     </div>
   </div>
+    <%= link_to "S'inscrire",
+      profile_path(event),
+      data: {turbo_method: :new, turbo_confirm: "Validez"}
+    %>
+</div>
 
+
+
+
+  <div>
+    <% @event_ratings.each do |event_rating| %>
+      <div>
+        <h2> <%= event_rating.user.username %></h2>
+        <h2> <%= event_rating.comment %></h2>
+        <h2> <%= event_rating.rating %> /5</h2>
+      </div>
+    <% end %>
+  </div>
+</div>
 <!-- don't forget to add map + event rating once event date is passed + chat bubble at the top >

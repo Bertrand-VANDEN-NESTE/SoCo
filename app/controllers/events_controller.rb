@@ -1,13 +1,14 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: %i[show destroy]
+  before_action :set_event, only: %i[show destroy edit update]
   def home; end
-  
+
   def index
     @events = Event.all
   end
 
-
-  def show; end
+  def show
+    @event_ratings = @event.event_ratings
+  end
 
   def new
     @event = Event.new
@@ -15,13 +16,20 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    @event.user = current.user
-    if event.save
+    @event.user = current_user
+    if @event.save
       redirect_to events_path
     else
       render :new, status: :unprocessable_entity
     end
   end
+
+  def update
+    @event.update(event_params)
+    redirect_to event_path(@event)
+  end
+
+  def edit; end
 
   def destroy
     @event.destroy
@@ -37,5 +45,4 @@ class EventsController < ApplicationController
   def set_event
     @event = Event.find(params[:id])
   end
-
 end

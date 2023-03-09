@@ -14,7 +14,7 @@ User.destroy_all
 # Message.destroy_all
 # Chatroom.destroy_all
 # UserRating.destroy_all
-# EventRating.destroy_all
+EventRating.destroy_all
 
 puts "Creating events, users, and participants"
 
@@ -59,6 +59,7 @@ participant14 = User.create(first_name: "Vincent", last_name: "Protille", gender
 participant14.save
 participant15 = User.create(first_name: "Hanene", last_name: "Bensadock", gender: "F", birth_date: Date.new(1989, 5, 11) , city: "Lille", phone_number: "0645085672", hobbies: "Sport", email: "Bensadock.hanene@gmail.com", username: "Ben657", password: "123456")
 participant15.save
+
 
 file_event1 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678199791/latino_f7dztc.avif")
 event1 = Event.new(title: "Carnaval Latino!", theme: "Fête", date: Date.new(2023, 3, 26), location: "Exit Café 12 Quai de Rive Neuve 13007 Marseille", description: "Avancez et soyez transporté dans le monde vibrant et coloré du Carnaval Latin lors de notre incroyable fête à Marseille ! Avec des décorations éblouissantes, des costumes étonnants et des rythmes énergiques, vous serez immergé dans une célébration de la culture riche et vivante de l'Amérique latine. Préparez-vous à une nuit d'amusement et de divertissement non-stop qui vous fera faire la fête toute la nuit. Avec beaucoup de musique latine, c'est un événement que vous n'oublierez pas. Que vous soyez un danseur de salsa chevronné ou un fêtard novice, notre fête du Carnaval latin à Marseille est l'endroit où il faut être. Alors venez nous rejoindre pour une soirée inoubliable de couleurs, de musique et de plaisir. Nous sommes ravis de vous y voir !", capacity: 100, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user1)
@@ -134,3 +135,8 @@ file_event15 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678
 event15 = Event.new(title: "Soirée Rencontre", theme: "Fête", date: Date.new(2023, 5, 5), location: "Place de la timone 13010 Marseille", description: "Une soirée entre amis afin de faire de nouvelles rencontres. Accompagné de ma compagne et de mon chien Youyou, nous serons ravi de vous acceuillir à la maison. Tenue correct exigé merci !", capacity: 10, status: "privé", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user5)
 event15.photo.attach(io: file_event15, filename: "event15.jpg", content_type: "image/jpg")
 event15.save
+
+event_rating1 = EventRating.create(comment: "event au top", rating: 4, user: participant2, event: event1)
+event_rating1.save
+
+puts "Finished!"

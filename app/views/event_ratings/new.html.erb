@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Rate the event you've just participated to:</h1>
+    <%= simple_form_for [@event, @event_rating] do |f| %>
+      <%= f.input :comment %>
+      <%= f.input :rating %>
+      <%= f.submit %>
+    <% end %>
+</div>
+<!-- ajouter la date du rating dans la show du rating dans la show de l'event, comment faire?>
