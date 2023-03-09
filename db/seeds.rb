@@ -15,6 +15,7 @@ User.destroy_all
 # Chatroom.destroy_all
 # UserRating.destroy_all
 EventRating.destroy_all
+Participant.destroy_all
 
 puts "Creating events, users, and participants"
 
@@ -138,5 +139,8 @@ event15.save
 
 event_rating1 = EventRating.create(comment: "event au top", rating: 4, user: participant2, event: event1)
 event_rating1.save
+
+participanttoto = Participant.create(user: participant1, event: event6)
+participanttoto.save
 
 puts "Finished!"
