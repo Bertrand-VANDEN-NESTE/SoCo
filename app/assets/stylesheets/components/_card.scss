@@ -4,7 +4,11 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-trip > img {
+.color-font {
+  color: $primary-color;
+}
+
+.card-trip > span {
   height: 200px;
   width: 100%;
   background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5));
@@ -15,12 +19,15 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  padding-top: 10px;
+  color: $primary-color;
 }
 
 .card-trip p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
+  color: $primary-color;
 }
 
 
@@ -41,12 +48,22 @@
 
 .btn-cards{
   background-color: #8536EA;
-  color: white;
   border-radius: 20px;
   text-decoration: none;
+  margin-top: 10px;
 }
 
 .width{
   height: 20vh;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.overflow-text{
+  text-overflow: ellipsis;
+}
+
+span{
+  font-size: 8px;
+  width: 50%;
+  text-align: -webkit-center;
 }

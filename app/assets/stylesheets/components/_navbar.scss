@@ -8,16 +8,19 @@
 }
 
 .wi-size-logo {
-  width: 20vw;
+  width: 30vw;
 }
 
 .wi-size-photo {
   width: 18vw;
-  border-color: 2px solid violet;
+  border: 2px solid $primary-color;
+  margin-top: 10px;
+  margin-left: 30px;
 }
 
 .wi-size-chat {
   width: 12vw;
+  margin-left: 30px;
 }
 
 .container-navbar {
