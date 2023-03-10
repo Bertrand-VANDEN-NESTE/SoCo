@@ -7,7 +7,7 @@
     <div class="margin">
       <%= link_to event_path(event) do %>
         <div class="card-trip radius h-25 mt-5">
-          <%= cl_image_tag event.photo.key, height: 200, width: 200 %>
+          <%= cl_image_tag event.photo.key, height: 200, class: "w-100 object-fit-cover" %>
           <div class="card-trip-infos">
             <div class="overflow-text">
               <h2 class="text-center mb-3"><%= event.title %></h2>
