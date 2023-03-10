@@ -42,8 +42,8 @@
 .card-trip-infos .card-trip-user {
   position: absolute;
   left: 16px;
-  top: -20px;
-  width: 40px;
+  top: -40px;
+  width: 16vw;
 }
 
 .btn-cards{
@@ -66,4 +66,21 @@ span{
   font-size: 8px;
   width: 50%;
   text-align: -webkit-center;
+}
+
+.width-size-photo-profil {
+  width: 20vw;
+  height: 9vh;
+  top: 22px;
+  left: -7px;
+  margin: auto;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: 2px solid $primary-color;
+}
+
+.title-padding{
+  margin-left: 12vw;
+  padding: 3vw;
+  text-align: center;
 }

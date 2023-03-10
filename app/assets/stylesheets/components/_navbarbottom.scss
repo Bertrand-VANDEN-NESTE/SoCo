@@ -1,6 +1,7 @@
 .container-navbar-bottom {
   display: flex;
   width: 80%;
+  border: 1px solid $secondary-color;
   background-color: $primary-color;
   justify-content: space-evenly;
   border-radius: 16px;
