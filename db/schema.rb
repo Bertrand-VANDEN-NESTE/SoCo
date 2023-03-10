@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_09_095535) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_10_104255) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -75,6 +75,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_095535) do
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "latitude"
+    t.float "longitude"
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
@@ -106,6 +108,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_095535) do
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_participants_on_event_id"
     t.index ["user_id"], name: "index_participants_on_user_id"
+  end
+
+  create_table "user_ratings", force: :cascade do |t|
+    t.date "date"
+    t.integer "target_id"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_user_ratings_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -140,4 +151,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_095535) do
   add_foreign_key "participant_ratings", "users", column: "target_id"
   add_foreign_key "participants", "events"
   add_foreign_key "participants", "users"
+  add_foreign_key "user_ratings", "users"
 end
