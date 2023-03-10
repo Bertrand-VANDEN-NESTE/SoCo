@@ -5,7 +5,6 @@ class ParticipantsController < ApplicationController
     @participants = Participant.all
   end
 
-
   def show; end
 
   def new
@@ -26,9 +25,9 @@ class ParticipantsController < ApplicationController
   def update
     @participant.update(participant_params)
     redirect_to participant_path(@participant)
+  end
 
   def show
-
   end
 
   def destroy
