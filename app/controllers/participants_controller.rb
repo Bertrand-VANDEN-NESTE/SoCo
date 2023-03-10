@@ -5,7 +5,6 @@ class ParticipantsController < ApplicationController
     @participants = Participant.all
   end
 
-
   def show; end
 
   def new
