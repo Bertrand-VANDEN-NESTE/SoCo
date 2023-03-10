@@ -1,12 +1,18 @@
-<%= simple_form_for(@event) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :theme %>
-  <%= f.input :date %>
-  <%= f.input :location %>
-  <%= f.input :description %>
-  <%= f.input :capacity %>
-  <%= f.input :status %>
-  <%= f.input :tricount %>
-  <%= f.input :password %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="margin">
+    <%= simple_form_for(@event) do |f| %>
+      <%= f.input :title %>
+      <%= f.input :theme %>
+      <%= f.input :date %>
+      <%= f.input :location %>
+      <%= f.input :description %>
+      <%= f.input :capacity %>
+      <%= f.input :status %>
+      <%= f.input :tricount %>
+      <%= f.input :password %>
+      <div class="text-center">
+        <%= f.submit class:"btn btn-cards mb-2" %>
+      </div>
+    <% end %>
+  </div>
+</div>
