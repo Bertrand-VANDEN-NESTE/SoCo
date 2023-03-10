@@ -3,7 +3,7 @@
   <h2 class="color-font">Evénements auxquels vous avez participés :</h2>
     <div class="card-trip radius h-25 mt-5">
       <% @participants.each do |participant| %>
-        <div class="">
+        <div class="text-center">
           <p class="card-trip-pricing color-font w-10 mb-3"><strong>Intitulé :</strong> <br> <%= participant.event.title %></p>
           <p class="card-trip-pricing color-font w-10 mb-3"><strong>Thème :</strong> <br> <%= participant.event.theme %></p>
           <p class="card-trip-pricing color-font w-10 mb-3"><strong>Date :</strong> <br> <%= participant.event.date %> </p>
@@ -12,7 +12,6 @@
         </div>
         <%= link_to "Supprimer", participant_path(participant), data: {turbo_method: :delete, turbo_confirm: "Etes-vous sûr ?"} %>
       <% end %>
-      </div>
     </div>
   </div>
 
