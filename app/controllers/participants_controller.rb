@@ -1,10 +1,10 @@
 class ParticipantsController < ApplicationController
-  before_action :set_participant, only: %i[show destroy edit update]
-  def home; end
+  before_action :set_participant, only: %i[show destroy]
 
   def index
     @participants = Participant.all
   end
+
 
   def show; end
 
@@ -26,20 +26,17 @@ class ParticipantsController < ApplicationController
   def update
     @participant.update(participant_params)
     redirect_to participant_path(@participant)
-  end
 
-  def edit; end
+  def show
+
+  end
 
   def destroy
     @participant.destroy
-    redirect_to participants_path, status: :see_other
+    redirect_to profile_path, status: :see_other
   end
 
   private
-
-  def participant_params
-    params.require(:participant).permit(:title, :theme, :date, :location, :description, :capacity, :status, :tricount, :password, :photo)
-  end
 
   def set_participant
     @participant = Participant.find(params[:id])
