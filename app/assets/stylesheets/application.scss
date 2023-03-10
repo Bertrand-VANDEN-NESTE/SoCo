@@ -12,6 +12,8 @@
 @import "pages/index";
 @import "components/card";
 
+@import "components/navbarbottom";
+
 div a{
   text-decoration: none;
 }
@@ -28,4 +30,3 @@ body{
   margin: auto;
   width: 80vw;
 }
-
