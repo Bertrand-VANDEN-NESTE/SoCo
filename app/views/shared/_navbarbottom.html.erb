@@ -1,11 +1,5 @@
 <div class="sticky-bottom d-flex justify-content-evenly">
   <div class="container-navbar-bottom">
-    <% if user_signed_in? %>
-      <%= link_to profile_path do %>
-        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "wi-size-photo ps-2 pt-2 rounded-circle"%>
-      <% end %>
-      <% else %>
-      <% end %>
     <div>
       <%= link_to events_path do %>
         <i class="fa-solid fa-house text-light"></i>
@@ -21,9 +15,13 @@
         <i class="fa-regular fa-circle-plus"></i>
       <% end %>
     </div>
-        <div>
-      <%= link_to profile_path do %>
-        <i class="fa-regular fa-user"></i>
+    <div>
+      <% if user_signed_in? %>
+        <%= link_to profile_path do %>
+          <i class="fa-regular fa-user"></i>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_session_path %>
       <% end %>
     </div>
   </div>
