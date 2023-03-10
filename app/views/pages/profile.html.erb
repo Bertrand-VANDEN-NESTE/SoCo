@@ -4,34 +4,38 @@
     <div class="card-trip radius h-25 mt-5">
       <% @participants.each do |participant| %>
         <div class="text-center">
-          <p class="card-trip-pricing color-font w-10 mb-3"><strong>Intitulé :</strong> <br> <%= participant.event.title %></p>
-          <p class="card-trip-pricing color-font w-10 mb-3"><strong>Thème :</strong> <br> <%= participant.event.theme %></p>
-          <p class="card-trip-pricing color-font w-10 mb-3"><strong>Date :</strong> <br> <%= participant.event.date %> </p>
-          <p class="card-trip-pricing color-font w-10 mb-3"><strong>Lieu :</strong> <br> <%= participant.event.location %> </p>
-          <p class="card-trip-pricing color-font w-10 mb-3"><strong>Statut : </strong><br> <%= participant.event.status %> </p>
+          <p class="card-trip-pricing color-font mb-1"><strong>Intitulé :</strong> <br> <%= participant.event.title %></p>
+          <p class="card-trip-pricing color-font mb-1"><strong>Thème :</strong> <br> <%= participant.event.theme %></p>
+          <p class="card-trip-pricing color-font mb-1"><strong>Date :</strong> <br> <%= participant.event.date %> </p>
+          <p class="card-trip-pricing color-font mb-1"><strong>Lieu :</strong> <br> <%= participant.event.location %> </p>
+          <p class="card-trip-pricing color-font mb-1"><strong>Statut : </strong><br> <%= participant.event.status %> </p>
         </div>
-        <%= link_to "Supprimer", participant_path(participant), data: {turbo_method: :delete, turbo_confirm: "Etes-vous sûr ?"} %>
+        <div class="text-center mb-2">
+          <div class="btn btn-cards">
+            <%= link_to "Supprimer", participant_path(participant), data: {turbo_method: :delete, turbo_confirm: "Etes-vous sûr ?"} %>
+          </div>
+        </div>
       <% end %>
     </div>
   </div>
 
-  <div class="row justify-content-evenly ms-5 me-5">
-    <h2 class=" mb-5">Evénements que vous avez proposés :</h2>
+  <div class="margin mb-3">
+    <h2 class="color-font">Evénements que vous avez proposés :</h2>
     <% @events.each do |event| %>
-      <div class="profile col-6 mb-4 ms-4 me-4">
+      <div class="card-trip radius h-25 mt-5">
         <% if event.photo.attached? %>
-        <%= cl_image_tag event.photo.key, height: 200, width: 200, crop: :fill, class: "margin-center" %>
+        <%= cl_image_tag event.photo.key, height: 200, crop: :fill, class: "w-100 object-fit-cover" %>
         <% end %>
-        <div class="card-body">
+        <div class="text-center">
           <h5 class="card-title text-center font-weight-bold mb-3"><%= link_to event.title, event_path(event), class: "text-deco"%></h5>
-          <p class="card-text text-center"><strong>Intitulé :</strong> <%= event.title %></p>
-          <p class="card-text text-center"><strong>Thème :</strong> <%= event.theme %></p>
-          <p class="card-text text-center"><strong>Date :</strong> <%= event.date %></p>
-          <p class="card-text text-center"><strong>Lieu :</strong> <%= event.location %></p>
-          <p class="card-text text-center"><strong>Description :</strong> <%= event.description %></p>
-          <p class="card-text text-center"><strong>Capacité :</strong> <%= event.capacity %> tickets</p>
-          <p class="card-text text-center"><strong>Statut :</strong> <%= event.status %></p>
-          <p class="card-text text-center"><strong>Cagnotte :</strong> <%= event.tricount %></p>
+          <p class="card-trip-pricing color-font mb-1"><strong>Intitulé :</strong> <%= event.title %></p>
+          <p class="card-trip-pricing color-font mb-1"><strong>Thème :</strong> <%= event.theme %></p>
+          <p class="card-trip-pricing color-font mb-1"><strong>Date :</strong> <%= event.date %></p>
+          <p class="card-trip-pricing color-font mb-1"><strong>Lieu :</strong> <%= event.location %></p>
+          <p class="card-trip-pricing color-font mb-1"><strong>Description :</strong> <%= event.description %></p>
+          <p class="card-trip-pricing color-font mb-1"><strong>Capacité :</strong> <%= event.capacity %> tickets</p>
+          <p class="card-trip-pricing color-font mb-1"><strong>Statut :</strong> <%= event.status %></p>
+          <p class="card-trip-pricing color-font mb-1"><strong>Cagnotte :</strong> <%= event.tricount %></p>
           <div class="text-center">
           <%= link_to "Supprimer",
             event_path(event),
