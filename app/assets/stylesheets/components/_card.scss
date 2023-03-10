@@ -34,7 +34,19 @@
 
 .card-trip-infos .card-trip-user {
   position: absolute;
-  right: 16px;
+  left: 16px;
   top: -20px;
   width: 40px;
+}
+
+.btn-cards{
+  background-color: #8536EA;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.width{
+  height: 20vh;
+  margin-bottom: 10px;
 }

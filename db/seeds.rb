@@ -9,12 +9,13 @@ require "open-uri"
 
 puts "Cleaning database..."
 
+Participant.destroy_all
+EventRating.destroy_all
 Event.destroy_all
 User.destroy_all
 # Message.destroy_all
 # Chatroom.destroy_all
 # UserRating.destroy_all
-# EventRating.destroy_all
 
 puts "Creating events, users, and participants"
 
@@ -134,3 +135,15 @@ file_event15 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678
 event15 = Event.new(title: "Soirée Rencontre", theme: "Fête", date: Date.new(2023, 5, 5), location: "Place de la timone 13010 Marseille", description: "Une soirée entre amis afin de faire de nouvelles rencontres. Accompagné de ma compagne et de mon chien Youyou, nous serons ravi de vous acceuillir à la maison. Tenue correct exigé merci !", capacity: 10, status: "privé", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user5)
 event15.photo.attach(io: file_event15, filename: "event15.jpg", content_type: "image/jpg")
 event15.save
+
+event_rating1 = EventRating.create(comment: "event au top", rating: 4, user: user1, event: event1)
+event_rating1.save
+
+
+participanttest = Participant.create(user: user1, event: event1)
+participanttest.save
+
+participanttest2 = Participant.create(user: user1, event: event2)
+participanttest2.save
+
+puts "Finished!"

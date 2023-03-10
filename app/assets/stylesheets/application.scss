@@ -11,3 +11,22 @@
 @import "components/index";
 @import "pages/index";
 @import "components/card";
+
+@import "components/navbarbottom";
+
+div a{
+  text-decoration: none;
+}
+
+body{
+  background-color: white;
+}
+
+.radius{
+  border-radius: 20px !important;
+}
+
+.margin{
+  margin: auto;
+  width: 80vw;
+}
