@@ -5,7 +5,7 @@
   </div>
   <% @events.each do |event| %>
     <div class="margin">
-      <a href="<%= event_path(event)%>">
+      <%= link_to event_path(event) do %>
         <div class="card-trip radius h-25 mt-5">
           <%= cl_image_tag event.photo.key, height: 200, width: 200 %>
           <div class="card-trip-infos">
@@ -20,7 +20,7 @@
             <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
           </div>
         </div>
-      </a>
+      <% end %>
     </div>
   <% end %>
 </div>
