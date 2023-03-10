@@ -17,8 +17,6 @@ User.destroy_all
 # Chatroom.destroy_all
 # UserRating.destroy_all
 
-
-
 puts "Creating events, users, and participants"
 
 user1 = User.create(first_name: "Jaime", last_name: "Sortir", gender: "H", birth_date: Date.new(1996, 3, 3), city: "Marseille", phone_number: "0756432354", hobbies: " Dessin", email: "jaime.sortir@gmail.com", username: "Jaime_Sortir", password: "123456")
@@ -141,9 +139,11 @@ event15.save
 event_rating1 = EventRating.create(comment: "event au top", rating: 4, user: user1, event: event1)
 event_rating1.save
 
-"Last ones..."
 
 participanttest = Participant.create(user: user1, event: event1)
 participanttest.save
+
+participanttest2 = Participant.create(user: user1, event: event2)
+participanttest2.save
 
 puts "Finished!"

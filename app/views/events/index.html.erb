@@ -1,15 +1,26 @@
-<% @events.each do |event| %>
-  <div class="container">
-    <div class="card-trip mt-5">
-      <%= cl_image_tag event.photo.key, height: 200, width: 200 %>
-      <div class="card-trip-infos">
-        <div>
-          <h2><%= event.title %></h2>
-          <p><%= event.description %></p>
-        </div>
-        <h2 class="card-trip-pricing"><%= event.date %></h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-      </div>
-    </div>
+<div class="container">
+  <div class="text-center">
+    <div class="btn btn-cards"><%= link_to "Evènemments", events_path%></div>
+    <div class="btn btn-cards"><%= link_to "Map", events_path %></div>
   </div>
-<% end %>
+  <% @events.each do |event| %>
+    <div class="margin">
+      <a href="<%= event_path(event)%>">
+        <div class="card-trip radius h-25 mt-5">
+          <%= cl_image_tag event.photo.key, height: 200, width: 200 %>
+          <div class="card-trip-infos">
+            <div class="">
+              <h2 class="text-center primary-color mb-3"><%= event.title %></h2>
+              <div class="d-flex">
+                <span class="card-trip-pricing mb-3"><%= event.date %></span>
+                <span class="card-trip-pricing mb-3"><%= event.location %></span>
+              </div>
+              <p class="text-center width primary-color"><%= event.description %></p>
+            </div>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+          </div>
+        </div>
+      </a>
+    </div>
+  <% end %>
+</div>
