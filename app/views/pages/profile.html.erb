@@ -36,14 +36,13 @@
           <p class="card-trip-pricing color-font mb-1"><strong>Capacité :</strong> <%= event.capacity %> tickets</p>
           <p class="card-trip-pricing color-font mb-1"><strong>Statut :</strong> <%= event.status %></p>
           <p class="card-trip-pricing color-font mb-1"><strong>Cagnotte :</strong> <%= event.tricount %></p>
-          <div class="text-center">
-          <%= link_to "Supprimer",
-            event_path(event),
-            data: {turbo_method: :delete, turbo_confirm: "Etes-vous sûr ?"}
-          %>
-          <%= link_to "Modifier",
-            edit_event_path(event)%>
-
+          <div class="text-center mb-2">
+            <div class="btn btn-cards">
+              <%= link_to "Supprimer", event_path(event), data: {turbo_method: :delete, turbo_confirm: "Etes-vous sûr ?"} %>
+            </div>
+            <div class="btn btn-cards">
+              <%= link_to "Modifier", edit_event_path(event)%>
+            </div>
           </div>
         </div>
       </div>
