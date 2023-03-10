@@ -11,6 +11,8 @@
           <p class="card-text  text-center"><strong>Description :</strong> <br> <%= participant.event.description %></p>
           <p class="card-text  text-center"><strong>Statut : </strong><br> <%= participant.event.status %> </p>
         </div>
+
+        <%= link_to "Supprimer", participant_path(participant), data: {turbo_method: :delete, turbo_confirm: "Etes-vous sûr ?"} %>
       <% end %>
     </div>
   </div>

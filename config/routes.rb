@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   resources :events do
     resources :event_ratings, only: %i[new create]
   end
+
+  resources :participants, only: %i[destroy]
 end

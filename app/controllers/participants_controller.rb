@@ -31,7 +31,7 @@ class ParticipantsController < ApplicationController
 
   def destroy
     @participant.destroy
-    redirect_to participants_path, status: :see_other
+    redirect_to profile_path, status: :see_other
   end
 
   private
