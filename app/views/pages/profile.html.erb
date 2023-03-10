@@ -14,6 +14,8 @@
             data: {turbo_method: :delete, turbo_confirm: "Voulez-vous supprimer votre inscription ?"}
           %>
         </div>
+
+        <%= link_to "Supprimer", participant_path(participant), data: {turbo_method: :delete, turbo_confirm: "Etes-vous sûr ?"} %>
       <% end %>
     </div>
   </div>
