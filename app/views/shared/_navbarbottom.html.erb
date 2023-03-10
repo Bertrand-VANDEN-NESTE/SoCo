@@ -1,0 +1,21 @@
+<div class="navbar navbar-expand-sm sticky-bottom bg-white">
+  <div class="container-navbar">
+    <% if user_signed_in? %>
+      <%= link_to profile_path do %>
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "wi-size-photo ps-2 pt-2 rounded-circle"%>
+      <% end %>
+    <% else %>
+      <%= link_to new_user_session_path do %>
+        <button type="button" class="btn btn-primary">Log in</button>
+      <% end %>
+    <% end %>
+
+    <%= link_to events_path do %>
+      <%= image_tag "SoCo__2_-removebg-preview.png", class: "wi-size-logo mt-3" %>
+    <% end %>
+
+    <%= link_to "#" do %>
+      <%= image_tag "SoCo__2_-removebg-preview.png", class: "wi-size-chat me-3 mt-1" %>
+    <% end %>
+  </div>
+</div>
