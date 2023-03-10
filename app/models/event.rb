@@ -3,4 +3,8 @@ class Event < ApplicationRecord
   has_many :participants
   has_many :event_ratings
   has_one_attached :photo
+
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
+
 end
