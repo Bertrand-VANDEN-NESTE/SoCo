@@ -19,6 +19,7 @@ User.destroy_all
 
 puts "Creating events, users, and participants"
 
+
 file_user1 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678700558/soco/lucas-gouvea-aoEwuEH7YAs-unsplash_jiaume.jpg")
 user1 = User.create(first_name: "Jaime", last_name: "Sortir", gender: "H", birth_date: Date.new(1996, 3, 3), city: "Marseille", phone_number: "0756432354", hobbies: " Dessin", email: "jaime.sortir@gmail.com", username: "Jaime_Sortir", password: "123456")
 user1.photo.attach(io: file_user1, filename: "user1.jpg", content_type: "image/jpg")
@@ -44,36 +45,81 @@ user5 = User.create(first_name: "Matthieu", last_name: "Delor", gender: "H", bir
 user5.photo.attach(io: file_user5, filename: "user5.jpg", content_type: "image/jpg")
 user5.save
 
+
+file_participant1 = URI.open("")
 participant1 = User.create(first_name: "Attimin", last_name: "Cuk", gender: "F", birth_date: Date.new(1931, 5, 16), city: "Carcassonne", phone_number: "0752378496", hobbies: "Plantes", email: "grandma@gmail.com", username: "iamstillyoung", password: "123456")
+participant1.photo.attach(io: file_participant1, filename: "participant1.jpg", content_type: "image/jpg")
 participant1.save
+
+file_participant2 = URI.open("")
 participant2 = User.create(first_name: "Michèle", last_name: "Zappata", gender: "F", birth_date: Date.new(1940, 9, 21), city: "Arles", phone_number: "0724536785", hobbies: "Décoration", email: "jeddah@gmail.com", username: "iamthebest", password: "123456")
+participant2.photo.attach(io: file_participant4, filename: "participant4.jpg", content_type: "image/jpg")
 participant2.save
+
+file_participant3 = URI.open("")
 participant3 = User.create(first_name: "Taieb", last_name: "Salmi", gender: "H", birth_date: Date.new(1953, 2, 27), city: "Marseille", phone_number: "072100352035", hobbies: "Jardinage", email: "papou@gmail.com", username: "iamthebest", password: "123456")
+participant3.photo.attach(io: file_participant4, filename: "participant4.jpg", content_type: "image/jpg")
 participant3.save
+
+file_participant4 = URI.open("")
 participant4 = User.create(first_name: "Jilali", last_name: "Le Victorieux", gender: "H", birth_date: Date.new(1943, 1, 1), city: "Aix-en-Provence", phone_number: "070102030405", hobbies: "Voyages", email: "lilajil@gmail.com", username: "lilajil", password: "123456")
 participant4.save
+
+file_participant5 = URI.open("")
 participant5 = User.create(first_name: "Pierrette", last_name: "Ségura", gender: "F", birth_date: Date.new(1943, 12, 25), city: "Tarascon", phone_number: "0725436859", hobbies: "Cuisine", email: "pierrette.segura@gmail.com", username: "pierrettedupanier", password: "123456")
+participant5.photo.attach(io: file_v4, filename: "v4.jpg", content_type: "image/jpg")
 participant5.save
+
+file_participant6 = URI.open("")
 participant6 = User.create(first_name: "Nathalie", last_name: "Tournier", gender: "F", birth_date: Date.new(1968, 12, 6), city: "Paris", phone_number: "077892415630", hobbies: "Danse", email: "nathalie.tournier@gmail.com", username: "chouchoune", password: "123456")
+participant6.photo.attach(io: file_participant4, filename: "v4.jpg", content_type: "image/jpg")
 participant6.save
+
+file_participant7 = URI.open("")
 participant7 = User.create(first_name: "Paul", last_name: "Rodier", gender: "H", birth_date: Date.new(1968, 12, 6), city: "Marseille", phone_number: "0752378963", hobbies: "Lecture", email: "pcordier@gmail.com", username: "pc", password: "123456")
+participant7.photo.attach(io: file_participant4, filename: "participant4.jpg", content_type: "image/jpg")
 participant7.save
+
+file_participant8 = URI.open("")
 participant8 = User.create(first_name: "Beya", last_name: "Stambouli", gender: "F", birth_date: Date.new(1993, 2, 28), city: "Nimes", phone_number: "0654169823", hobbies: "Gaming", email: "Beya.stambouli@gmail.com", username: "stambouli49", password: "123456")
+participant8.photo.attach(io: file_participant4, filename: "participant4.jpg", content_type: "image/jpg")
 participant8.save
+
+file_participant9 = URI.open("")
 participant9 = User.create(first_name: "Ines", last_name: "Aitdjebarra", gender: "F", birth_date: Date.new(1986, 3, 1), city: "Paris", phone_number: "0759071234", hobbies: "Art", email: "Ait-ines@gmail.com", username: "DAitdje45", password: "123456")
+participant9.photo.attach(io: file_participant4, filename: "participant4.jpg", content_type: "image/jpg")
 participant9.save
+
+file_participant10 = URI.open("")
 participant10 = User.create(first_name: "Damien", last_name: "Dedin", gender: "H", birth_date: Date.new(1991, 11, 22), city: "Marseille", phone_number: "0659074543", hobbies: "Danse", email: "Dedin.damien@gmail.com", username: "Dedin63", password: "123456")
+participant10.photo.attach(io: file_participant4, filename: "participant4.jpg", content_type: "image/jpg")
 participant10.save
+
+file_participant11 = URI.open("")
 participant11 = User.create(first_name: "Maxime", last_name: "Xany", gender: "H", birth_date: Date.new(1965, 8, 5), city: "Lyon", phone_number: "0654238703", hobbies: "Musique", email: "Xany.maxime@gmail.com", username: "Xany56", password: "123456")
+participant11.photo.attach(io: file_participant4, filename: "participant4.jpg", content_type: "image/jpg")
 participant11.save
+
+file_participant12 = URI.open("")
 participant12 = User.create(first_name: "Rachina", last_name: "Doukali", gender: "F", birth_date: Date.new(1976, 10, 12) , city: "Cannes", phone_number: "0623946125", hobbies: "Culture", email: "Doukali.rachida@gmail.com", username: "Doukali23", password: "123456")
+participant12.photo.attach(io: file_participant4, filename: "participant4.jpg", content_type: "image/jpg")
 participant12.save
+
+file_participant13 = URI.open("")
 participant13 = User.create(first_name: "Many", last_name: "Trad", gender: "H", birth_date: Date.new(1996, 7, 3), city: "Nice", phone_number: "0758076543", hobbies: "Cuisine", email: "Trad.many@gmail.com", username: "Trad45", password: "123456")
+participant13.photo.attach(io: file_participant4, filename: "v4.jpg", content_type: "image/jpg")
 participant13.save
+
+file_participant14 = URI.open("")
 participant14 = User.create(first_name: "Vincent", last_name: "Protille", gender: "H", birth_date: Date.new(1994, 2, 8) , city: "Bordeaux", phone_number: "0776459823", hobbies: "Equitation", email: "Protille.Vincent@gmail.com", username: "Protille239", password: "123456")
+participant14.photo.attach(io: file_participant4, filename: participant4.jpg", content_type: "image/jpg")
 participant14.save
+
+file_participant15 = URI.open("")
 participant15 = User.create(first_name: "Hanene", last_name: "Bensadock", gender: "F", birth_date: Date.new(1989, 5, 11) , city: "Lille", phone_number: "0645085672", hobbies: "Sport", email: "Bensadock.hanene@gmail.com", username: "Ben657", password: "123456")
+participant15.photo.attach(io: file_participant4, filename: "v4.jpg", content_type: "image/jpg")
 participant15.save
+
 
 file_event1 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697305/soco/https_3A_2F_2Fcdn.e[…]mages_2F460014729_2F1091781423553_2F1_2Foriginal_dmw3dl.jpg")
 event1 = Event.new(title: "Carnaval Latino!", theme: "Fête", date: Date.new(2023, 3, 26), location: "Exit Café 12 Quai de Rive Neuve 13007 Marseille", description: "Avancez et soyez transporté dans le monde vibrant et coloré du Carnaval Latin lors de notre incroyable fête à Marseille ! Avec des décorations éblouissantes, des costumes étonnants et des rythmes énergiques, vous serez immergé dans une célébration de la culture riche et vivante de l'Amérique latine. Préparez-vous à une nuit d'amusement et de divertissement non-stop qui vous fera faire la fête toute la nuit. Avec beaucoup de musique latine, c'est un événement que vous n'oublierez pas. Que vous soyez un danseur de salsa chevronné ou un fêtard novice, notre fête du Carnaval latin à Marseille est l'endroit où il faut être. Alors venez nous rejoindre pour une soirée inoubliable de couleurs, de musique et de plaisir. Nous sommes ravis de vous y voir !", capacity: 100, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user1)
@@ -95,12 +141,12 @@ event4 = Event.new(title: "Brunch e-commerce Marseille by Evolutive x Scalapay",
 event4.photo.attach(io: file_event4, filename: "event4.jpg", content_type: "image/jpg")
 event4.save
 
-file_event5 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678204591/https_3A_2F_2Fcdn.evbuc.com_2Fimages_2F416495579_2F186928393937_2F1_2Foriginal_mbbw3s.jpg")
+file_event5 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678698062/soco/le-Wagon_xl7jlc.png")
 event5 = Event.new(title: "Demoday Le Wagon", theme: "Formation", date: Date.new(2023, 3, 17), location: "Le Wagon 21 rue Haxo 13001 Marseille", description: "Pendant ces 9 semaines de bootcamp, nos apprenants ont travaillé dur pour apprendre à coder et gagner une autonomie technique. Ils peuvent aujourd’hui développer des applications web et mobiles de A à Z en Fullstack Rails ! Que vous soyez développeurs, recruteurs, alumnis, que vous cherchiez à apprendre à coder ou bien que vous soyez tout simplement curieux, vous êtes le/la bienvenu.e ! Les places sont limitées, ne tardez pas !", capacity: 40, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user5)
-event5.photo.attach(io: file_event5, filename: "event5.jpg", content_type: "image/jpg")
+event5.photo.attach(io: file_event5, filename: "event5.jpg", content_type: "image/png")
 event5.save
 
-file_event6 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678204536/https_3A_2F_2Fcdn.evbuc.com_2Fimages_2F436631129_2F309258733797_2F1_2Foriginal_neb4em.jpg")
+file_event6 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697352/soco/https_3A_2F_2Fcdn.e[…]images_2F436631129_2F309258733797_2F1_2Foriginal_u4tnbh.jpg")
 event6 = Event.new(title: "Boost ton Réseau dans les Bouches-du-Rhône par Bouge ta Boîte", theme: "Réseau", date: Date.new(2023, 3, 14), location: "Now Coworking 9 Quai de Rive Neuve 13007 Marseille", description: "Rejoins-nous pour notre événement Bouge ton Réseau ! Le principe est simple, te permettre de rencontrer un maximum de Bougeuses (membres du réseau) et d&#x27;entrepreneur.e.s du département dans une ambiance fun et dynamique ! #inspiration #reseautage #entrepreneuriat", capacity: 35, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user1)
 event6.photo.attach(io: file_event6, filename: "event6.jpg", content_type: "image/jpg")
 event6.save
