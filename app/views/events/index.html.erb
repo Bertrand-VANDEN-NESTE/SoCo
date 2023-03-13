@@ -3,6 +3,16 @@
     <div class="btn btn-cards mt-3"><%= link_to "Evènemments", events_path, class: "text-light"%></div>
     <div class="btn btn-cards mt-3"><%= link_to "Map", events_path, class: "text-light" %></div>
   </div>
+
+    <%= form_with url: events_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find an event"
+      %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+
   <% @events.each do |event| %>
     <div class="margin">
       <%= link_to event_path(event) do %>
