@@ -3,6 +3,18 @@
     <div class="btn btn-cards mt-3"><%= link_to "Evènements", events_path, class: "text-light"%></div>
     <div class="btn btn-cards mt-3"><%= link_to "Map", events_path, class: "text-light" %></div>
   </div>
+
+
+    <%= form_with url: events_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find an event"
+      %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
+
+
   <div>
     <% @events.each do |event| %>
       <div class="margin">
@@ -20,6 +32,7 @@
                 <div class="text-center mt-2">
                   <div class="btn btn-cards"><%= link_to "Partager", events_path, class: "text-light m-0 p-0" %></div>
                 </div>
+
               </div>
               <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
             </div>

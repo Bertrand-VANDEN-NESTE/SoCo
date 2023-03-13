@@ -3,7 +3,11 @@ class EventsController < ApplicationController
   def home; end
 
   def index
-    @events = Event.all
+    if params[:query]
+      @events = Event.search_by_location_and_theme(params[:query])
+    else
+      @events = Event.all
+    end
   end
 
   def show
