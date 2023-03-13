@@ -27,9 +27,6 @@ class ParticipantsController < ApplicationController
     redirect_to participant_path(@participant)
   end
 
-  def show
-  end
-
   def destroy
     @participant.destroy
     redirect_to profile_path, status: :see_other
