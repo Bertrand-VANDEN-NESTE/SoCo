@@ -1,22 +1,19 @@
-// .wi-size-logo {
-//   width: 20vw;
-// }
-
-// .wi-size-photo {
-//   width: 18vw;
-//   border-color: 2px solid violet;
-// }
-
-// .wi-size-chat {
-//   width: 12vw;
-// }
-
 .container-navbar-bottom {
   display: flex;
   width: 80%;
+  border: 1px solid $secondary-color;
   background-color: $primary-color;
   justify-content: space-evenly;
+  border-radius: 16px;
   a{
     display: block;
   }
+}
+
+.fa-solid {
+  color: white;
+}
+
+.fa-regular {
+  color: white;
 }

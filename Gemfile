@@ -80,3 +80,4 @@ gem "devise"
 gem "cloudinary"
 
 gem "bootstrap"
+gem "geocoder"

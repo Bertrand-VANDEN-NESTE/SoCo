@@ -1,37 +1,50 @@
 <div class="container">
-  <div class="text-center">
-    <h2><%= @event.title %></h2>
-    <h3><%= @event.date %></h3>
-  </div>
-  <div class="text-center">
-    <h3><%= @event.capacity %> tickets</h3>
-    <h3> <%= @event.status %> event</h3>
-  </div>
-  <div class="card-trip mt-5">
-    <%= cl_image_tag @event.photo.key, height: 200, width: 200 %>
-    <div class="card-trip-infos">
+  <div class="margin">
+    <div class="card-trip radius h-25 mt-5">
       <div>
-        <p><%= @event.description %></p>
+        <div class="color-font text-center">
+        <h2><%= @event.title %></h2>
+        <span><%= @event.date %></span>
+        </div>
       </div>
-      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+      <div class="color-font text-center pb-2">
+        <span><%= @event.capacity %> Places</span>
+        <span> <%= @event.status %> event</span>
+      </div>
+      <%= cl_image_tag @event.photo.key, height: 150, class: "w-100 object-fit-cover" %>
+      <div class="card-trip-infos">
+        <div class="overflow-text">
+          <h2 class="text-center mb-3"><%= @event.title %></h2>
+          <div class="d-flex">
+            <span class="card-trip-pricing color-font w-10 mb-3"><%= @event.date %></span>
+            <span class="card-trip-pricing color-font w-10 mb-3"><%= @event.location %></span>
+          </div>
+          <p class="text-center width overflow-scroll"><%= @event.description %></p>
+          <div class="text-center mt-2">
+            <div class="btn btn-cards"><%= link_to "Partager", events_path, class: "text-light m-0 p-0" %></div>
+          </div>
+        </div>
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+      </div>
+      <div class="d-flex justify-content-center mb-3">
+        <%= form_with model: @participant do |f| %>
+          <%= f.text_field :event_id, value: @event.id, class: "d-none btn btn-cards" %>
+          <%# <%= f.text_field :user_id, value: current_user.id, class: "d-none btn btn-cards" %>
+          <%= f.submit "S'inscrire", class: "btn btn-cards text-light" %>
+        <% end %>
+        <% @event_ratings.each do |event_rating| %>
+          <div>
+            <h2 class="text-center"> <%= event_rating.user.username %></h2>
+            <h2 class="text-center"> <%= event_rating.comment %></h2>
+            <h2 class="text-center"> <%= event_rating.rating %> / 5</h2>
+          </div>
+        <% end %>
+      </div>
+      <div style="width: 100%; height: 600px;"
+        data-controller="map"
+        data-map-markers-value="<%= @event_marker.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
     </div>
-  </div>
-
-  <%= form_with model: @participant do |f| %>
-    <%= f.text_field :event_id, value: @event.id, class: "d-none" %>
-    <%= f.text_field :user_id, value: current_user.id, class: "d-none" %>
-    <%= f.submit "S'inscrire" %>
-  <% end %> 
-    <%# <%= link_to "S'inscrire", controller: "participants", action: "create" %>
-</div>
-
-  <div>
-    <% @event_ratings.each do |event_rating| %>
-      <div>
-        <h2 class="text-center"> <%= event_rating.user.username %></h2>
-        <h2 class="text-center"> <%= event_rating.comment %></h2>
-        <h2 class="text-center"> <%= event_rating.rating %> / 5</h2>
-      </div>
-    <% end %>
   </div>
 </div>

@@ -7,17 +7,15 @@
   flex-grow: 0;
 }
 
-.wi-size-logo {
-  width: 20vw;
+.width-size-logo {
+  width: 30vw;
 }
 
-.wi-size-photo {
+.width-size-photo {
   width: 18vw;
-  border-color: 2px solid violet;
-}
-
-.wi-size-chat {
-  width: 12vw;
+  border: 2px solid $primary-color;
+  margin-top: 10px;
+  margin-left: 30px;
 }
 
 .container-navbar {
@@ -27,4 +25,23 @@
   a{
     display: block;
   }
+}
+
+.log {
+  background-color: $primary-color;
+  height: 8vh;
+  width: auto;
+  margin-top: 10px;
+  margin-left: 30px;
+  border: none;
+}
+
+.log-chat {
+  background-color: $primary-color;
+  width: 18vw;
+  height: 8vh;
+  margin-top: 10px;
+  margin-right: 30px;
+  border: none;
+  color: #fecece;
 }
