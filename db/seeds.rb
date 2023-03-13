@@ -96,42 +96,42 @@ event7 = Event.new(title: "Société de Musique de Chambre de Marseille", theme:
 event7.photo.attach(io: file_event7, filename: "event7.jpg", content_type: "image/jpg")
 event7.save
 
-file_event8 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678199791/latino_f7dztc.avif")
+file_event8 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678696921/soco/SISTINE-CHAPEL_LYON-013-scaled-1_oyl6nv.jpg")
 event8 = Event.new(title: "Exposition", theme: "Culture", date: Date.new(2023, 8, 24), location: "30 quai de rive neuve 13007 Marseille", description: "Notre galerie expose un artiste populaire italien. Ces scultures ont eu un grand succée à Vienne et Milan. Il nous fait le privilége de venir sur Marseille pour une durée de 2 jours.", capacity: 80, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user2)
 event8.photo.attach(io: file_event8, filename: "event8.jpg", content_type: "image/jpg")
 event8.save
 
-file_event9 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678199791/latino_f7dztc.avif")
+file_event9 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678696887/soco/danseuse_orientale_b12_pss7ta.jpg")
 event9 = Event.new(title: "Spectacle danse oriental", theme: "Danse", date: Date.new(2023, 6, 14), location: "29 rue désirée clary 13002 Marseille", description: "La danseuse star Didem vient nous rendre visite avec toute sa troupe. Elle sera en representation toute la journée, plusieurs activités seront proposés afin de vous faire vivre toutes les joies de l'orient.", capacity: 100, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user4)
 event9.photo.attach(io: file_event9, filename: "event9.jpg", content_type: "image/jpg")
 event9.save
 
-file_event10 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678199791/latino_f7dztc.avif")
+file_event10 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678696903/soco/so-57eb934066a4bd7760c21969-ph0_cj1oof.jpg")
 event10 = Event.new(title: "Gay pride!", theme: "Fête", date: Date.new(2023, 5, 11), location: "Vieux Port Marseille", description: "Hello, le char partira a partir du Vieux port en face du restaurant de l'OM, veuillez prévoir vos meilleures tenues et accéssoires. Les 20 premières personnes a s'inscrire pourront monter avec toute l'équipe", capacity: 100, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user2)
 event10.photo.attach(io: file_event10, filename: "event10.jpg", content_type: "image/jpg")
 event10.save
 
-file_event11 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678199791/latino_f7dztc.avif")
+file_event11 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697371/soco/image-black-angus-r[…]-viande-marseille-la-valentine-26_20200219172622_m59gf4.jpg")
 event11 = Event.new(title: "Soirée Billard!", theme: "Fête", date: Date.new(2023, 3, 18), location: "Queen victoria 1 place aux huiles 13001 Marseille", description: "Bonjour, bienvenue a notre soirée billard, venez profiter avec toute notre équipe. Un turnoi sera mis en place, le gagnant aura droit a une belle surprise.", capacity: 100, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user1)
 event11.photo.attach(io: file_event11, filename: "event11.jpg", content_type: "image/jpg")
 event11.save
 
-file_event12 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678199791/latino_f7dztc.avif")
+file_event12 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697402/soco/pique-nique-piscine_dnmdgi.jpg")
 event12 = Event.new(title: "Pique Nique en face de la piscine", theme: "Fête", date: Date.new(2023, 7, 4), location: "Chemin de l'impasse Villa Karthy 13012 Marseille", description: "Nous vous proposons une incroyable après-midi, devant la piscine et un barbecue. Mon épouse et moi nous ferons un plaisir de festoyer avec vous. Serviette de plage exigée !", capacity: 12, status: "privé", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user3)
 event12.photo.attach(io: file_event12, filename: "event12.jpg", content_type: "image/jpg")
 event12.save
 
-file_event13 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678199791/latino_f7dztc.avif")
+file_event13 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697385/soco/8fbb4f36b3641433d38bfc79cb60990d_o7gxak.jpg")
 event13 = Event.new(title: "Séminaire pop art", theme: "Culture", date: Date.new(2023, 11, 3), location: "Parc Chanot 13008 Marseille", description: "Pour ce séminaire nous avons décidé de reunir plusieurs artistes du monde entier. Ce rassemblement permet de proumouvoir toute influence artistique que notre mordernité peut connaitre.", capacity: 100, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user3)
 event13.photo.attach(io: file_event13, filename: "event13.jpg", content_type: "image/jpg")
 event13.save
 
-file_event14 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678199791/latino_f7dztc.avif")
+file_event14 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697420/soco/image-102_fwfg9j.jpg")
 event14 = Event.new(title: "Pool party", theme: "Fête", date: Date.new(2023, 6, 22), location: "Place du Prado 13008 Marseille", description: "Pool party phénomenal sur Marseille, notre Dj star sera la pour la journée. En soirée nous aurons le privilége de recevoir Biyouna grande actrice vietnamienne qui chantera son tube international"  , capacity: 100, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user1)
 event14.photo.attach(io: file_event14, filename: "event14.jpg", content_type: "image/jpg")
 event14.save
 
-file_event15 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678199791/latino_f7dztc.avif")
+file_event15 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697436/soco/image_rb16ob.jpg")
 event15 = Event.new(title: "Soirée Rencontre", theme: "Fête", date: Date.new(2023, 5, 5), location: "Place de la timone 13010 Marseille", description: "Une soirée entre amis afin de faire de nouvelles rencontres. Accompagné de ma compagne et de mon chien Youyou, nous serons ravi de vous acceuillir à la maison. Tenue correct exigé merci !", capacity: 10, status: "privé", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user5)
 event15.photo.attach(io: file_event15, filename: "event15.jpg", content_type: "image/jpg")
 event15.save
