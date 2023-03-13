@@ -1,8 +1,9 @@
 class Event < ApplicationRecord
   belongs_to :user
-  has_many :participants
-  has_many :event_ratings
+  has_many :participants, dependent: :destroy
+  has_many :event_ratings, dependent: :destroy
   has_one_attached :photo
+  has_one :chatroom, dependent: :destroy
 
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
