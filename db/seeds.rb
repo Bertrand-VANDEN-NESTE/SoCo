@@ -61,22 +61,22 @@ participant14.save
 participant15 = User.create(first_name: "Hanene", last_name: "Bensadock", gender: "F", birth_date: Date.new(1989, 5, 11) , city: "Lille", phone_number: "0645085672", hobbies: "Sport", email: "Bensadock.hanene@gmail.com", username: "Ben657", password: "123456")
 participant15.save
 
-file_event1 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678199791/latino_f7dztc.avif")
+file_event1 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697305/soco/https_3A_2F_2Fcdn.e[…]mages_2F460014729_2F1091781423553_2F1_2Foriginal_dmw3dl.jpg")
 event1 = Event.new(title: "Carnaval Latino!", theme: "Fête", date: Date.new(2023, 3, 26), location: "Exit Café 12 Quai de Rive Neuve 13007 Marseille", description: "Avancez et soyez transporté dans le monde vibrant et coloré du Carnaval Latin lors de notre incroyable fête à Marseille ! Avec des décorations éblouissantes, des costumes étonnants et des rythmes énergiques, vous serez immergé dans une célébration de la culture riche et vivante de l'Amérique latine. Préparez-vous à une nuit d'amusement et de divertissement non-stop qui vous fera faire la fête toute la nuit. Avec beaucoup de musique latine, c'est un événement que vous n'oublierez pas. Que vous soyez un danseur de salsa chevronné ou un fêtard novice, notre fête du Carnaval latin à Marseille est l'endroit où il faut être. Alors venez nous rejoindre pour une soirée inoubliable de couleurs, de musique et de plaisir. Nous sommes ravis de vous y voir !", capacity: 100, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user1)
 event1.photo.attach(io: file_event1, filename: "event1.jpg", content_type: "image/jpg")
 event1.save
 
-file_event2 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678199788/afterwork_yejgqm.avif")
+file_event2 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697321/soco/https_3A_2F_2Fcdn.e[…]mages_2F415759669_2F1275937052053_2F1_2Foriginal_szcglt.jpg")
 event2 = Event.new(title: "Afterwork de la communauté des engagés", theme: "Eco-action", date: Date.new(2023, 3, 14), location: "QG des éco-acteurs 28 Allée Léon Gambetta 13001 Marseille", description: "Connecter les personnes et les projets à impact positif sur le territoire d'Aix Marseille, et organiser une chaine de solidarité et de valeurs, c'est la raison d'être de cette nouvelle communauté d'acteurs et entrepreneurs engagés. Venez à leur rencontre autour d'un apéritif convival, et pourquoi pas... rejoignez le mouvement.", capacity: 50, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user2)
 event2.photo.attach(io: file_event2, filename: "event2.jpg", content_type: "image/jpg")
 event2.save
 
-file_event3 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678199791/latino_f7dztc.avif")
+file_event3 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678698210/soco/le-quai-du-rire-89405035_yesqcq.jpg")
 event3 = Event.new(title: "Comédie Club Vieux Port", theme: "Stand up", date: Date.new(2023, 3, 27), location: "16 Quai de Rive Neuve 13007 Marseille", description: "Des blagues et des bières, quoi de mieux pour commencer la semaine de bonne humeur ? 6 artistes se succéderont sur scène pour vous faire leurs meilleures blagues pendant une heure.", capacity: 70, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user3)
 event3.photo.attach(io: file_event3, filename: "event3.jpg", content_type: "image/jpg")
 event3.save
 
-file_event4 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678199791/latino_f7dztc.avif")
+file_event4 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697338/soco/https_3A_2F_2Fcdn.e[…]mages_2F462608669_2F1108580016293_2F1_2Foriginal_rngfdl.jpg")
 event4 = Event.new(title: "Brunch e-commerce Marseille by Evolutive x Scalapay", theme: "E-commerce", date: Date.new(2023, 3, 27), location: "Sofitel Marseille Vieux-Port 36 Boulevard Charles Livon 13007 Marseille", description: "Le 09 mars prochain, Evolutive Group, Scalapay et Bridge vous invitent dans la magnifique ville de Marseille pour un atelier autour du e-commerce suivi d’un délicieux brunch pour échanger entre acteurs du e-commerce marseillais. Le tout dans le somptueux Sofitel Marseille Vieux Port.", capacity: 70, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user4)
 event4.photo.attach(io: file_event4, filename: "event4.jpg", content_type: "image/jpg")
 event4.save
