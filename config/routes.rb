@@ -4,11 +4,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # resources :events
-  
-  # resources de chatrooms :
-  resources :chatrooms, only: :show do
-    resources :messages, only: :create
-  end
+
   # Defines the root path route ("/")
   # root "articles#index"
   get "profile", to: "pages#profile"
@@ -16,6 +12,9 @@ Rails.application.routes.draw do
   resources :events do
     resources :participants, only: %i[show destroy]
     resources :event_ratings, only: %i[new create]
+    resources :chatrooms, only: :show do
+      resources :messages, only: :create
+    end
   end
   resources :participants, only: %i[destroy]
 end

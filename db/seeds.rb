@@ -14,11 +14,10 @@ EventRating.destroy_all
 Event.destroy_all
 User.destroy_all
 # Message.destroy_all
-# Chatroom.destroy_all
+Chatroom.destroy_all
 # UserRating.destroy_all
 
 puts "Creating events, users, and participants"
-
 
 file_user1 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678700558/soco/lucas-gouvea-aoEwuEH7YAs-unsplash_jiaume.jpg")
 user1 = User.create(first_name: "Jaime", last_name: "Sortir", gender: "H", birth_date: Date.new(1996, 3, 3), city: "Marseille", phone_number: "0756432354", hobbies: " Dessin", email: "jaime.sortir@gmail.com", username: "Jaime_Sortir", password: "123456")
@@ -44,7 +43,6 @@ file_user5 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v167870
 user5 = User.create(first_name: "Matthieu", last_name: "Delor", gender: "H", birth_date: Date.new(1998, 9, 8), city: "Lille", phone_number: "0743231265", hobbies: "Gaming", email: "Delor.m22@gmail.com", username: "Delor66", password: "123456")
 user5.photo.attach(io: file_user5, filename: "user5.jpg", content_type: "image/jpg")
 user5.save
-
 
 file_participant1 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678700542/soco/ayo-ogunseinde-6W4F62sN_yI-unsplash_cbg0fs.jpg")
 participant1 = User.create(first_name: "Attimin", last_name: "Cuk", gender: "F", birth_date: Date.new(1931, 5, 16), city: "Carcassonne", phone_number: "0752378496", hobbies: "Plantes", email: "grandma@gmail.com", username: "iamstillyoung", password: "123456")
@@ -121,12 +119,12 @@ participant15 = User.create(first_name: "Hanene", last_name: "Bensadock", gender
 participant15.photo.attach(io: file_participant15, filename: "participant15.jpg", content_type: "image/jpg")
 participant15.save
 
-file_event1 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697305/soco/https_3A_2F_2Fcdn.e[…]mages_2F460014729_2F1091781423553_2F1_2Foriginal_dmw3dl.jpg")
+file_event1 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678705996/5e43ddb455d043.58647812_wgmd8u.jpg")
 event1 = Event.new(title: "Carnaval Latino!", theme: "Fête", date: Date.new(2023, 3, 26), location: "Exit Café 12 Quai de Rive Neuve 13007 Marseille", description: "Avancez et soyez transporté dans le monde vibrant et coloré du Carnaval Latin lors de notre incroyable fête à Marseille ! Avec des décorations éblouissantes, des costumes étonnants et des rythmes énergiques, vous serez immergé dans une célébration de la culture riche et vivante de l'Amérique latine. Préparez-vous à une nuit d'amusement et de divertissement non-stop qui vous fera faire la fête toute la nuit. Avec beaucoup de musique latine, c'est un événement que vous n'oublierez pas. Que vous soyez un danseur de salsa chevronné ou un fêtard novice, notre fête du Carnaval latin à Marseille est l'endroit où il faut être. Alors venez nous rejoindre pour une soirée inoubliable de couleurs, de musique et de plaisir. Nous sommes ravis de vous y voir !", capacity: 100, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user1)
 event1.photo.attach(io: file_event1, filename: "event1.jpg", content_type: "image/jpg")
 event1.save
 
-file_event2 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697321/soco/https_3A_2F_2Fcdn.e[…]mages_2F415759669_2F1275937052053_2F1_2Foriginal_szcglt.jpg")
+file_event2 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697321/soco/https_3A_2F_2Fcdn.evbuc.com_2Fimages_2F415759669_2F1275937052053_2F1_2Foriginal_szcglt.jpg")
 event2 = Event.new(title: "Afterwork de la communauté des engagés", theme: "Eco-action", date: Date.new(2023, 3, 14), location: "QG des éco-acteurs 28 Allée Léon Gambetta 13001 Marseille", description: "Connecter les personnes et les projets à impact positif sur le territoire d'Aix Marseille, et organiser une chaine de solidarité et de valeurs, c'est la raison d'être de cette nouvelle communauté d'acteurs et entrepreneurs engagés. Venez à leur rencontre autour d'un apéritif convival, et pourquoi pas... rejoignez le mouvement.", capacity: 50, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user2)
 event2.photo.attach(io: file_event2, filename: "event2.jpg", content_type: "image/jpg")
 event2.save
@@ -136,7 +134,7 @@ event3 = Event.new(title: "Comédie Club Vieux Port", theme: "Stand up", date: D
 event3.photo.attach(io: file_event3, filename: "event3.jpg", content_type: "image/jpg")
 event3.save
 
-file_event4 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697338/soco/https_3A_2F_2Fcdn.e[…]mages_2F462608669_2F1108580016293_2F1_2Foriginal_rngfdl.jpg")
+file_event4 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697338/soco/https_3A_2F_2Fcdn.evbuc.com_2Fimages_2F462608669_2F1108580016293_2F1_2Foriginal_rngfdl.jpg")
 event4 = Event.new(title: "Brunch e-commerce Marseille by Evolutive x Scalapay", theme: "E-commerce", date: Date.new(2023, 3, 27), location: "Sofitel Marseille Vieux-Port 36 Boulevard Charles Livon 13007 Marseille", description: "Le 09 mars prochain, Evolutive Group, Scalapay et Bridge vous invitent dans la magnifique ville de Marseille pour un atelier autour du e-commerce suivi d’un délicieux brunch pour échanger entre acteurs du e-commerce marseillais. Le tout dans le somptueux Sofitel Marseille Vieux Port.", capacity: 70, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user4)
 event4.photo.attach(io: file_event4, filename: "event4.jpg", content_type: "image/jpg")
 event4.save
@@ -146,12 +144,12 @@ event5 = Event.new(title: "Demoday Le Wagon", theme: "Formation", date: Date.new
 event5.photo.attach(io: file_event5, filename: "event5.jpg", content_type: "image/png")
 event5.save
 
-file_event6 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697352/soco/https_3A_2F_2Fcdn.e[…]images_2F436631129_2F309258733797_2F1_2Foriginal_u4tnbh.jpg")
+file_event6 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697352/soco/https_3A_2F_2Fcdn.evbuc.com_2Fimages_2F436631129_2F309258733797_2F1_2Foriginal_u4tnbh.jpg")
 event6 = Event.new(title: "Boost ton Réseau dans les Bouches-du-Rhône par Bouge ta Boîte", theme: "Réseau", date: Date.new(2023, 3, 14), location: "Now Coworking 9 Quai de Rive Neuve 13007 Marseille", description: "Rejoins-nous pour notre événement Bouge ton Réseau ! Le principe est simple, te permettre de rencontrer un maximum de Bougeuses (membres du réseau) et d&#x27;entrepreneur.e.s du département dans une ambiance fun et dynamique ! #inspiration #reseautage #entrepreneuriat", capacity: 35, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user1)
 event6.photo.attach(io: file_event6, filename: "event6.jpg", content_type: "image/jpg")
 event6.save
 
-file_event7 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678204536/https_3A_2F_2Fcdn.evbuc.com_2Fimages_2F436631129_2F309258733797_2F1_2Foriginal_neb4em.jpg")
+file_event7 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697485/soco/284512482_174768221593363_7760413973300804735_n.jpg_bmqtyc.jpg")
 event7 = Event.new(title: "Société de Musique de Chambre de Marseille", theme: "Musique", date: Date.new(2023, 10, 18), location: "Auditorium Maurice Toga Faculté de Médecine La Timone 27 Boulevard Jean Moulin 13005 Marseille", description: "Rejoins-nous pour notre événement Bouge ton Réseau ! Le principe est simple, te permettre de rencontrer un maximum de Bougeuses (membres du réseau) et d&#x27;entrepreneur.e.s du département dans une ambiance fun et dynamique ! #inspiration #reseautage #entrepreneuriat", capacity: 120, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user3)
 event7.photo.attach(io: file_event7, filename: "event7.jpg", content_type: "image/jpg")
 event7.save
@@ -171,7 +169,7 @@ event10 = Event.new(title: "Gay pride!", theme: "Fête", date: Date.new(2023, 5,
 event10.photo.attach(io: file_event10, filename: "event10.jpg", content_type: "image/jpg")
 event10.save
 
-file_event11 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697371/soco/image-black-angus-r[…]-viande-marseille-la-valentine-26_20200219172622_m59gf4.jpg")
+file_event11 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697371/soco/image-black-angus-restaurant-viande-marseille-la-valentine-26_20200219172622_m59gf4.jpg")
 event11 = Event.new(title: "Soirée Billard!", theme: "Fête", date: Date.new(2023, 3, 18), location: "Queen victoria 1 place aux huiles 13001 Marseille", description: "Bonjour, bienvenue a notre soirée billard, venez profiter avec toute notre équipe. Un turnoi sera mis en place, le gagnant aura droit a une belle surprise.", capacity: 100, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user1)
 event11.photo.attach(io: file_event11, filename: "event11.jpg", content_type: "image/jpg")
 event11.save
