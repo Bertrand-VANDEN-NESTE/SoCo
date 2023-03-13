@@ -11,7 +11,6 @@ class CreateEvents < ActiveRecord::Migration[7.0]
       t.string :tricount
       t.string :password
       t.references :user, null: false, foreign_key: true
-      t.references :chatroom, null: false, foreign_key: true
 
       t.timestamps
     end
