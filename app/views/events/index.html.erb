@@ -34,7 +34,7 @@
                 </div>
 
               </div>
-              <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+              <%= cl_image_tag current_user.photo.key, height: 150, class: "card-trip-user avatar-bordered" %>
             </div>
           </div>
         <% end %>

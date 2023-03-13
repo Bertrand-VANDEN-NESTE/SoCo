@@ -1,2 +1,8 @@
-<h1>Voulez-vous supprimer votre inscription ?</h1>
-<%= link_to "Supprimer", event_participant_path(@participant), data: {turbo_method: :delete, turbo_confirm: "Voulez-vous supprimer votre inscription ?"} %>
+<div class="container">
+  <div class="margin text-center">
+    <h1>Voulez-vous supprimer votre inscription ?</h1>
+    <div class="btn btn-cards justify-content-center mb-3">
+      <%= link_to "Supprimer", event_participant_path(@participant), data: {turbo_method: :delete, turbo_confirm: "Voulez-vous supprimer votre inscription ?"} %>
+    </div>
+  </div>
+</div>
