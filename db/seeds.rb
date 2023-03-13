@@ -1,20 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
-
 require "open-uri"
 
 puts "Cleaning database..."
 
-user.destroy_all
-EventRating.destroy_all
-Event.destroy_all
 User.destroy_all
-# Message.destroy_all
+Event.destroy_all
+EventRating.destroy_all
 Chatroom.destroy_all
+# Message.destroy_all
 # UserRating.destroy_all
 
 puts "Creating events, users, and users"
@@ -70,8 +62,7 @@ user10.photo.attach(io: file_user10, filename: "user10.jpg", content_type: "imag
 user10.save
 
 file_user11 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678704530/soco/ashton-bingham-EQFtEzJGERg-unsplash_y7eppi.jpg")
-user11 =
-.create(first_name: "Maxime", last_name: "Xany", gender: "H", birth_date: Date.new(1965, 8, 5), city: "Lyon", phone_number: "0654238703", hobbies: "Musique", email: "Xany.maxime@gmail.com", username: "Xany56", password: "123456")
+user11 = User.create(first_name: "Maxime", last_name: "Xany", gender: "H", birth_date: Date.new(1965, 8, 5), city: "Lyon", phone_number: "0654238703", hobbies: "Musique", email: "Xany.maxime@gmail.com", username: "Xany56", password: "123456")
 user11.photo.attach(io: file_user11, filename: "user11.jpg", content_type: "image/jpg")
 user11.save
 
@@ -195,29 +186,27 @@ event15 = Event.new(title: "Soirée Rencontre", theme: "Fête", date: Date.new(2
 event15.photo.attach(io: file_event15, filename: "event15.jpg", content_type: "image/jpg")
 event15.save
 
-
-participation1 = Participant.create(user1.id event1.id)
-participation1 = Participant.create(user2.id event2.id)
-participation1 = Participant.create(user3.id event3.id)
-participation1 = Participant.create(user4.id event4.id)
-participation1 = Participant.create(user5.id event5.id)
-participation1 = Participant.create(user6.id event6.id)
-participation1 = Participant.create(user7.id event7.id)
-participation1 = Participant.create(user8.id event8.id)
-participation1 = Participant.create(user9.id event9.id)
-participation1 = Participant.create(user10.id event10.id)
-participation1 = Participant.create(user11.id event11.id)
-participation1 = Participant.create(user12.id event12.id)
-participation1 = Participant.create(user13.id event13.id)
-participation1 = Participant.create(user14.id event14.id)
-participation1 = Participant.create(user15.id event15.id)
-
+Participant.create(user_id: user1.id, event_id: event1.id)
+Participant.create(user_id: user2.id, event_id: event2.id)
+Participant.create(user_id: user3.id, event_id: event3.id)
+Participant.create(user_id: user4.id, event_id: event4.id)
+Participant.create(user_id: user5.id, event_id: event5.id)
+Participant.create(user_id: user6.id, event_id: event6.id)
+Participant.create(user_id: user7.id, event_id: event7.id)
+Participant.create(user_id: user8.id, event_id: event8.id)
+Participant.create(user_id: user9.id, event_id: event9.id)
+Participant.create(user_id: user10.id, event_id: event10.id)
+Participant.create(user_id: user11.id, event_id: event11.id)
+Participant.create(user_id: user12.id, event_id: event12.id)
+Participant.create(user_id: user13.id, event_id: event13.id)
+Participant.create(user_id: user14.id, event_id: event14.id)
+Participant.create(user_id: user15.id, event_id: event15.id)
 
 Chatroom.create!(event_id: event1.id)
 Chatroom.create!(event_id: event2.id)
 Chatroom.create!(event_id: event3.id)
 Chatroom.create!(event_id: event4.id)
-Chatroom.create!(event_id: event5.id)
+chat5 = Chatroom.create!(event_id: event5.id)
 Chatroom.create!(event_id: event6.id)
 Chatroom.create!(event_id: event7.id)
 Chatroom.create!(event_id: event8.id)
@@ -229,16 +218,15 @@ Chatroom.create!(event_id: event13.id)
 Chatroom.create!(event_id: event14.id)
 Chatroom.create!(event_id: event15.id)
 
+Message.create!(content: "coucou", chatroom_id: chat5.id, event_id: event5.id, user_id: user5.id)
 
-Message.create!(content: "Coucou", user_id:, chatroom_id:)
 event_rating1 = EventRating.create(comment: "event au top", rating: 4, user: user1, event: event1)
 event_rating1.save
 
+# usertest = user.create(user: user1, event: event1)
+# usertest.save
 
-usertest = user.create(user: user1, event: event1)
-usertest.save
-
-usertest2 = user.create(user: user1, event: event2)
-usertest2.save
+# usertest2 = user.create(user: user1, event: event2)
+# usertest2.save
 
 puts "Finished!"
