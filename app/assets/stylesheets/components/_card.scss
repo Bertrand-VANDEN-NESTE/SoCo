@@ -1,7 +1,8 @@
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(254,206,206,0.2);
+  border: 1px solid rgba(133, 54, 234, 0.2);
 }
 
 .color-font {
@@ -42,8 +43,8 @@
 .card-trip-infos .card-trip-user {
   position: absolute;
   left: 16px;
-  top: -20px;
-  width: 40px;
+  top: -40px;
+  width: 16vw;
 }
 
 .btn-cards{
@@ -54,7 +55,7 @@
 }
 
 .width{
-  height: 20vh;
+  height: 11vh;
   margin-bottom: 20px;
 }
 
@@ -66,4 +67,21 @@ span{
   font-size: 8px;
   width: 50%;
   text-align: -webkit-center;
+}
+
+.width-size-photo-profil {
+  width: 20vw;
+  height: 9vh;
+  top: 22px;
+  left: -7px;
+  margin: auto;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: 5px solid $primary-color;
+}
+
+.title-padding{
+  margin-left: 12vw;
+  padding: 3vw;
+  text-align: center;
 }

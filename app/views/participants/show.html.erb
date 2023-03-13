@@ -1,4 +1,2 @@
-<h1>Part</h1>
-<%= link_to "Supprimer", event_participant_path(@participant),
-            data: {turbo_method: :delete, turbo_confirm: "Voulez-vous supprimer votre inscription ?"}
-          %>
+<h1>Voulez-vous supprimer votre inscription ?</h1>
+<%= link_to "Supprimer", event_participant_path(@participant), data: {turbo_method: :delete, turbo_confirm: "Voulez-vous supprimer votre inscription ?"} %>
