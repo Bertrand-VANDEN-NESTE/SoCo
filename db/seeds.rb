@@ -9,15 +9,15 @@ require "open-uri"
 
 puts "Cleaning database..."
 
-Participant.destroy_all
+user.destroy_all
 EventRating.destroy_all
 Event.destroy_all
 User.destroy_all
 # Message.destroy_all
-# Chatroom.destroy_all
+Chatroom.destroy_all
 # UserRating.destroy_all
 
-puts "Creating events, users, and participants"
+puts "Creating events, users, and users"
 
 
 file_user1 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678700558/soco/lucas-gouvea-aoEwuEH7YAs-unsplash_jiaume.jpg")
@@ -45,81 +45,83 @@ user5 = User.create(first_name: "Matthieu", last_name: "Delor", gender: "H", bir
 user5.photo.attach(io: file_user5, filename: "user5.jpg", content_type: "image/jpg")
 user5.save
 
+file_user6 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678704584/soco/mathilde-langevin-yuahvgxIXjE-unsplash_pqrvyr.jpg")
+user6 = User.create(first_name: "Nathalie", last_name: "Tournier", gender: "F", birth_date: Date.new(1968, 12, 6), city: "Paris", phone_number: "077892415630", hobbies: "Danse", email: "nathalie.tournier@gmail.com", username: "chouchoune", password: "123456")
+user6.photo.attach(io: file_user6, filename: "user6.jpg", content_type: "image/jpg")
+user6.save
 
-file_participant1 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678700542/soco/ayo-ogunseinde-6W4F62sN_yI-unsplash_cbg0fs.jpg")
-participant1 = User.create(first_name: "Attimin", last_name: "Cuk", gender: "F", birth_date: Date.new(1931, 5, 16), city: "Carcassonne", phone_number: "0752378496", hobbies: "Plantes", email: "grandma@gmail.com", username: "iamstillyoung", password: "123456")
-participant1.photo.attach(io: file_participant1, filename: "participant1.jpg", content_type: "image/jpg")
-participant1.save
+file_user7 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678700483/soco/austin-wade-X6Uj51n5CE8-unsplash_y1lduj.jpg")
+user7 = User.create(first_name: "Paul", last_name: "Rodier", gender: "H", birth_date: Date.new(1968, 12, 6), city: "Marseille", phone_number: "0752378963", hobbies: "Lecture", email: "pcordier@gmail.com", username: "pc", password: "123456")
+user7.photo.attach(io: file_user7, filename: "user7.jpg", content_type: "image/jpg")
+user7.save
 
-file_participant2 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678700483/soco/jimmy-fermin-bqe0J0b26RQ-unsplash_bohvyc.jpg")
-participant2 = User.create(first_name: "Michèle", last_name: "Zappata", gender: "F", birth_date: Date.new(1940, 9, 21), city: "Arles", phone_number: "0724536785", hobbies: "Décoration", email: "jeddah@gmail.com", username: "iamthebest", password: "123456")
-participant2.photo.attach(io: file_participant2, filename: "participant2.jpg", content_type: "image/jpg")
-participant2.save
+file_user8 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678700483/soco/michael-dam-mEZ3PoFGs_k-unsplash_xfvw3u.jpg")
+user8 = User.create(first_name: "Beya", last_name: "Stambouli", gender: "F", birth_date: Date.new(1993, 2, 28), city: "Nimes", phone_number: "0654169823", hobbies: "Gaming", email: "Beya.stambouli@gmail.com", username: "stambouli49", password: "123456")
+user8.photo.attach(io: file_user8, filename: "user8.jpg", content_type: "image/jpg")
+user8.save
 
-file_participant3 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678700483/soco/joseph-gonzalez-iFgRcqHznqg-unsplash_fn6fwp.jpg")
-participant3 = User.create(first_name: "Taieb", last_name: "Salmi", gender: "H", birth_date: Date.new(1953, 2, 27), city: "Marseille", phone_number: "072100352035", hobbies: "Jardinage", email: "papou@gmail.com", username: "iamthebest", password: "123456")
-participant3.photo.attach(io: file_participant3, filename: "participant3.jpg", content_type: "image/jpg")
-participant3.save
+file_user9 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678704529/soco/tyler-nix-X2YO8KFxgEM-unsplash_ehu6rv.jpg")
+user9 = User.create(first_name: "Ines", last_name: "Aitdjebarra", gender: "F", birth_date: Date.new(1986, 3, 1), city: "Paris", phone_number: "0759071234", hobbies: "Art", email: "Ait-ines@gmail.com", username: "DAitdje45", password: "123456")
+user9.photo.attach(io: file_user9, filename: "user9.jpg", content_type: "image/jpg")
+user9.save
 
-file_participant4 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678705191/localize-TZwDRq2MqXs-unsplash_joyaa7.jpg")
-participant4 = User.create(first_name: "Jilali", last_name: "Le Victorieux", gender: "H", birth_date: Date.new(1943, 1, 1), city: "Aix-en-Provence", phone_number: "070102030405", hobbies: "Voyages", email: "lilajil@gmail.com", username: "lilajil", password: "123456")
-participant4.photo.attach(io: file_participant4, filename: "participant4.jpg", content_type: "image/jpg")
-participant4.save
+file_user10 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678704530/soco/austin-distel-7uoMmzPd2JA-unsplash_s1sh9z.jpg")
+user10 = User.create(first_name: "Damien", last_name: "Dedin", gender: "H", birth_date: Date.new(1991, 11, 22), city: "Marseille", phone_number: "0659074543", hobbies: "Danse", email: "Dedin.damien@gmail.com", username: "Dedin63", password: "123456")
+user10.photo.attach(io: file_user10, filename: "user10.jpg", content_type: "image/jpg")
+user10.save
 
-file_participant5 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678704609/soco/aiony-haust-3TLl_97HNJo-unsplash_uxm7hg.jpg")
-participant5 = User.create(first_name: "Pierrette", last_name: "Ségura", gender: "F", birth_date: Date.new(1943, 12, 25), city: "Tarascon", phone_number: "0725436859", hobbies: "Cuisine", email: "pierrette.segura@gmail.com", username: "pierrettedupanier", password: "123456")
-participant5.photo.attach(io: file_participant5, filename: "participant5.jpg", content_type: "image/jpg")
-participant5.save
+file_user11 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678704530/soco/ashton-bingham-EQFtEzJGERg-unsplash_y7eppi.jpg")
+user11 =
+.create(first_name: "Maxime", last_name: "Xany", gender: "H", birth_date: Date.new(1965, 8, 5), city: "Lyon", phone_number: "0654238703", hobbies: "Musique", email: "Xany.maxime@gmail.com", username: "Xany56", password: "123456")
+user11.photo.attach(io: file_user11, filename: "user11.jpg", content_type: "image/jpg")
+user11.save
 
-file_participant6 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678704584/soco/mathilde-langevin-yuahvgxIXjE-unsplash_pqrvyr.jpg")
-participant6 = User.create(first_name: "Nathalie", last_name: "Tournier", gender: "F", birth_date: Date.new(1968, 12, 6), city: "Paris", phone_number: "077892415630", hobbies: "Danse", email: "nathalie.tournier@gmail.com", username: "chouchoune", password: "123456")
-participant6.photo.attach(io: file_participant6, filename: "participant6.jpg", content_type: "image/jpg")
-participant6.save
+file_user12 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678704529/soco/alma-lxsduAdWXy4-unsplash_a01cmb.jpg")
+user12 = User.create(first_name: "Rachina", last_name: "Doukali", gender: "F", birth_date: Date.new(1976, 10, 12) , city: "Cannes", phone_number: "0623946125", hobbies: "Culture", email: "Doukali.rachida@gmail.com", username: "Doukali23", password: "123456")
+user12.photo.attach(io: file_user12, filename: "user12.jpg", content_type: "image/jpg")
+user12.save
 
-file_participant7 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678700483/soco/austin-wade-X6Uj51n5CE8-unsplash_y1lduj.jpg")
-participant7 = User.create(first_name: "Paul", last_name: "Rodier", gender: "H", birth_date: Date.new(1968, 12, 6), city: "Marseille", phone_number: "0752378963", hobbies: "Lecture", email: "pcordier@gmail.com", username: "pc", password: "123456")
-participant7.photo.attach(io: file_participant7, filename: "participant7.jpg", content_type: "image/jpg")
-participant7.save
+file_user13 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678704529/soco/julian-wan-WNoLnJo7tS8-unsplash_gj1ets.jpg")
+user13 = User.create(first_name: "Many", last_name: "Trad", gender: "H", birth_date: Date.new(1996, 7, 3), city: "Nice", phone_number: "0758076543", hobbies: "Cuisine", email: "Trad.many@gmail.com", username: "Trad45", password: "123456")
+user13.photo.attach(io: file_user13, filename: "user13.jpg", content_type: "image/jpg")
+user13.save
 
-file_participant8 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678700483/soco/michael-dam-mEZ3PoFGs_k-unsplash_xfvw3u.jpg")
-participant8 = User.create(first_name: "Beya", last_name: "Stambouli", gender: "F", birth_date: Date.new(1993, 2, 28), city: "Nimes", phone_number: "0654169823", hobbies: "Gaming", email: "Beya.stambouli@gmail.com", username: "stambouli49", password: "123456")
-participant8.photo.attach(io: file_participant8, filename: "participant8.jpg", content_type: "image/jpg")
-participant8.save
+file_user14 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678704529/soco/taylor-8Vt2haq8NSQ-unsplash_sxnoaq.jpg")
+user14 = User.create(first_name: "Vincent", last_name: "Protille", gender: "H", birth_date: Date.new(1994, 2, 8) , city: "Bordeaux", phone_number: "0776459823", hobbies: "Equitation", email: "Protille.Vincent@gmail.com", username: "Protille239", password: "123456")
+user14.photo.attach(io: file_user14, filename: "user14.jpg", content_type: "image/jpg")
+user14.save
 
-file_participant9 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678704529/soco/tyler-nix-X2YO8KFxgEM-unsplash_ehu6rv.jpg")
-participant9 = User.create(first_name: "Ines", last_name: "Aitdjebarra", gender: "F", birth_date: Date.new(1986, 3, 1), city: "Paris", phone_number: "0759071234", hobbies: "Art", email: "Ait-ines@gmail.com", username: "DAitdje45", password: "123456")
-participant9.photo.attach(io: file_participant9, filename: "participant9.jpg", content_type: "image/jpg")
-participant9.save
+file_user15 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678704529/soco/freestocks-9UVmlIb0wJU-unsplash_y721pn.jpg")
+user15 = User.create(first_name: "Hanene", last_name: "Bensadock", gender: "F", birth_date: Date.new(1989, 5, 11) , city: "Lille", phone_number: "0645085672", hobbies: "Sport", email: "Bensadock.hanene@gmail.com", username: "Ben657", password: "123456")
+user15.photo.attach(io: file_user15, filename: "user15.jpg", content_type: "image/jpg")
+user15.save
 
-file_participant10 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678704530/soco/austin-distel-7uoMmzPd2JA-unsplash_s1sh9z.jpg")
-participant10 = User.create(first_name: "Damien", last_name: "Dedin", gender: "H", birth_date: Date.new(1991, 11, 22), city: "Marseille", phone_number: "0659074543", hobbies: "Danse", email: "Dedin.damien@gmail.com", username: "Dedin63", password: "123456")
-participant10.photo.attach(io: file_participant10, filename: "participant10.jpg", content_type: "image/jpg")
-participant10.save
+file_user16 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678700542/soco/ayo-ogunseinde-6W4F62sN_yI-unsplash_cbg0fs.jpg")
+user16 = User.create(first_name: "Attimin", last_name: "Cuk", gender: "F", birth_date: Date.new(1931, 5, 16), city: "Carcassonne", phone_number: "0752378496", hobbies: "Plantes", email: "grandma@gmail.com", username: "iamstillyoung", password: "123456")
+user16.photo.attach(io: file_user16, filename: "user16.jpg", content_type: "image/jpg")
+user16.save
 
-file_participant11 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678704530/soco/ashton-bingham-EQFtEzJGERg-unsplash_y7eppi.jpg")
-participant11 = User.create(first_name: "Maxime", last_name: "Xany", gender: "H", birth_date: Date.new(1965, 8, 5), city: "Lyon", phone_number: "0654238703", hobbies: "Musique", email: "Xany.maxime@gmail.com", username: "Xany56", password: "123456")
-participant11.photo.attach(io: file_participant11, filename: "participant11.jpg", content_type: "image/jpg")
-participant11.save
+file_user17 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678700483/soco/jimmy-fermin-bqe0J0b26RQ-unsplash_bohvyc.jpg")
+user17 = User.create(first_name: "Michèle", last_name: "Zappata", gender: "F", birth_date: Date.new(1940, 9, 21), city: "Arles", phone_number: "0724536785", hobbies: "Décoration", email: "jeddah@gmail.com", username: "iamthebest", password: "123456")
+user17.photo.attach(io: file_user17, filename: "user17.jpg", content_type: "image/jpg")
+user17.save
 
-file_participant12 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678704529/soco/alma-lxsduAdWXy4-unsplash_a01cmb.jpg")
-participant12 = User.create(first_name: "Rachina", last_name: "Doukali", gender: "F", birth_date: Date.new(1976, 10, 12) , city: "Cannes", phone_number: "0623946125", hobbies: "Culture", email: "Doukali.rachida@gmail.com", username: "Doukali23", password: "123456")
-participant12.photo.attach(io: file_participant12, filename: "participant12.jpg", content_type: "image/jpg")
-participant12.save
+file_user18 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678700483/soco/joseph-gonzalez-iFgRcqHznqg-unsplash_fn6fwp.jpg")
+user18 = User.create(first_name: "Taieb", last_name: "Salmi", gender: "H", birth_date: Date.new(1953, 2, 27), city: "Marseille", phone_number: "072100352035", hobbies: "Jardinage", email: "papou@gmail.com", username: "iamthebest", password: "123456")
+user18.photo.attach(io: file_user18, filename: "user18.jpg", content_type: "image/jpg")
+user18.save
 
-file_participant13 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678704529/soco/julian-wan-WNoLnJo7tS8-unsplash_gj1ets.jpg")
-participant13 = User.create(first_name: "Many", last_name: "Trad", gender: "H", birth_date: Date.new(1996, 7, 3), city: "Nice", phone_number: "0758076543", hobbies: "Cuisine", email: "Trad.many@gmail.com", username: "Trad45", password: "123456")
-participant13.photo.attach(io: file_participant13, filename: "participant13.jpg", content_type: "image/jpg")
-participant13.save
+file_user19 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678705191/localize-TZwDRq2MqXs-unsplash_joyaa7.jpg")
+user19 = User.create(first_name: "Jilali", last_name: "Le Victorieux", gender: "H", birth_date: Date.new(1943, 1, 1), city: "Aix-en-Provence", phone_number: "070102030405", hobbies: "Voyages", email: "lilajil@gmail.com", username: "lilajil", password: "123456")
+user19.photo.attach(io: file_user19, filename: "user19.jpg", content_type: "image/jpg")
+user19.save
 
-file_participant14 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678704529/soco/taylor-8Vt2haq8NSQ-unsplash_sxnoaq.jpg")
-participant14 = User.create(first_name: "Vincent", last_name: "Protille", gender: "H", birth_date: Date.new(1994, 2, 8) , city: "Bordeaux", phone_number: "0776459823", hobbies: "Equitation", email: "Protille.Vincent@gmail.com", username: "Protille239", password: "123456")
-participant14.photo.attach(io: file_participant14, filename: "participant14.jpg", content_type: "image/jpg")
-participant14.save
+file_user20 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678704609/soco/aiony-haust-3TLl_97HNJo-unsplash_uxm7hg.jpg")
+user20 = User.create(first_name: "Pierrette", last_name: "Ségura", gender: "F", birth_date: Date.new(1943, 12, 25), city: "Tarascon", phone_number: "0725436859", hobbies: "Cuisine", email: "pierrette.segura@gmail.com", username: "pierrettedupanier", password: "123456")
+user20.photo.attach(io: file_user20, filename: "user20.jpg", content_type: "image/jpg")
+user5.save
 
-file_participant15 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678704529/soco/freestocks-9UVmlIb0wJU-unsplash_y721pn.jpg")
-participant15 = User.create(first_name: "Hanene", last_name: "Bensadock", gender: "F", birth_date: Date.new(1989, 5, 11) , city: "Lille", phone_number: "0645085672", hobbies: "Sport", email: "Bensadock.hanene@gmail.com", username: "Ben657", password: "123456")
-participant15.photo.attach(io: file_participant15, filename: "participant15.jpg", content_type: "image/jpg")
-participant15.save
+
 
 file_event1 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697305/soco/https_3A_2F_2Fcdn.e[…]mages_2F460014729_2F1091781423553_2F1_2Foriginal_dmw3dl.jpg")
 event1 = Event.new(title: "Carnaval Latino!", theme: "Fête", date: Date.new(2023, 3, 26), location: "Exit Café 12 Quai de Rive Neuve 13007 Marseille", description: "Avancez et soyez transporté dans le monde vibrant et coloré du Carnaval Latin lors de notre incroyable fête à Marseille ! Avec des décorations éblouissantes, des costumes étonnants et des rythmes énergiques, vous serez immergé dans une célébration de la culture riche et vivante de l'Amérique latine. Préparez-vous à une nuit d'amusement et de divertissement non-stop qui vous fera faire la fête toute la nuit. Avec beaucoup de musique latine, c'est un événement que vous n'oublierez pas. Que vous soyez un danseur de salsa chevronné ou un fêtard novice, notre fête du Carnaval latin à Marseille est l'endroit où il faut être. Alors venez nous rejoindre pour une soirée inoubliable de couleurs, de musique et de plaisir. Nous sommes ravis de vous y voir !", capacity: 100, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user1)
@@ -196,14 +198,50 @@ event15 = Event.new(title: "Soirée Rencontre", theme: "Fête", date: Date.new(2
 event15.photo.attach(io: file_event15, filename: "event15.jpg", content_type: "image/jpg")
 event15.save
 
+
+participation1 = Participant.create(user1.id event1.id)
+participation1 = Participant.create(user2.id event2.id)
+participation1 = Participant.create(user3.id event3.id)
+participation1 = Participant.create(user4.id event4.id)
+participation1 = Participant.create(user5.id event5.id)
+participation1 = Participant.create(user6.id event6.id)
+participation1 = Participant.create(user7.id event7.id)
+participation1 = Participant.create(user8.id event8.id)
+participation1 = Participant.create(user9.id event9.id)
+participation1 = Participant.create(user10.id event10.id)
+participation1 = Participant.create(user11.id event11.id)
+participation1 = Participant.create(user12.id event12.id)
+participation1 = Participant.create(user13.id event13.id)
+participation1 = Participant.create(user14.id event14.id)
+participation1 = Participant.create(user15.id event15.id)
+
+
+Chatroom.create!(event_id: event1.id)
+Chatroom.create!(event_id: event2.id)
+Chatroom.create!(event_id: event3.id)
+Chatroom.create!(event_id: event4.id)
+Chatroom.create!(event_id: event5.id)
+Chatroom.create!(event_id: event6.id)
+Chatroom.create!(event_id: event7.id)
+Chatroom.create!(event_id: event8.id)
+Chatroom.create!(event_id: event9.id)
+Chatroom.create!(event_id: event10.id)
+Chatroom.create!(event_id: event11.id)
+Chatroom.create!(event_id: event12.id)
+Chatroom.create!(event_id: event13.id)
+Chatroom.create!(event_id: event14.id)
+Chatroom.create!(event_id: event15.id)
+
+
+Message.create!(content: "Coucou", user_id:, chatroom_id:)
 event_rating1 = EventRating.create(comment: "event au top", rating: 4, user: user1, event: event1)
 event_rating1.save
 
 
-participanttest = Participant.create(user: user1, event: event1)
-participanttest.save
+usertest = user.create(user: user1, event: event1)
+usertest.save
 
-participanttest2 = Participant.create(user: user1, event: event2)
-participanttest2.save
+usertest2 = user.create(user: user1, event: event2)
+usertest2.save
 
 puts "Finished!"
