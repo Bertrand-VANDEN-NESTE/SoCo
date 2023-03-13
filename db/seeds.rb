@@ -19,17 +19,29 @@ User.destroy_all
 
 puts "Creating events, users, and participants"
 
-file_user1 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678700558/soco/toa-heftiba-O3ymvT7Wf9U-unsplash_muzreg.jpg")
+file_user1 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678700558/soco/lucas-gouvea-aoEwuEH7YAs-unsplash_jiaume.jpg")
 user1 = User.create(first_name: "Jaime", last_name: "Sortir", gender: "H", birth_date: Date.new(1996, 3, 3), city: "Marseille", phone_number: "0756432354", hobbies: " Dessin", email: "jaime.sortir@gmail.com", username: "Jaime_Sortir", password: "123456")
-user11.photo.attach(io: file_user1, filename: "user1.jpg", content_type: "image/jpg")
+user1.photo.attach(io: file_user1, filename: "user1.jpg", content_type: "image/jpg")
 user1.save
+
+file_user2 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678700558/soco/robert-godwin-cdksyTqEXzo-unsplash_plwlmu.jpg")
 user2 = User.create(first_name: "Philippe", last_name: "Caillo", gender: "H", birth_date: Date.new(1991, 7, 9), city: "Cannes", phone_number: "0765457325", hobbies: "Equitation", email: "Phil.C@gmail.com", username: "Philippe_C23", password: "123456")
+user2.photo.attach(io: file_user2, filename: "user2.jpg", content_type: "image/jpg")
 user2.save
+
+file_user3 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678700558/soco/toa-heftiba-O3ymvT7Wf9U-unsplash_muzreg.jpg")
 user3 = User.create(first_name: "Maeva", last_name: "Sodrey", gender: "F", birth_date: Date.new(1987, 8, 6), city: "Lyon", phone_number: "0643562134", hobbies: "Musique", email: "Sodrey.M@gmail.com", username: "MSodrey1", password: "123456")
+user3.photo.attach(io: file_user3, filename: "user3.jpg", content_type: "image/jpg")
 user3.save
+
+file_user4 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678700558/soco/kimson-doan-HD8KlyWRYYM-unsplash_xfxzbn.jpg")
 user4 = User.create(first_name: "Sarah", last_name: "Lorea", gender: "F", birth_date: Date.new(1993, 5, 13), city: "Nimes", phone_number: "0769764323", hobbies: "Danse", email: "Lorea.S@gmail.com", username: "Srh12", password: "123456")
+user4.photo.attach(io: file_user4, filename: "user4.jpg", content_type: "image/jpg")
 user4.save
+
+file_user5 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678700542/soco/cesar-rincon-XHVpWcr5grQ-unsplash_tyhg6l.jpg")
 user5 = User.create(first_name: "Matthieu", last_name: "Delor", gender: "H", birth_date: Date.new(1998, 9, 8), city: "Lille", phone_number: "0743231265", hobbies: "Gaming", email: "Delor.m22@gmail.com", username: "Delor66", password: "123456")
+user5.photo.attach(io: file_user5, filename: "user5.jpg", content_type: "image/jpg")
 user5.save
 
 participant1 = User.create(first_name: "Attimin", last_name: "Cuk", gender: "F", birth_date: Date.new(1931, 5, 16), city: "Carcassonne", phone_number: "0752378496", hobbies: "Plantes", email: "grandma@gmail.com", username: "iamstillyoung", password: "123456")
