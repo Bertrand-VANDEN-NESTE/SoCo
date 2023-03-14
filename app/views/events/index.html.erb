@@ -20,7 +20,6 @@
       <% end %>
     </div>
   </div>
-
   <div>
     <% @events.each do |event| %>
       <div class="margin">
@@ -34,11 +33,14 @@
                   <span class="color-font m-auto w-10"><%= event.date %></span>
                   <span class="color-font m-auto w-10"><%= event.location %></span>
                 </div>
-                <p class="text-center m-auto pt-2 width overflow-scroll"><%= event.description %></p>
+                <p class="text-center m-auto pt-2 width overflow-scroll">
+                  <%= event.description %>
+                </p>
                 <div class="text-center mt-2">
-                  <div class="btn btn-cards"><%= link_to "Partager", events_path, class: "text-light m-0 p-0" %></div>
+                  <div class="btn btn-cards">
+                    <%= link_to "Partager", events_path, class: "text-light m-0 p-0" %>
+                  </div>
                 </div>
-
               </div>
               <%= cl_image_tag event.user.photo.key, height: 150, class: "card-trip-user avatar-bordered" %>
             </div>
