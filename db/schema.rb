@@ -42,6 +42,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_14_084920) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "title"
+    t.bigint "event_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_categories_on_event_id"
+  end
+
   create_table "chatrooms", force: :cascade do |t|
     t.bigint "event_id", null: false
     t.datetime "created_at", null: false
@@ -132,6 +140,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_14_084920) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "categories", "events"
   add_foreign_key "chatrooms", "events"
   add_foreign_key "event_ratings", "events"
   add_foreign_key "event_ratings", "users"
