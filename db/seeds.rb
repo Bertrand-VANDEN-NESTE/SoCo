@@ -229,4 +229,4 @@ event_rating1.save
 # usertest2 = user.create(user: user1, event: event2)
 # usertest2.save
 
-puts "Finished!"
+puts "Finished!!"
