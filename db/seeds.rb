@@ -6,10 +6,10 @@ User.destroy_all
 Event.destroy_all
 EventRating.destroy_all
 Chatroom.destroy_all
-# Message.destroy_all
-# UserRating.destroy_all
+Message.destroy_all
+Category.destroy_all
 
-puts "Creating events and users"
+puts "Creating events, users, categories, chatrooms, etc."
 
 file_user1 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678700558/soco/lucas-gouvea-aoEwuEH7YAs-unsplash_jiaume.jpg")
 user1 = User.create(first_name: "Jaime", last_name: "Sortir", gender: "H", birth_date: Date.new(1996, 3, 3), city: "Marseille", phone_number: "0756432354", hobbies: " Dessin", email: "jaime.sortir@gmail.com", username: "Jaime_Sortir", password: "123456")
@@ -111,6 +111,7 @@ user20 = User.create(first_name: "Pierrette", last_name: "Ségura", gender: "F",
 user20.photo.attach(io: file_user20, filename: "user20.jpg", content_type: "image/jpg")
 user5.save
 
+puts "users successfully created!"
 
 file_event1 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678705996/5e43ddb455d043.58647812_wgmd8u.jpg")
 event1 = Event.new(title: "Carnaval Latino!", date: Date.new(2023, 3, 26), location: "Exit Café 12 Quai de Rive Neuve 13007 Marseille", description: "Avancez et soyez transporté dans le monde vibrant et coloré du Carnaval Latin lors de notre incroyable fête à Marseille ! Avec des décorations éblouissantes, des costumes étonnants et des rythmes énergiques, vous serez immergé dans une célébration de la culture riche et vivante de l'Amérique latine. Préparez-vous à une nuit d'amusement et de divertissement non-stop qui vous fera faire la fête toute la nuit. Avec beaucoup de musique latine, c'est un événement que vous n'oublierez pas. Que vous soyez un danseur de salsa chevronné ou un fêtard novice, notre fête du Carnaval latin à Marseille est l'endroit où il faut être. Alors venez nous rejoindre pour une soirée inoubliable de couleurs, de musique et de plaisir. Nous sommes ravis de vous y voir !", capacity: 100, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user1)
@@ -187,6 +188,7 @@ event15 = Event.new(title: "Soirée Rencontre", date: Date.new(2023, 5, 5), loca
 event15.photo.attach(io: file_event15, filename: "event15.jpg", content_type: "image/jpg")
 event15.save
 
+puts "events successfully created!"
 
 Participant.create(user_id: user1.id, event_id: event1.id)
 Participant.create(user_id: user2.id, event_id: event2.id)
@@ -204,6 +206,7 @@ Participant.create(user_id: user13.id, event_id: event13.id)
 Participant.create(user_id: user14.id, event_id: event14.id)
 Participant.create(user_id: user15.id, event_id: event15.id)
 
+puts "participants successfully created!"
 
 Chatroom.create!(event_id: event1.id)
 Chatroom.create!(event_id: event2.id)
@@ -221,6 +224,7 @@ Chatroom.create!(event_id: event13.id)
 Chatroom.create!(event_id: event14.id)
 Chatroom.create!(event_id: event15.id)
 
+puts "chatrooms successfully created!"
 
 Message.create!(content: "coucou", chatroom_id: chat5.id, event_id: event5.id, user_id: user5.id)
 
@@ -235,37 +239,37 @@ event_rating1.save
 # usertest2.save
 
 
-Category.create(title: musique)
-Category.create(title: danse)
-Category.create(title: chant)
-Category.create(title: festivals)
-Category.create(title: cirque)
-Category.create(title: loisirs)
-Category.create(title: sorties)
-Category.create(title: affaires)
-Category.create(title: conférences)
-Category.create(title: ateliers)
-Category.create(title: fête)
-Category.create(title: gastronomie)
-Category.create(title: santé)
-Category.create(title: sports)
-Category.create(title: balades)
-Category.create(title: patrimoine)
-Category.create(title: voyages)
-Category.create(title: nature)
-Category.create(title: beauté)
-Category.create(title: salons)
-Category.create(title: bénévolat)
-Category.create(title: jardinage)
-Category.create(title: décoration)
-Category.create(title: formations)
-Category.create(title: livres)
-Category.create(title: marchés)
-Category.create(title: auto)
-Category.create(title: moto)
-Category.create(title: bâteau)
-Category.create(title: technologie)
-Category.create(title: terroir)
+cat1 = Category.create(title: "musique", event_id: event1.id)
+cat2 = Category.create(title: "danse", event_id: event3.id)
+cat3 = Category.create(title: "chant", event_id: event2.id)
+cat4 = Category.create(title: "festivals", event_id: event6.id)
+cat5 = Category.create(title: "cirque", event_id: event3.id)
+cat6 = Category.create(title: "loisirs", event_id: event15.id)
+cat7 = Category.create(title: "sorties", event_id: event8.id)
+cat8 = Category.create(title: "affaires", event_id: event12.id)
+cat9 = Category.create(title: "conférences", event_id: event3.id)
+cat10 = Category.create(title: "santé", event_id: event8.id)
+cat11 = Category.create(title: "ateliers", event_id: event8.id)
+cat12 = Category.create(title: "fête", event_id: event6.id)
+cat13 = Category.create(title: "gastronomie", event_id: event6.id)
+cat14 = Category.create(title: "sports", event_id: event7.id)
+cat15 = Category.create(title: "balades", event_id: event12.id)
+cat16 = Category.create(title: "patrimoine", event_id: event11.id)
+cat17 = Category.create(title: "voyages", event_id: event2.id)
+cat18 = Category.create(title: "nature", event_id: event9.id)
+cat19 = Category.create(title: "beauté", event_id: event9.id)
+cat20 = Category.create(title: "salons", event_id: event11.id)
+cat21 = Category.create(title: "bénévolat", event_id: event5.id)
+cat22 = Category.create(title: "jardinage", event_id: event4.id)
+cat23 = Category.create(title: "décoration", event_id: event7.id)
+cat24 = Category.create(title: "formations", event_id: event10.id)
+cat25 = Category.create(title: "livres", event_id: event10.id)
+cat26 = Category.create(title: "marchés", event_id: event10.id)
+cat27 = Category.create(title: "auto", event_id: event2.id)
+cat28 = Category.create(title: "moto", event_id: event13.id)
+cat29 = Category.create(title: "bâteau", event_id: event14.id)
+cat30 = Category.create(title: "technologie", event_id: event15.id)
 
+puts "categories successfully created!"
 
 puts "Finished!!"
