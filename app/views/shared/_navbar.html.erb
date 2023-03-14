@@ -1,16 +1,15 @@
-<div class="navbar navbar-expand-sm bg-white">
-  <div class="container-navbar">
+
     <% if user_signed_in? %>
-      <%= link_to profile_path do %>
+      <%= link_to profile_path, id: "login" do %>
         <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "width-size-photo rounded-circle"%>
       <% end %>
     <% else %>
       <%= link_to new_user_session_path do %>
-        <button type="button" class="rounded-circle log text-light">Log in</button>
+        <i class="fa-solid fa-arrow-right-to-bracket logochat-color"></i>
       <% end %>
     <% end %>
     <%= link_to events_path do %>
       <%= image_tag "SoCo__2_-removebg-preview.png", class: "width-size-logo mt-3" %>
     <% end %>
-  </div>
-</div>
+    <div id="blank">
+    </div>
