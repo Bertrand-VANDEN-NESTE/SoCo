@@ -43,8 +43,10 @@
 .card-trip-infos .card-trip-user {
   position: absolute;
   left: 16px;
-  top: -40px;
+  top: -30px;
   width: 16vw;
+  height: 16vw;
+  object-fit: cover;
 }
 
 .btn-cards{
