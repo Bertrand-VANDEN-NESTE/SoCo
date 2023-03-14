@@ -13,6 +13,12 @@ class PagesController < ApplicationController
     redirect_to profile_path, status: :see_other
   end
 
+  def image(image)
+    @event = Event.find(params[:event_id])
+    @event.image.purge
+    redirect_to profile_path, status: :see_other
+  end
+
   private
 
   def set_participant

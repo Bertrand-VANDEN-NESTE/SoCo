@@ -13,9 +13,12 @@ class ParticipantsController < ApplicationController
 
   def create
     @participant = Participant.new
-    @participant.user_id = params["participant"]["user_id"].to_i
-    @participant.event_id = params["participant"]["event_id"].to_i
-    if @participant.save
+    @event = Event.find(params[:participant][:event_id].to_i)
+    @participant.user = current_user
+    @participant.event = @event
+    if @event.participants.count < @event.capacity
+      @participant.save!
+      @event.update(capacity: @event.capacity - 1)
       redirect_to profile_path
     else
       render :new, status: :unprocessable_entity
@@ -29,6 +32,8 @@ class ParticipantsController < ApplicationController
 
   def destroy
     @participant.destroy
+    @event = @participant.event
+    @event.update(capacity: @event.capacity + 1)
     redirect_to profile_path, status: :see_other
   end
 
