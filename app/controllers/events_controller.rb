@@ -38,7 +38,9 @@ class EventsController < ApplicationController
     if @event.save
       redirect_to events_path
       Chatroom.create!(event_id: @event)
+
     else
+      @event.participant
       render :new, status: :unprocessable_entity
     end
   end
@@ -58,7 +60,7 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:title, :theme, :date, :location, :description, :capacity, :status, :tricount, :password, :photo)
+    params.require(:event).permit(:title, :theme, :date, :location, :description, :capacity, :status, :tricount, :password, :photo, images:[])
   end
 
   def set_event

@@ -14,6 +14,7 @@
       <h5 class="card-title title-padding color-font mb-1"><strong><%= participant.event.title %></strong></h5>
       <div class="d-flex p-2">
         <div class="text-center flex-fill w-50 m-auto p-1">
+
           <p class="color-font mb-1"><strong>Date</strong> <br> <%= participant.event.date %> </p>
         </div>
         <div class="text-center flex-fill w-50 m-auto p-1">
@@ -42,7 +43,7 @@
             <div class="text-center">
               <h5 class="card-title color-font text-center font-weight-bold mb-3"><strong><%=event.title%></strong></h5>
               <p class="color-font mb-1"><strong>Date :</strong> <%= event.date %></p>
-              <p class="color-font mb-1"><strong>Capacité :</strong> <%= event.capacity %> tickets</p>
+              <p class="color-font mb-1"><strong>Capacité :</strong> <%= event.capacity %> tickets <i class="fa-solid fa-ticket logochat-color"></i></p>
               <p class="color-font mb-1"><strong>Statut :</strong> <%= event.status %></p>
               <p class="color-font mb-1"><strong>Lieu :</strong> <%= event.location %></p>
               <p class="color-font mb-1"><strong>Description :</strong> <%= event.description %></p>

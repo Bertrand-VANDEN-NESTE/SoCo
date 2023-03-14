@@ -3,6 +3,7 @@ class Event < ApplicationRecord
   has_many :participants, dependent: :destroy
   has_many :event_ratings, dependent: :destroy
   has_one_attached :photo
+  has_many_attached :images, dependent: :destroy
   has_many :categories
   has_one :chatroom, dependent: :destroy
 
