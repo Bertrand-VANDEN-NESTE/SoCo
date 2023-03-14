@@ -1,4 +1,4 @@
 <%= simple_form_for(@event) do |f| %>
-  <%= f.input :images, as: :file %>
+  <%= f.input :images, as: :file,  input_html: { multiple: true } %>
   <%= f.submit %>
 <% end %>
