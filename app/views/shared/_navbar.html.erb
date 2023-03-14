@@ -1,15 +1,25 @@
-
-    <% if user_signed_in? %>
-      <%= link_to profile_path, id: "login" do %>
-        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "width-size-photo rounded-circle"%>
-      <% end %>
-    <% else %>
-      <%= link_to new_user_session_path do %>
-        <i class="fa-solid fa-arrow-right-to-bracket logochat-color"></i>
-      <% end %>
-    <% end %>
-    <%= link_to events_path do %>
-      <%= image_tag "SoCo__2_-removebg-preview.png", class: "width-size-logo mt-3" %>
-    <% end %>
-    <div id="blank">
+<div class="navbar-taille">
+    <div class="size-disp">
+        <% if user_signed_in? %>
+          <% if current_user.photo.attached? %>
+            <%= link_to profile_path do %>
+              <%= cl_image_tag current_user.photo.key, class: "param-img" %>
+            <% end %>
+          <% else %>
+          <%= link_to profile_path do %>
+              <%= image_tag "SoCo__1_-removebg-preview.png", class: "param-img" %>
+            <% end %>
+          <% end %>
+        <% else %>
+          <%= link_to new_user_session_path do %>
+            <i class="fa-solid fa-circle-user param-icon"></i>
+          <% end %>
+        <% end %>
     </div>
+    <div class="size-disp position-logo">
+      <%= link_to events_path do %>
+        <%= image_tag "SoCo__2_-removebg-preview.png", class: "param-logo" %>
+      <% end %>
+    </div>
+    <div class="size-disp"></div>
+</div>
