@@ -4,7 +4,7 @@ class Event < ApplicationRecord
   has_many :event_ratings, dependent: :destroy
   has_one_attached :photo
   has_many_attached :images, dependent: :destroy
-  has_many :categories
+  has_many :categories, dependent: :destroy
   has_one :chatroom, dependent: :destroy
 
   geocoded_by :location
