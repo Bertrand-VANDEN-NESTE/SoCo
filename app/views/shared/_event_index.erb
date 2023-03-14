@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="text-center">
+    <div class="btn btn-cards mt-3"><%= link_to "Evènements", events_path, class: "text-light"%></div>
+    <div class="btn btn-cards mt-3"><%= link_to "Map", events_path, class: "text-light" %></div>
+  </div>
+  <%= render "shared/searchbar" %>
+  <div>
+    <% @events.each do |event| %>
+      <div class="margin">
+        <%= link_to event_path(event) do %>
+          <div class="card-trip radius h-25 mt-3 mb-4">
+            <%= cl_image_tag event.photo.key, height: 150, class: "w-100 object-fit-cover" %>
+            <div class="card-trip-infos">
+              <div class="overflow-text">
+                <h2 class="text-center mb-3"><%= event.title %></h2>
+                <div class="d-flex">
+                  <span class="color-font m-auto w-10"><%= event.date %></span>
+                  <span class="color-font m-auto w-10"><%= event.location %></span>
+                </div>
+                <p class="text-center m-auto pt-2 width overflow-scroll">
+                  <%= event.description %>
+                </p>
+                <div class="text-center mt-2">
+                  <div class="btn btn-cards">
+                    <%= link_to "Partager", events_path, class: "text-light m-0 p-0" %>
+                  </div>
+                </div>
+              </div>
+              <%= cl_image_tag event.user.photo.key, height: 150, class: "card-trip-user avatar-bordered" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
