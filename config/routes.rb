@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   post "/participants", to: "participants#create", as: :participant_invitation
   resources :participants
   resources :events do
+    delete "image", to: "pages#image"
     resources :participants, only: %i[show destroy]
     resources :event_ratings, only: %i[new create]
     resources :chatrooms, only: :show do
