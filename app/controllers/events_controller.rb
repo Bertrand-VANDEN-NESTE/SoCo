@@ -4,7 +4,7 @@ class EventsController < ApplicationController
 
   def index
     if params[:query]
-      @events = Event.search_by_location_and_theme(params[:query])
+      @events = Event.global_search(params[:query])
     else
       @events = Event.all
     end
