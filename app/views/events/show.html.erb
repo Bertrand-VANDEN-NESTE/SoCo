@@ -48,10 +48,10 @@
       <div>
         <% @event.images.each do |image| %>
           <div class="gallery" id="gallery">
-            <p>libfmougliygliuyvmiuvliy</p>
-            <%= cl_image_tag image.key, height: 150, class: "" %>
+            <%= cl_image_tag image.key, height: 150, class: "content" %>
           </div>
-        <% end %>
+          <%= link_to "Supprimer", event_image_path(image), data: {turbo_method: :delete}, class: "text-light m-0 p-0"%>
+          <% end %>
       </div>
       <div style="width: 100%; height: 600px;"
         data-controller="map"
