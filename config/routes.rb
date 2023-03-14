@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   get "profile", to: "pages#profile"
+  post "/participants", to: "participants#create", as: :participant_invitation
   resources :participants
   resources :events do
     resources :participants, only: %i[show destroy]
