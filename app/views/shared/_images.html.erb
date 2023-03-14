@@ -1,0 +1,7 @@
+<div>
+  <% @event.images.each do |image| %>
+    <div class="gallery" id="gallery">
+      <%= cl_image_tag images.key, height: 150, class: "content" %>
+    </div>
+  <% end %>
+</div>
