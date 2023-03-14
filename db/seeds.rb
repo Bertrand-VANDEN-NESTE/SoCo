@@ -232,11 +232,6 @@ Message.create!(content: "coucou", chatroom_id: chat5.id, event_id: event5.id, u
 event_rating1 = EventRating.create(comment: "event au top", rating: 4, user: user1, event: event1)
 event_rating1.save
 
-# usertest = user.create(user: user1, event: event1)
-# usertest.save
-
-# usertest2 = user.create(user: user1, event: event2)
-# usertest2.save
 
 
 cat1 = Category.create(title: "musique", event_id: event1.id)
