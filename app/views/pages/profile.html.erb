@@ -5,7 +5,7 @@
     </div>
   </div>
   <div class="margin mb-3">
-    <h2 class="color-font text-center">Evénements auxquels vous avez participés</h2>
+    <h2 class="color-font text-center">Evénements auxquels vous avez participé</h2>
     <% @participants.each do |participant| %>
     <div class="position-relative">
       <%= cl_image_tag participant.event.photo.key, class: "position-absolute width-size-photo-profil rounded-circle"%>
@@ -32,7 +32,7 @@
     </div>
   </div>
   <div class="margin">
-    <h2 class="color-font text-center mt-4 mb-3">Evénements que vous avez proposés</h2>
+    <h2 class="color-font text-center mt-4 mb-3">Evénements que vous avez organisé</h2>
     <% @events.each do |event| %>
       <div class="card-trip radius h-25 mt-5 mb-4">
         <% if event.photo.attached? %>

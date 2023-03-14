@@ -1,24 +1,15 @@
-<div class="sticky-bottom pb-3 d-flex justify-content-evenly">
-  <div class="container-navbar-bottom">
-    <div>
-      <%= link_to events_path do %>
-        <i class="fa-solid fa-house text-light"></i>
-      <% end %>
-    </div>
-
-    <div>
-      <%= link_to new_event_path do %>
-        <i class="fa-solid fa-plus"></i>
-      <% end %>
-    </div>
-    <div>
-      <% if user_signed_in? %>
-        <%= link_to profile_path do %>
-          <i class="fa-regular fa-user"></i>
-        <% end %>
-      <% else %>
-        <%= link_to new_user_session_path %>
-      <% end %>
-    </div>
-  </div>
+<div class="navigation-bottom d-flex justify-content-evenly align-items-center mx-2">
+  <%= link_to events_path do %>
+    <i class="fa-solid fa-house text-light"></i>
+  <% end %>
+  <%= link_to new_event_path do %>
+    <i class="fa-solid fa-plus"></i>
+  <% end %>
+  <% if user_signed_in? %>
+    <%= link_to profile_path do %>
+      <i class="fa-regular fa-user"></i>
+    <% end %>
+  <% else %>
+    <%= link_to new_user_session_path %>
+  <% end %>
 </div>
