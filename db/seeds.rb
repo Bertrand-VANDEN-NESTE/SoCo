@@ -234,9 +234,9 @@ event1_rating2 = EventRating.create(comment: "evenement agréable, la musique é
 event1_rating2.save
 event1_rating3 = EventRating.create(comment: "J'y suis aller avec mon époux, nous avons passer un bon moment et rencontré de belles personnes", rating: 4, user: user3, event: event1)
 event1_rating3.save
-event1_rating4 = EventRating.create(comment: "Mes amis m'ont partagé cette soirée, j'étais un peu rétissante mais finalement assez surprise", rating: 4, user: user4, event: event1)
+event1_rating4 = EventRating.create(comment: "Mes amis m'ont partagé cette soirée, j'étais un peu rétissante mais finalement assez surprise", rating: 4, user: user3, event: event1)
 event1_rating4.save
-event1_rating5 = EventRating.create(comment: "Super event, j'ai pu faire de belles rencontres. ", rating: 4, user: user5, event: event1)
+event1_rating5 = EventRating.create(comment: "Super event, j'ai pu faire de belles rencontres. ", rating: 4, user: user4, event: event1)
 event1_rating5.save
 
 event2_rating1 = EventRating.create(comment: "La soirée était vraiment stimulante et j'ai aimé l'ambiance générale de l'événement. J'ai rencontré des personnes passionnées et j'ai passé un bon moment à discuter avec eux.", rating: 5, user: user1, event: event2)
@@ -282,37 +282,37 @@ event8_rating2.save
 
 event9_rating1 = EventRating.create(comment: "Ce fut une super soirée, la danseuse était très douée", rating: 5, user: user18, event: event9)
 event9_rating1.save
-event9_rating2 = EventRating.create(comment: "Nous avons découvert cette event avec ma femme, ravi d'avoir pu y assiter. L'univers oriental a été un pure délice", rating: 5, user: user19, event: event9)
+event9_rating2 = EventRating.create(comment: "Nous avons découvert cette event avec ma femme, ravi d'avoir pu y assiter. L'univers oriental a été un pure délice", rating: 5, user: user15, event: event9)
 event9_rating2.save
 
 event10_rating1 = EventRating.create(comment: "Le char était super, nous avons bien profité de la journée", rating: 5, user: user20, event: event10)
 event10_rating1.save
-event10_rating2 = EventRating.create(comment: "La journée s'est extrement bien passé, et les décorations du char étaient sublimes", rating: 5, user: user21, event: event10)
+event10_rating2 = EventRating.create(comment: "La journée s'est extrement bien passé, et les décorations du char étaient sublimes", rating: 5, user: user19, event: event10)
 event10_rating2.save
 
-event11_rating1 = EventRating.create(comment: "J'y suis aller spontanément et agréablement surprise", rating: 5, user: user22, event: event11)
+event11_rating1 = EventRating.create(comment: "J'y suis aller spontanément et agréablement surprise", rating: 5, user: user12, event: event11)
 event11_rating1.save
-event11_rating2 = EventRating.create(comment: "J'y suis aller spontanément et agréablement surprise", rating: 5, user: user23, event: event11)
+event11_rating2 = EventRating.create(comment: "J'y suis aller spontanément et agréablement surprise", rating: 5, user: user13, event: event11)
 event11_rating2.save
 
-event12_rating1 = EventRating.create(comment: "Le cadre était magnifique et relaxant, et la nourriture était incroyable. J'ai vraiment apprécié la variété de plats et de boissons proposés, ainsi que l'atmosphère conviviale.", rating: 5, user: user24, event: event12)
+event12_rating1 = EventRating.create(comment: "Le cadre était magnifique et relaxant, et la nourriture était incroyable. J'ai vraiment apprécié la variété de plats et de boissons proposés, ainsi que l'atmosphère conviviale.", rating: 5, user: user14, event: event12)
 event12_rating1.save
-event12_rating2 = EventRating.create(comment: "Ce pique-nique était exactement ce dont j'avais besoin : un endroit paisible pour se détendre, des amis sympathiques, et une nourriture délicieuse. Je suis heureux d'avoir été invité.", rating: 5, user: user25, event: event12)
+event12_rating2 = EventRating.create(comment: "Ce pique-nique était exactement ce dont j'avais besoin : un endroit paisible pour se détendre, des amis sympathiques, et une nourriture délicieuse. Je suis heureux d'avoir été invité.", rating: 5, user: user15, event: event12)
 event12_rating2.save
 
-event13_rating1 = EventRating.create(comment: "Le séminaire sur le pop art était incroyablement instructif et inspirant. J'ai appris tellement de choses sur les artistes et les mouvements qui ont façonné cette période fascinante de l'histoire de l'art.", rating: 5, user: user26, event: event13)
+event13_rating1 = EventRating.create(comment: "Le séminaire sur le pop art était incroyablement instructif et inspirant. J'ai appris tellement de choses sur les artistes et les mouvements qui ont façonné cette période fascinante de l'histoire de l'art.", rating: 5, user: user16, event: event13)
 event13_rating1.save
-event13_rating2 = EventRating.create(comment: "C'était génial de voir autant de personnes réunies pour discuter de l'art et de la culture populaire. Le séminaire a suscité des débats intéressants et m'a permis de voir les choses sous un nouvel angle.", rating: 5, user: user27, event: event13)
+event13_rating2 = EventRating.create(comment: "C'était génial de voir autant de personnes réunies pour discuter de l'art et de la culture populaire. Le séminaire a suscité des débats intéressants et m'a permis de voir les choses sous un nouvel angle.", rating: 5, user: user17, event: event13)
 event13_rating2.save
 
-event14_rating1 = EventRating.create(comment: "C'était une soirée incroyable ! Tout le monde était tellement détendu et heureux de se baigner dans la piscine. Nous avons dansé, ri et passé un moment inoubliable ensemble.", rating: 5, user: user28, event: event14)
+event14_rating1 = EventRating.create(comment: "C'était une soirée incroyable ! Tout le monde était tellement détendu et heureux de se baigner dans la piscine. Nous avons dansé, ri et passé un moment inoubliable ensemble.", rating: 5, user: user18, event: event14)
 event14_rating1.save
-event14_rating2 = EventRating.create(comment: "C'était tellement amusant de rencontrer de nouvelles personnes à la pool party. Tout le monde était si sympathique et accueillant, et nous avons fini par passer toute la soirée ensemble", rating: 5, user: user29, event: event14)
+event14_rating2 = EventRating.create(comment: "C'était tellement amusant de rencontrer de nouvelles personnes à la pool party. Tout le monde était si sympathique et accueillant, et nous avons fini par passer toute la soirée ensemble", rating: 5, user: user19, event: event14)
 event14_rating2.save
 
-event15_rating1 = EventRating.create(comment:"La soirée rencontres était très bien organisée et l'atmosphère était accueillante et amicale. J'ai eu la chance de rencontrer des personnes fascinantes et j'ai passé un bon moment.", rating: 5, user: user30, event: event15)
+event15_rating1 = EventRating.create(comment:"La soirée rencontres était très bien organisée et l'atmosphère était accueillante et amicale. J'ai eu la chance de rencontrer des personnes fascinantes et j'ai passé un bon moment.", rating: 5, user: user10, event: event15)
 event15_rating1.save
-event15_rating2 = EventRating.create(comment: "La soirée rencontres était fantastique. J'ai eu l'occasion de rencontrer des personnes intéressantes et j'ai vraiment apprécié l'atmosphère détendue et amicale de la soirée.", rating: 5, user: user31, event: event15)
+event15_rating2 = EventRating.create(comment: "La soirée rencontres était fantastique. J'ai eu l'occasion de rencontrer des personnes intéressantes et j'ai vraiment apprécié l'atmosphère détendue et amicale de la soirée.", rating: 5, user: user11, event: event15)
 event15_rating2.save
 
 cat1 = Category.create(title: "musique", event_id: event1.id)
