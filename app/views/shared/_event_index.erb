@@ -3,7 +3,9 @@
     <div class="btn btn-cards mt-3"><%= link_to "Evènements", events_path, class: "text-light"%></div>
     <div class="btn btn-cards mt-3"><%= link_to "Map", events_path, class: "text-light" %></div>
   </div>
-  <%= render "shared/searchbar" %>
+  <div>
+    <%= render "shared/searchbar" %>
+  </div>
   <div>
     <% @events.each do |event| %>
       <div class="margin">
