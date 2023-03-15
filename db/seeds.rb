@@ -109,7 +109,7 @@ user19.save
 file_user20 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678704609/soco/aiony-haust-3TLl_97HNJo-unsplash_uxm7hg.jpg")
 user20 = User.create(first_name: "Pierrette", last_name: "Ségura", gender: "F", birth_date: Date.new(1943, 12, 25), city: "Tarascon", phone_number: "0725436859", hobbies: "Cuisine", email: "pierrette.segura@gmail.com", username: "pierrettedupanier", password: "123456")
 user20.photo.attach(io: file_user20, filename: "user20.jpg", content_type: "image/jpg")
-user5.save
+user20.save
 
 puts "users successfully created!"
 
