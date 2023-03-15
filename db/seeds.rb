@@ -133,7 +133,7 @@ event4 = Event.new(title: "Brunch e-commerce Marseille by Evolutive x Scalapay",
 event4.photo.attach(io: file_event4, filename: "event4.jpg", content_type: "image/jpg")
 event4.save
 
-file_event5 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678698062/soco/le-Wagon_xl7jlc.png")
+file_event5 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678890161/soco/https_3A_2F_2Fcdn.evbuc.com_2Fimages_2F468361379_2F1336518031073_2F1_2Foriginal_djcqmh.jpg")
 event5 = Event.new(title: "Demoday Le Wagon", date: Date.new(2023, 3, 17), location: "Le Wagon 21 rue Haxo 13001 Marseille", description: "Pendant ces 9 semaines de bootcamp, nos apprenants ont travaillé dur pour apprendre à coder et gagner une autonomie technique. Ils peuvent aujourd’hui développer des applications web et mobiles de A à Z en Fullstack Rails ! Que vous soyez développeurs, recruteurs, alumnis, que vous cherchiez à apprendre à coder ou bien que vous soyez tout simplement curieux, vous êtes le/la bienvenu.e ! Les places sont limitées, ne tardez pas !", capacity: 40, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user5)
 event5.photo.attach(io: file_event5, filename: "event5.jpg", content_type: "image/png")
 event5.save
