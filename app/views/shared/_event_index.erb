@@ -1,12 +1,16 @@
 <div class="container">
   <div class="text-center">
-    <div class="btn btn-cards mt-3"><%= link_to "Evènements", events_path, class: "text-light"%></div>
-    <div class="btn btn-cards mt-3"><%= link_to "Map", events_path, class: "text-light" %></div>
+    <div class="btn btn-cards mt-3"><%= link_to "Map", events_map_path, class: "text-light" %></div>
   </div>
   <div>
     <%= render "shared/searchbar" %>
   </div>
   <div>
+    <div>
+      <%= link_to event_path(Event.randomizer) do %>
+        <i class="fa-solid fa-dice color-icon"></i>
+      <% end %>
+    </div>
     <% @events.each do |event| %>
       <div class="margin">
         <%= link_to event_path(event) do %>
@@ -29,6 +33,5 @@
         <% end %>
       </div>
     <% end %>
-    <%= render "map_index" %>
   </div>
 </div>

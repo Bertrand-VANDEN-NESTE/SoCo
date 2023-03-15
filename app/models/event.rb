@@ -17,4 +17,8 @@ class Event < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
+
+  def self.randomizer
+    all.sample
+  end
 end

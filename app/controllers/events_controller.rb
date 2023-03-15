@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: %i[show destroy edit update randomizer]
+  before_action :set_event, only: %i[show destroy edit update]
   def home; end
 
   def index
@@ -57,10 +57,6 @@ class EventsController < ApplicationController
     redirect_to events_path, status: :see_other
   end
 
-  def randomizer
-    @events = Event.all
-    @event = @events.sample
-  end
 
   private
 
