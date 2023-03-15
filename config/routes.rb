@@ -7,7 +7,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  get "randomizer", to: "events#randomizer"
   get "profile", to: "pages#profile"
   post "/participants", to: "participants#create", as: :participant_invitation
   resources :participants

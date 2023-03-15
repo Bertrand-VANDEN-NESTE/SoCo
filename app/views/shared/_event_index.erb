@@ -7,6 +7,11 @@
     <%= render "shared/searchbar" %>
   </div>
   <div>
+    <div>
+      <%= link_to event_path(Event.randomizer) do %>
+        <i class="fa-solid fa-dice color-icon"></i>
+      <% end %>
+    </div>
     <% @events.each do |event| %>
       <div class="margin">
         <%= link_to event_path(event) do %>
