@@ -228,7 +228,6 @@ puts "chatrooms successfully created!"
 
 Message.create!(content: "coucou", chatroom_id: chat5.id, event_id: event5.id, user_id: user5.id)
 
-
 event1_rating1 = EventRating.create(comment: "event au top", rating: 4, user: user1, event: event1)
 event1_rating1.save
 event1_rating2 = EventRating.create(comment: "evenement agréable, la musique était bonne", rating: 3, user: user2, event: event1)
@@ -315,12 +314,6 @@ event15_rating1 = EventRating.create(comment:"La soirée rencontres était très
 event15_rating1.save
 event15_rating2 = EventRating.create(comment: "La soirée rencontres était fantastique. J'ai eu l'occasion de rencontrer des personnes intéressantes et j'ai vraiment apprécié l'atmosphère détendue et amicale de la soirée.", rating: 5, user: user31, event: event15)
 event15_rating2.save
-
-
-
-
-
-
 
 cat1 = Category.create(title: "musique", event_id: event1.id)
 cat2 = Category.create(title: "danse", event_id: event3.id)
