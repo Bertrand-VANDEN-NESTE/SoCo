@@ -36,11 +36,16 @@
             <%# <%= f.text_field :user_id, value: current_user.id, class: "d-none btn btn-cards" %>
             <%= f.submit "S'inscrire", class: "btn btn-cards text-light mb-2" %>
           <% end %>
+          <div style="width: 100%; height: 300px;"
+            data-controller="map"
+            data-map-markers-value="<%= @event_marker.to_json %>"
+            data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+          </div>
           <%= simple_form_for([@event, @event_rating]) do |f| %>
-            <%= f.input :comment %>
-            <%= f.input :rating %>
+            <%= f.input :comment, placeholder:"Commentaire" %>
+            <%= f.input :rating, placeholder:"Votre note Entre 0 et 5" %>
             <div class="text-center pb-2">
-              <%= f.submit class:"btn btn-cards mb-2 text-light" %>
+              <%= f.submit value:"Ajouter", class:"btn btn-cards mb-2 text-light" %>
             </div>
           <% end %>
           <% @event_ratings.each do |event_rating| %>
@@ -60,17 +65,16 @@
       </div>
       <div>
         <%= render "shared/formulaireimages"%>
-        <% @event.images.each do |image| %>
-          <div class="gallery" id="gallery">
-            <%= cl_image_tag image.key, height: 150, class: "content" %>
-          </div>
-          <%= link_to "Supprimer", event_image_path(image), data: {turbo_method: :delete}, class: "text-light m-0 p-0"%>
-        <% end %>
-      </div>
-      <div style="width: 100%; height: 300px;"
-        data-controller="map"
-        data-map-markers-value="<%= @event_marker.to_json %>"
-        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        <div class="d-flex m-2">
+          <% @event.images.each do |image| %>
+            <div class="col-6">
+              <div class="gallery text-center" id="gallery">
+                <%= cl_image_tag image.key, class: "w-25 h-25" %>
+              </div>
+              <%= link_to "Supprimer", event_image_path(image), data: {turbo_method: :delete}, class: "btn btn-cards mb-2 text-light"%>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

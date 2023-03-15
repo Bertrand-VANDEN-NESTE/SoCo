@@ -1,16 +1,16 @@
-<div class="container chatroom">
-  <div class="container chatroom" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
+<div class="container chatroom" data-controller="chatroom-subscription" data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>">
+  <div class="margin">
     <div class="messages" data-chatroom-subscription-target="messages">
       <% @chatroom.messages.each do |message| %>
         <%= render "messages/message", message: message %>
       <% end %>
     </div>
   </div>
-  <div>
+  <div class="pb-5">
     <h1>#<%= @chatroom.event.title %>'s chatroom</h1>
-    <%= simple_form_for [@event, @chatroom, @message], html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm"}, class: "d-flex"} do |f| %>
-      <%= f.input :content, label: false, placeholder: "Message #{@chatroom.event.title}", wrapper_html: {class: "flex-grow-1"} %>
-      <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+    <%= simple_form_for [@event, @chatroom, @message], html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm"}, class: "d-flex m-0"} do |f| %>
+      <%= f.input :content, label: false, placeholder: "Votre message", wrapper_html: {class: "margin-b me-1 flex-grow-1"} %>
+      <%= f.submit "Envoyer", class: "btn mt-0 btn-cards text-light" %>
     <% end %>
   </div>
 </div>
