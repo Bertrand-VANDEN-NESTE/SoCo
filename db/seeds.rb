@@ -229,8 +229,96 @@ puts "chatrooms successfully created!"
 Message.create!(content: "coucou", chatroom_id: chat5.id, event_id: event5.id, user_id: user5.id)
 
 
-event_rating1 = EventRating.create(comment: "event au top", rating: 4, user: user1, event: event1)
-event_rating1.save
+event1_rating1 = EventRating.create(comment: "event au top", rating: 4, user: user1, event: event1)
+event1_rating1.save
+event1_rating2 = EventRating.create(comment: "evenement agréable, la musique était bonne", rating: 3, user: user2, event: event1)
+event1_rating2.save
+event1_rating3 = EventRating.create(comment: "J'y suis aller avec mon époux, nous avons passer un bon moment et rencontré de belles personnes", rating: 4, user: user3, event: event1)
+event1_rating3.save
+event1_rating4 = EventRating.create(comment: "Mes amis m'ont partagé cette soirée, j'étais un peu rétissante mais finalement assez surprise", rating: 4, user: user4, event: event1)
+event1_rating4.save
+event1_rating5 = EventRating.create(comment: "Super event, j'ai pu faire de belles rencontres. ", rating: 4, user: user5, event: event1)
+event1_rating5.save
+
+event2_rating1 = EventRating.create(comment: "La soirée était vraiment stimulante et j'ai aimé l'ambiance générale de l'événement. J'ai rencontré des personnes passionnées et j'ai passé un bon moment à discuter avec eux.", rating: 5, user: user1, event: event2)
+event2_rating1.save
+event2_rating2 = EventRating.create(comment: "La soirée était vraiment bien organisée et j'ai apprécié l'atmosphère chaleureuse et accueillante. J'ai rencontré des gens très engagés et j'ai passé un bon moment.", rating: 3, user: user2, event: event2)
+event2_rating2.save
+event2_rating3 = EventRating.create(comment: "L'after work de la communauté des engagés était une soirée vraiment inspirante. J'ai rencontré des personnes qui font une réelle différence et qui m'ont donné envie de m'engager davantage dans les causes qui me tiennent à cœur", rating: 5, user: user4, event: event2)
+event2_rating3.save
+event2_rating4 = EventRating.create(comment: "La soirée était vraiment bien organisée et j'ai apprécié l'atmosphère chaleureuse et accueillante. J'ai rencontré des gens très engagés et j'ai passé un bon moment.", rating: 4, user: user4, event: event2)
+event2_rating4.save
+event2_rating5 = EventRating.create(comment: "J'y suis aller spontanément et agréablement surprise. J'ai eu l'occasion de rencontrer des gens inspirants et j'ai appris beaucoup de choses nouvelles sur les enjeux sociaux et environnementaux.", rating: 5, user: user5, event: event2)
+event2_rating5.save
+
+event3_rating1 = EventRating.create(comment: "Bonne soirée, les humoristes étaient très agreable", rating: 4, user: user6, event: event3)
+event3_rating1.save
+event3_rating2 = EventRating.create(comment: "Assez cool, j'étais dubitatif mais finalement j'ai bien rigolé", rating: 4, user: user7, event: event3)
+event3_rating2.save
+
+event4_rating1 = EventRating.create(comment: "Le brunch était délicieux et l'occasion idéale pour rencontrer d'autres professionnels du e-commerce. J'ai appris beaucoup de choses intéressantes et j'ai hâte d'appliquer ces nouvelles connaissances à mon entreprise", rating: 5, user: user8, event: event4)
+event4_rating1.save
+event4_rating2 = EventRating.create(comment: "Le choix de conférenciers était exceptionnel et j'ai vraiment apprécié les discussions animées autour des tendances actuelles du e-commerce. C'était une expérience très enrichissante et je recommanderais vivement ce brunch à tous les professionnels de l'e-commerce", rating: 5, user: user9, event: event4)
+event4_rating2.save
+
+event5_rating1 = EventRating.create(comment: "Le Wagon est une école fantastique et le Demoday a été la preuve ultime de cela. Les projets étaient innovants et bien conçus, et j'ai eu la chance de rencontrer des gens formidables qui partagent ma passion pour le développement web. Merci à toute l'équipe du Wagon pour cette expérience incroyable.", rating: 5, user: user10, event: event5)
+event5_rating1.save
+event5_rating2 = EventRating.create(comment: "J'ai assisté au Demoday pour découvrir ce que le Wagon avait à offrir et j'ai été impressionné par ce que j'ai vu. Les étudiants ont présenté des projets incroyables et ont montré une réelle compréhension des compétences nécessaires pour réussir dans l'industrie. C'était vraiment inspirant.", rating: 4, user: user11, event: event5)
+event5_rating2.save
+
+event6_rating1 = EventRating.create(comment: "J'ai beaucoup apprécié l'événement Boost ton Réseau. J'ai rencontré de nouvelles personnes intéressantes et j'ai pu échanger des idées et des contacts avec elles. Je recommande vivement cet événement à tous ceux qui cherchent à élargir leur réseau professionnel.", rating: 4, user: user12, event: event6)
+event6_rating1.save
+event6_rating2 = EventRating.create(comment: "Je n'étais pas sûr de ce que j'allais trouver à l'événement Boost ton Réseau, mais je suis heureux d'avoir franchi le pas. J'ai rencontré des personnes passionnantes et j'ai pu parler de mon travail et de mes projets à un public intéressé. Je recommande cet événement à tous ceux qui cherchent à sortir de leur zone de confort et à élargir leur cercle professionnel.", rating: 5, user: user13, event: event6)
+event6_rating2.save
+
+event7_rating1 = EventRating.create(comment: "Heureuse d'avoir participé a cette event, la mususique était excellente", rating: 5, user: user14, event: event7)
+event7_rating1.save
+event7_rating2 = EventRating.create(comment: "Ce fut un moment mémorable,", rating: 5, user: user15, event: event7)
+event7_rating2.save
+
+event8_rating1 = EventRating.create(comment: "Bonne ambiance, je me suis bien amusé, les oeuvres étaient sublimes", rating: 4, user: user16, event: event8)
+event8_rating1.save
+event8_rating2 = EventRating.create(comment: "L'expostion fut très esthétique et enrichissante", rating: 5, user: user17, event: event8)
+event8_rating2.save
+
+event9_rating1 = EventRating.create(comment: "Ce fut une super soirée, la danseuse était très douée", rating: 5, user: user18, event: event9)
+event9_rating1.save
+event9_rating2 = EventRating.create(comment: "Nous avons découvert cette event avec ma femme, ravi d'avoir pu y assiter. L'univers oriental a été un pure délice", rating: 5, user: user19, event: event9)
+event9_rating2.save
+
+event10_rating1 = EventRating.create(comment: "Le char était super, nous avons bien profité de la journée", rating: 5, user: user20, event: event10)
+event10_rating1.save
+event10_rating2 = EventRating.create(comment: "La journée s'est extrement bien passé, et les décorations du char étaient sublimes", rating: 5, user: user21, event: event10)
+event10_rating2.save
+
+event11_rating1 = EventRating.create(comment: "J'y suis aller spontanément et agréablement surprise", rating: 5, user: user22, event: event11)
+event11_rating1.save
+event11_rating2 = EventRating.create(comment: "J'y suis aller spontanément et agréablement surprise", rating: 5, user: user23, event: event11)
+event11_rating2.save
+
+event12_rating1 = EventRating.create(comment: "Le cadre était magnifique et relaxant, et la nourriture était incroyable. J'ai vraiment apprécié la variété de plats et de boissons proposés, ainsi que l'atmosphère conviviale.", rating: 5, user: user24, event: event12)
+event12_rating1.save
+event12_rating2 = EventRating.create(comment: "Ce pique-nique était exactement ce dont j'avais besoin : un endroit paisible pour se détendre, des amis sympathiques, et une nourriture délicieuse. Je suis heureux d'avoir été invité.", rating: 5, user: user25, event: event12)
+event12_rating2.save
+
+event13_rating1 = EventRating.create(comment: "Le séminaire sur le pop art était incroyablement instructif et inspirant. J'ai appris tellement de choses sur les artistes et les mouvements qui ont façonné cette période fascinante de l'histoire de l'art.", rating: 5, user: user26, event: event13)
+event13_rating1.save
+event13_rating2 = EventRating.create(comment: "C'était génial de voir autant de personnes réunies pour discuter de l'art et de la culture populaire. Le séminaire a suscité des débats intéressants et m'a permis de voir les choses sous un nouvel angle.", rating: 5, user: user27, event: event13)
+event13_rating2.save
+
+event14_rating1 = EventRating.create(comment: "C'était une soirée incroyable ! Tout le monde était tellement détendu et heureux de se baigner dans la piscine. Nous avons dansé, ri et passé un moment inoubliable ensemble.", rating: 5, user: user28, event: event14)
+event14_rating1.save
+event14_rating2 = EventRating.create(comment: "C'était tellement amusant de rencontrer de nouvelles personnes à la pool party. Tout le monde était si sympathique et accueillant, et nous avons fini par passer toute la soirée ensemble", rating: 5, user: user29, event: event14)
+event14_rating2.save
+
+event15_rating1 = EventRating.create(comment:"La soirée rencontres était très bien organisée et l'atmosphère était accueillante et amicale. J'ai eu la chance de rencontrer des personnes fascinantes et j'ai passé un bon moment.", rating: 5, user: user30, event: event15)
+event15_rating1.save
+event15_rating2 = EventRating.create(comment: "La soirée rencontres était fantastique. J'ai eu l'occasion de rencontrer des personnes intéressantes et j'ai vraiment apprécié l'atmosphère détendue et amicale de la soirée.", rating: 5, user: user31, event: event15)
+event15_rating2.save
+
+
+
+
 
 
 
