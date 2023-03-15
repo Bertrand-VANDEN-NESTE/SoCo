@@ -1,7 +1,6 @@
 <div class="container">
   <div class="text-center">
-    <div class="btn btn-cards mt-3"><%= link_to "Evènements", events_path, class: "text-light"%></div>
-    <div class="btn btn-cards mt-3"><%= link_to "Map", events_path, class: "text-light" %></div>
+    <div class="btn btn-cards mt-3"><%= link_to "Map", events_map_path, class: "text-light" %></div>
   </div>
   <div>
     <%= render "shared/searchbar" %>
@@ -34,6 +33,5 @@
         <% end %>
       </div>
     <% end %>
-    <%= render "map_index" %>
   </div>
 </div>
