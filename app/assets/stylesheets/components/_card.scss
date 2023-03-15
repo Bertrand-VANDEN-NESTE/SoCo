@@ -4,6 +4,12 @@
   box-shadow: 0 0 15px rgba(254,206,206,0.5);
   border: 1px solid rgba(133, 54, 234, 0.2);
 }
+.card-trip-map {
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(254,206,206,0.5);
+  border: 1px solid rgba(133, 54, 234, 0.2);
+}
 
 .color-font {
   color: $primary-color;
