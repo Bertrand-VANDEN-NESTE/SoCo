@@ -5,7 +5,7 @@
     </div>
   </div>
   <div class="margin mb-3">
-    <h2 class="color-font text-center">Evénements auxquels vous avez participé</h2>
+    <h2 class="color-font text-center">Evénements auxquels vous avez participés</h2>
     <% @participants.each do |participant| %>
     <div class="position-relative">
       <%= cl_image_tag participant.event.photo.key, class: "position-absolute width-size-photo-profil rounded-circle"%>
@@ -32,7 +32,7 @@
     </div>
   </div>
   <div class="margin">
-    <h2 class="color-font text-center mt-4 mb-3">Evénements que vous avez organisé</h2>
+    <h2 class="color-font text-center mt-4 mb-3">Evénements que vous avez organisés</h2>
     <% @events.each do |event| %>
       <div class="card-trip radius h-25 mt-5 mb-4">
         <% if event.photo.attached? %>
@@ -42,7 +42,12 @@
           <div>
             <div class="text-center">
               <h5 class="card-title color-font text-center font-weight-bold mb-3"><strong><%=event.title%></strong></h5>
-              <p class="color-font mb-1"><strong>Date :</strong> <%= event.date %></p>
+              <div class="color-font text-center">
+                <div class="d-flex justify-content-center">
+                  <i class="fa-solid fa-calendar color-icon me-2"></i>
+                  <p class="color-font mb-1"><strong>Date :</strong> <%= event.date %></p>
+                </div>
+              </div>
               <p class="color-font mb-1"><strong>Capacité :</strong> <%= event.capacity %> tickets <i class="fa-solid fa-ticket logochat-color"></i></p>
               <p class="color-font mb-1"><strong>Statut :</strong> <%= event.status %></p>
               <p class="color-font mb-1"><strong>Lieu :</strong> <%= event.location %></p>
