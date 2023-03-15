@@ -19,6 +19,15 @@ class PagesController < ApplicationController
     redirect_to profile_path, status: :see_other
   end
 
+  def events_map
+    @events = Event.all
+    @markers = @events.geocoded.map do |event|
+      {
+        lat: event.latitude,
+        lng: event.longitude
+      }
+    end
+  end
 
   private
 
