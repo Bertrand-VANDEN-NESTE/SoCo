@@ -23,8 +23,8 @@
                   <span class="color-font m-auto w-10"><%= event.date %></span>
                   <span class="color-font m-auto w-10"><%= event.location %></span>
                 </div>
-                <p class="text-center m-auto pt-2 width overflow-auto">
-                  <%= event.description %>
+                <p class="text-center m-auto pt-2 mb-2 overflow-hidden width">
+                  <%= event.description[0..170] %>...
                 </p>
               </div>
               <%= cl_image_tag event.user.photo.key, height: 150, class: "card-trip-user avatar-bordered" %>
