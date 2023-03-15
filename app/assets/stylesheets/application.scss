@@ -36,3 +36,25 @@ body{
   margin: auto;
   width: 80vw;
 }
+
+.chatroom-css{
+  right: 3vh;
+  top: 10vh;
+}
+
+.cercle{
+  background-color: $primary-color;
+  width: 6vh;
+  height: 6vh;
+  border: 2px solid $secondary-color;
+  box-shadow: 0 0 15px rgba(254,206,206,0.5);
+}
+
+.position-bulle{
+  top: 1.7vh;
+  right: 1.7vh;
+}
+
+.color-icon{
+  color: $primary-color;
+}
