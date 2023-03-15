@@ -34,13 +34,26 @@
           <%= form_with model: @participant do |f| %>
             <%= f.text_field :event_id, value: @event.id, class: "d-none btn btn-cards" %>
             <%# <%= f.text_field :user_id, value: current_user.id, class: "d-none btn btn-cards" %>
-            <%= f.submit "S'inscrire", class: "btn btn-cards text-light" %>
+            <%= f.submit "S'inscrire", class: "btn btn-cards text-light mb-2" %>
+          <% end %>
+          <%= simple_form_for([@event, @event_rating]) do |f| %>
+            <%= f.input :comment %>
+            <%= f.input :rating %>
+            <div class="text-center pb-2">
+              <%= f.submit class:"btn btn-cards mb-2 text-light" %>
+            </div>
           <% end %>
           <% @event_ratings.each do |event_rating| %>
-            <div>
-              <h2 class="text-center"> <%= event_rating.user.username %></h2>
-              <h2 class="text-center"> <%= event_rating.comment %></h2>
-              <h2 class="text-center"> <%= event_rating.rating %> / 5</h2>
+            <div class="border-comment m-2 p-2">
+              <div>
+                <span class="text-center"><strong><%= event_rating.user.username %></strong></span>
+              </div>
+              <div>
+                <span class="text-center"><strong><%= event_rating.rating %> / 5</strong></span>
+              </div>
+              <div>
+                <span class="text-center"><%= event_rating.comment%></span>
+              </div>
             </div>
           <% end %>
         </div>

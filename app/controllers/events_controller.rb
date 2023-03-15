@@ -20,7 +20,7 @@ class EventsController < ApplicationController
   def show
     @event_ratings = @event.event_ratings
     @participant = Participant.new
-
+    @event_rating = EventRating.new
     @event_marker =
       {
         lat: @event.latitude,

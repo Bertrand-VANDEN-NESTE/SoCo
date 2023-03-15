@@ -14,7 +14,6 @@
       <h5 class="card-title title-padding color-font mb-1"><strong><%= participant.event.title %></strong></h5>
       <div class="d-flex p-2">
         <div class="text-center flex-fill w-50 m-auto p-1">
-
           <p class="color-font mb-1"><i class="fa-solid fa-calendar color-icon me-2"></i> <br> <%= participant.event.date %> </p>
         </div>
         <div class="text-center flex-fill w-50 m-auto p-1">
@@ -45,47 +44,41 @@
         <%= cl_image_tag event.photo.key, height: 150, crop: :fill, class: "w-100 object-fit-cover" %>
         <% end %>
         <div class="card-trip-infos">
-          <div>
-            <div class="text-center">
-              <h5 class="card-title color-font text-center font-weight-bold mb-3"><strong><%=event.title%></strong></h5>
-            <div class="d-flex justify-content-center">
-              <i class="fa-solid fa-calendar color-icon me-2"></i>
-              <p class="color-font mb-1"><%= event.date %></p>
+          <div class="text-center">
+            <h5 class="card-title color-font text-center font-weight-bold mb-3"><strong><%=event.title%></strong></h5>
+          <div class="d-flex justify-content-center">
+            <i class="fa-solid fa-calendar color-icon me-2"></i>
+            <p class="color-font mb-1"><%= event.date %></p>
+          </div>
+          <div class="d-flex justify-content-center">
+            <i class="fa-solid fa-ticket color-icon me-2"></i>
+            <p class="color-font mb-1"><%= event.capacity %> places <i class="fa-solid fa-ticket logochat-color"></i></p>
+          </div>
+          <div class="d-flex justify-content-center pb-2">
+            <% if event.status == 'privé' %>
+              <i class="fa-solid fa-lock color-icon me-2"></i>
+            <% else %>
+              <i class="fa-solid fa-unlock color-icon me-2"></i>
+            <% end %>
+            <p class="color-font mb-1"><%= event.status %></p>
+          </div>
+          <div class="d-flex justify-content-center pb-2">
+            <i class="fa-solid fa-location-dot color-icon me-2"></i>
+            <p class="color-font mb-1"><%= event.location %></p>
+          </div>
+          <div class="d-flex justify-content-center pb-2">
+            <i class="fa-solid fa-circle-info color-icon me-2"></i>
+            <p class="color-font mb-1"><%= event.description %></p>
+          </div>
+          <a href=<%= event.tricount %>><i class="fa-solid fa-piggy-bank size-icon color-icon me-2"></i></a>
+          <div class="text-center mb-2">
+            <div class="btn btn-cards">
+              <%= link_to "Supprimer", event_path(event), data: {turbo_method: :delete, turbo_confirm: "Etes-vous sûr ?"} %>
             </div>
-            <div class="d-flex justify-content-center">
-              <i class="fa-solid fa-ticket color-icon me-2"></i>
-              <p class="color-font mb-1"><%= event.capacity %> places <i class="fa-solid fa-ticket logochat-color"></i></p>
+            <div class="btn btn-cards">
+              <%= link_to "Modifier", edit_event_path(event)%>
             </div>
-
-            <div class="d-flex justify-content-center">
-              <% if event.status == 'privé' %>
-                <i class="fa-solid fa-lock color-icon me-2"></i>
-              <% else %>
-                <i class="fa-solid fa-unlock color-icon me-2"></i>
-              <% end %>
-              <p class="color-font mb-1"><%= event.status %></p>
-            </div>
-
-            <div class="d-flex justify-content-center">
-              <i class="fa-solid fa-location-dot color-icon me-2"></i>
-              <p class="color-font mb-1"><%= event.location %></p>
-            </div>
-
-            <div class="d-flex justify-content-center">
-              <i class="fa-solid fa-circle-info color-icon me-2"></i>
-              <p class="color-font mb-1"><%= event.description %></p>
-            </div>
-
-            <a href=<%= event.tricount %>><i class="fa-solid fa-piggy-bank color-icon me-2"></i></a>
-
-            <div class="text-center mb-2">
-              <div class="btn btn-cards">
-                <%= link_to "Supprimer", event_path(event), data: {turbo_method: :delete, turbo_confirm: "Etes-vous sûr ?"} %>
-              </div>
-              <div class="btn btn-cards">
-                <%= link_to "Modifier", edit_event_path(event)%>
-              </div>
-            </div>
+          </div>
           </div>
         </div>
       </div>
