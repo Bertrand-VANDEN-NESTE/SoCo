@@ -19,6 +19,7 @@ class PagesController < ApplicationController
     redirect_to profile_path, status: :see_other
   end
 
+
   private
 
   def set_participant

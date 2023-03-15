@@ -1,0 +1,65 @@
+<div class="position-relative">
+  <div class="position-absolute chatroom-css color-font bg-transparent">
+    <div class="rounded-circle cercle">
+      <%= link_to event_chatroom_path(@event, @event.chatroom) do %>
+        <i class="fa-regular fa-message position-absolute position-bulle"></i>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="margin">
+    <div class="card-trip radius h-25">
+      <%= cl_image_tag @event.photo.key, height: 150, class: "w-100 object-fit-cover" %>
+      <div class="position-relative">
+        <%= cl_image_tag @event.user.photo.key, class: "card-trip-user position-absolute avatar-bordered" %>
+      </div>
+      <div class="card-trip-infos color-font text-center pb-2">
+        <div>
+          <div class="color-font text-center">
+            <h2 class="text-center mb-3"><%= @event.title %></h2>
+            <i class="fa-solid fa-calendar color-icon"></i>
+            <span><%= @event.date %></span>
+          </div>
+          <div class="color-font text-center pb-2">
+            <i class="fa-solid fa-ticket color-icon me-2"></i>
+            <span><%= @event.capacity %> Places</span>
+            <span> <%= @event.status %> event</span>
+          </div>
+          <div class="color-font text-center pb-2">
+            <i class="fa-solid fa-location-dot color-icon"></i>
+            <span class="color-font mb-3"><%= @event.location %></span>
+          </div>
+          <p class="text-center width overflow-scroll"><%= @event.description %></p>
+          <%= form_with model: @participant do |f| %>
+            <%= f.text_field :event_id, value: @event.id, class: "d-none btn btn-cards" %>
+            <%# <%= f.text_field :user_id, value: current_user.id, class: "d-none btn btn-cards" %>
+            <%= f.submit "S'inscrire", class: "btn btn-cards text-light" %>
+          <% end %>
+          <% @event_ratings.each do |event_rating| %>
+            <div>
+              <h2 class="text-center"> <%= event_rating.user.username %></h2>
+              <h2 class="text-center"> <%= event_rating.comment %></h2>
+              <h2 class="text-center"> <%= event_rating.rating %> / 5</h2>
+              <%= render "shared/formulaireimages"%>
+            </div>
+          <% end %>
+
+        </div>
+      </div>
+      <div>
+        <% @event.images.each do |image| %>
+          <div class="gallery" id="gallery">
+            <%= cl_image_tag image.key, height: 150, class: "content" %>
+          </div>
+          <%= link_to "Supprimer", event_image_path(image), data: {turbo_method: :delete}, class: "text-light m-0 p-0"%>
+          <% end %>
+      </div>
+      <div style="width: 100%; height: 300px;"
+        data-controller="map"
+        data-map-markers-value="<%= @event_marker.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+  </div>
+</div>

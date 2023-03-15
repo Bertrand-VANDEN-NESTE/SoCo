@@ -1,12 +1,10 @@
 <div id="cover">
   <form method="get" action="">
     <div class="tb">
-      <%# <div class="td"><input type="text" class="input-mod" placeholder="Search" required>
-      </div> %>
       <%= form_with url: events_path, method: :get, class: "input-mod" do %>
         <%= text_field_tag :query,
           params[:query],
-          class: "form-control",
+          class: "form-control input-taille",
           placeholder: "Find an event"
         %>
       <% end %>
