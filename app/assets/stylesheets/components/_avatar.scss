@@ -7,10 +7,14 @@
   border-radius: 50%;
 }
 .avatar-bordered {
-  width: 40px;
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(255,255,255,0.5);
   border: $primary-color 1px solid;
+  top: -23vh;
+  left: 1vh;
+  width: 7vh;
+  height: 7vh;
+  object-fit: cover;
 }
 .avatar-square {
   width: 40px;

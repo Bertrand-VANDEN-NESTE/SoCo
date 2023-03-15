@@ -3,43 +3,40 @@
 <% end %>
 <div class="container">
   <div class="margin">
-    <div class="card-trip radius h-25 mt-5">
-      <div>
-        <div class="color-font text-center">
-        <h2 class="text-center mb-3"><%= @event.title %></h2>
-        <span><%= @event.date %></span>
-        </div>
-      </div>
-      <div class="color-font text-center pb-2">
-        <span><%= @event.capacity %> Places</span>
-        <span> <%= @event.status %> event</span>
-      </div>
+    <div class="card-trip radius h-25">
       <%= cl_image_tag @event.photo.key, height: 150, class: "w-100 object-fit-cover" %>
-      <div class="card-trip-infos">
-        <div class="overflow-text">
-          <div class="d-flex">
+      <div class="position-relative">
+        <%= cl_image_tag @event.user.photo.key, class: "card-trip-user position-absolute avatar-bordered" %>
+      </div>
+      <div class="card-trip-infos color-font text-center pb-2">
+        <div>
+          <div class="color-font text-center">
+          <h2 class="text-center mb-3"><%= @event.title %></h2>
+          <span><%= @event.date %></span>
+          </div>
+          <div class="color-font text-center pb-2">
+            <span><%= @event.capacity %> Places</span>
+            <span> <%= @event.status %> event</span>
+          </div>
+          <div class="overflow-text">
             <span class="card-trip-pricing color-font w-10 mb-3"><%= @event.date %></span>
             <span class="card-trip-pricing color-font w-10 mb-3"><%= @event.location %></span>
+            <p class="text-center width overflow-scroll"><%= @event.description %></p>
+            <%= form_with model: @participant do |f| %>
+              <%= f.text_field :event_id, value: @event.id, class: "d-none btn btn-cards" %>
+              <%# <%= f.text_field :user_id, value: current_user.id, class: "d-none btn btn-cards" %>
+              <%= f.submit "S'inscrire", class: "btn btn-cards text-light" %>
+            <% end %>
+            <% @event_ratings.each do |event_rating| %>
+              <div>
+                <h2 class="text-center"> <%= event_rating.user.username %></h2>
+                <h2 class="text-center"> <%= event_rating.comment %></h2>
+                <h2 class="text-center"> <%= event_rating.rating %> / 5</h2>
+                <%= render "shared/formulaireimages"%>
+              </div>
+            <% end %>
           </div>
-          <p class="text-center width overflow-scroll"><%= @event.description %></p>
         </div>
-        <%= cl_image_tag @event.user.photo.key, class: "card-trip-user avatar-bordered" %>
-        <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
-      </div>
-      <div class="d-flex justify-content-center mb-3">
-        <%= form_with model: @participant do |f| %>
-          <%= f.text_field :event_id, value: @event.id, class: "d-none btn btn-cards" %>
-          <%# <%= f.text_field :user_id, value: current_user.id, class: "d-none btn btn-cards" %>
-          <%= f.submit "S'inscrire", class: "btn btn-cards text-light" %>
-        <% end %>
-        <% @event_ratings.each do |event_rating| %>
-          <div>
-            <h2 class="text-center"> <%= event_rating.user.username %></h2>
-            <h2 class="text-center"> <%= event_rating.comment %></h2>
-            <h2 class="text-center"> <%= event_rating.rating %> / 5</h2>
-            <%= render "shared/formulaireimages"%>
-          </div>
-        <% end %>
       </div>
       <div>
         <% @event.images.each do |image| %>
@@ -49,7 +46,7 @@
           <%= link_to "Supprimer", event_image_path(image), data: {turbo_method: :delete}, class: "text-light m-0 p-0"%>
           <% end %>
       </div>
-      <div style="width: 100%; height: 600px;"
+      <div style="width: 100%; height: 300px;"
         data-controller="map"
         data-map-markers-value="<%= @event_marker.to_json %>"
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
