@@ -1,8 +1,10 @@
 <div class="container">
   <%= simple_form_for(@event) do |f| %>
-    <%= f.input :images, as: :file, class: "", input_html: { multiple: true } %>
+    <div class="text-center">
+      <%= f.input :images, as: :file, input_html: { multiple: true } %>
+    </div>
     <div class="text-center pb-5">
-      <%= f.submit class:"btn btn-cards mb-2 text-light" %>
+      <%= f.submit value:"Ajouter", class:"btn btn-cards mb-2 text-light" %>
     </div>
   <% end %>
 </div>

@@ -1,6 +1,7 @@
 <div class="container">
-  <div class="btn btn-cards mt-3"><%= link_to "Evènements", events_path, class: "text-light"%></div>
-
+  <div class="d-flex justify-content-center">
+    <div class="btn btn-cards mt-3 mb-3"><%= link_to "Evènements", events_path, class: "text-light"%></div>
+  </div>
   <div class="card-trip-map margin">
     <div style="width: 100%; height: 80vh;"
       data-controller="mapindex"
@@ -11,16 +12,12 @@
     <% @events.first(5).each do |event| %>
       <div class="margin">
         <%= link_to event_path(event) do %>
-          <div class="card-trip radius h-25 mt-3 mb-4">
+          <div class="card-trip radius h-25 m-3">
             <div class="card-trip-infos">
               <div class="overflow-text">
                 <div class="d-flex">
-                  <%= cl_image_tag event.user.photo.key, height: 150, class: "avatar-bordered" %>
+                  <%= cl_image_tag event.user.photo.key, height: 150, class: "w-auto avatar-bordered" %>
                   <h2 class="text-center mb-3"><%= event.title %></h2>
-                </div>
-                <div class="d-flex">
-                  <span class="color-font m-auto w-10"><%= event.date %></span>
-                  <span class="color-font m-auto w-10"><%= event.location %></span>
                 </div>
               </div>
             </div>

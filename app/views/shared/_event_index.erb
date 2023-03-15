@@ -1,21 +1,21 @@
 <div class="container">
   <div class="text-center">
-    <div class="btn btn-cards mt-3"><%= link_to "Map", events_map_path, class: "text-light" %></div>
+    <div class="btn btn-cards mt-3"><%= link_to "Carte", events_map_path, class: "text-light" %></div>
   </div>
-  <div>
+  <div class="d-flex">
     <%= render "shared/searchbar" %>
   </div>
-  <div>
-    <div>
+  <div class="d-flex justify-content-center">
       <%= link_to event_path(Event.randomizer) do %>
         <i class="fa-solid fa-dice color-icon"></i>
       <% end %>
     </div>
+  <div>
     <% @events.each do |event| %>
       <div class="margin">
         <%= link_to event_path(event) do %>
           <div class="card-trip radius h-25 mt-3 mb-4">
-            <%= cl_image_tag event.photo.key, height: 150, class: "w-100 object-fit-cover" %>
+            <%= cl_image_tag event.photo.key, class: "w-100 h-100 object-fit-cover" %>
             <div class="card-trip-infos">
               <div class="overflow-text">
                 <h2 class="text-center mb-3"><%= event.title %></h2>
