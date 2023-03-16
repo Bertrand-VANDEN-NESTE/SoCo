@@ -19,6 +19,7 @@ class EventsController < ApplicationController
 
   def show
     @event_ratings = @event.event_ratings
+    @participants = Participant.all
     @participant = Participant.new
     @event_rating = EventRating.new
     @event_marker =
