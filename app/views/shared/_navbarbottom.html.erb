@@ -1,4 +1,4 @@
-<div class="navigation-bottom d-flex justify-content-evenly align-items-center mx-2">
+<div class="navigation-bottom d-flex justify-content-evenly align-items-center mb-3 mx-2">
   <%= link_to events_path do %>
     <i class="fa-solid fa-house text-light"></i>
   <% end %>
@@ -10,6 +10,8 @@
       <i class="fa-solid fa-user"></i>
     <% end %>
   <% else %>
-    <%= link_to new_user_session_path %>
+    <%= link_to new_user_session_path do %>
+      <i class="fa-solid fa-user"></i>
+    <% end %>
   <% end %>
 </div>
