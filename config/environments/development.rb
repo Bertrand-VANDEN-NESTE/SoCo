@@ -71,4 +71,6 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   config.active_storage.service = :cloudinary
+
+  config.hosts << /\A[a-z\d-]+\.loca\.lt\z/
 end
