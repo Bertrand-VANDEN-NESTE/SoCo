@@ -1,8 +1,8 @@
-<div class="position-relative">
-  <div class="position-absolute chatroom-css color-font bg-transparent">
-    <div class="rounded-circle cercle">
+<div class="d-flex justify-content-end me-2">
+  <div class="chatroom-css bg-transparent">
+    <div class="rounded-circle cercle d-flex justify-content-center align-items-center sticky">
       <%= link_to event_chatroom_path(@event, @event.chatroom) do %>
-        <i class="fa-regular fa-message position-absolute position-bulle"></i>
+        <i class="fa-regular fa-message"></i>
       <% end %>
     </div>
   </div>
@@ -69,9 +69,11 @@
           <% @event.images.each do |image| %>
             <div class="col-6">
               <div class="gallery text-center" id="gallery">
-                <%= cl_image_tag image.key, class: "w-25 h-25" %>
+                <%= cl_image_tag image.key, class: "w-100 h-100 p-2 rounded" %>
               </div>
-              <%= link_to "Supprimer", event_image_path(image), data: {turbo_method: :delete}, class: "btn btn-cards mb-2 text-light"%>
+              <div class="text-center">
+                <%= link_to "Supprimer", event_image_path(@event, image: image), data: {turbo_method: :delete}, class: "btn btn-cards mb-2 text-light"%>
+              </div>
             </div>
           <% end %>
         </div>
