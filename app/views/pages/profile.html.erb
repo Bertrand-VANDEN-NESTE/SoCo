@@ -41,7 +41,7 @@
     <% @events.each do |event| %>
       <div class="card-trip radius h-25 mt-5 mb-4">
         <% if event.photo.attached? %>
-        <%= cl_image_tag event.photo.key, height: 150, crop: :fill, class: "w-100 object-fit-cover" %>
+        <%= cl_image_tag event.photo.key, crop: :fill, class: "w-100 h-100 object-fit-cover" %>
         <% end %>
         <div class="card-trip-infos">
           <div class="text-center">
