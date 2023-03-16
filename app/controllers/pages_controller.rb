@@ -13,9 +13,9 @@ class PagesController < ApplicationController
     redirect_to profile_path, status: :see_other
   end
 
-  def image(image)
-    @event = Event.find(params[:event_id])
-    @event.image.purge
+  def image
+    event = Event.find(params[:event_id])
+    event.images.find_by_id(params[:image].to_i).purge
     redirect_to profile_path, status: :see_other
   end
 
