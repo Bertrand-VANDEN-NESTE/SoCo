@@ -57,8 +57,7 @@ class EventsController < ApplicationController
     @event.destroy
     redirect_to events_path, status: :see_other
   end
-
-
+  
   private
 
   def event_params
