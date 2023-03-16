@@ -78,7 +78,6 @@ end
 
 gem "devise"
 gem "cloudinary"
-
 gem "bootstrap"
 gem "geocoder"
 gem "pg_search"

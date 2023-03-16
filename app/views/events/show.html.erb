@@ -31,21 +31,12 @@
             <span class="color-font mb-3"><%= @event.location %></span>
           </div>
           <p class="text-center width overflow-scroll"><%= @event.description %></p>
+          <a href=<%= @event.tricount %>><i class="fa-solid fa-piggy-bank size-icon color-icon me-2"></i></a>
           <%= form_with model: @participant do |f| %>
             <%= f.text_field :event_id, value: @event.id, class: "d-none btn btn-cards" %>
             <%# <%= f.text_field :user_id, value: current_user.id, class: "d-none btn btn-cards" %>
             <%= f.submit "S'inscrire", class: "btn btn-cards text-light mb-2" %>
           <% end %>
-          <div class="d-grid">
-            <% @participants.each do |participant| %>
-              <div class="col-3">
-                <div class="gallery text-center" id="gallery">
-                  <%= cl_image_tag participant.user.photo.key, class: "w-25 h-25 p-2 rounded" %>
-                </div>
-              </div>
-            <% end %>
-          </div>
-
           <div style="width: 100%; height: 300px;"
             data-controller="map"
             data-map-markers-value="<%= @event_marker.to_json %>"
@@ -75,7 +66,7 @@
       </div>
       <div>
         <%= render "shared/formulaireimages"%>
-        <div class="d-flex m-2">
+        <div class="row m-2">
           <% @event.images.each do |image| %>
             <div class="col-6">
               <div class="gallery text-center" id="gallery">

@@ -4,6 +4,10 @@ class ChatroomChannel < ApplicationCable::Channel
     stream_for chatroom
   end
 
+  def receive(data)
+    ActionCable.server.broadcast("chatroom_#{params[:chatroom]}", data)
+  end
+
   def unsubscribed
     # Any cleanup needed when channel is unsubscribed
   end
