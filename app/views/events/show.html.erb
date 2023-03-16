@@ -24,13 +24,13 @@
           <div class="color-font text-center pb-2">
             <i class="fa-solid fa-ticket color-icon me-2"></i>
             <span><%= @event.capacity %> Places</span>
-            <span> <%= @event.status %> event</span>
+            <span>- Evènement <%= @event.status %></span>
           </div>
           <div class="color-font text-center pb-2">
             <i class="fa-solid fa-location-dot color-icon"></i>
             <span class="color-font mb-3"><%= @event.location %></span>
           </div>
-          <p class="text-center width overflow-scroll"><%= @event.description %></p>
+          <p class="text-center"><%= @event.description %></p>
           <a href=<%= @event.tricount %>><i class="fa-solid fa-piggy-bank size-icon color-icon me-2"></i></a>
           <%= form_with model: @participant do |f| %>
             <%= f.text_field :event_id, value: @event.id, class: "d-none btn btn-cards" %>
@@ -42,12 +42,14 @@
             data-map-markers-value="<%= @event_marker.to_json %>"
             data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
           </div>
-          <%= simple_form_for([@event, @event_rating]) do |f| %>
-            <%= f.input :comment, placeholder:"Commentaire" %>
-            <%= f.input :rating, placeholder:"Votre note Entre 0 et 5" %>
-            <div class="text-center pb-2">
-              <%= f.submit value:"Ajouter", class:"btn btn-cards mb-2 text-light" %>
-            </div>
+          <% if @event.participants.find_by(user_id: current_user.id) %>
+            <%= simple_form_for([@event, @event_rating]) do |f| %>
+              <%= f.input :comment, placeholder:"Commentaire" %>
+              <%= f.input :rating, placeholder:"Votre note Entre 0 et 5" %>
+              <div class="text-center pb-2">
+                <%= f.submit value:"Ajouter", class:"btn btn-cards mb-2 text-light" %>
+              </div>
+            <% end %>
           <% end %>
           <% @event_ratings.each do |event_rating| %>
             <div class="border-comment m-2 p-2">
@@ -72,9 +74,11 @@
               <div class="gallery text-center" id="gallery">
                 <%= cl_image_tag image.key, class: "w-100 h-100 p-2 rounded" %>
               </div>
-              <div class="text-center">
-                <%= link_to "Supprimer", event_image_path(@event, image: image), data: {turbo_method: :delete}, class: "btn btn-cards mb-2 text-light"%>
-              </div>
+              <% if @event.participants.find_by(user_id: current_user.id) %>
+                <div class="text-center">
+                  <%= link_to "Supprimer", event_image_path(@event, image: image), data: {turbo_method: :delete}, class: "btn btn-cards mb-2 btn-photo text-light"%>
+                </div>
+              <% end %>
             </div>
           <% end %>
         </div>
