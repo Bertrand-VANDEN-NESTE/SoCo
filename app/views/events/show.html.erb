@@ -10,7 +10,7 @@
 <div class="container">
   <div class="margin">
     <div class="card-trip radius h-25">
-      <%= cl_image_tag @event.photo.key, height: 150, class: "w-100 object-fit-cover" %>
+      <%= cl_image_tag @event.photo.key, class: "w-100 h-100 object-fit-cover" %>
       <div class="position-relative">
         <%= cl_image_tag @event.user.photo.key, class: "card-trip-user position-absolute avatar-bordered" %>
       </div>
