@@ -144,47 +144,47 @@ event6.photo.attach(io: file_event6, filename: "event6.jpg", content_type: "imag
 event6.save
 
 file_event7 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697485/soco/284512482_174768221593363_7760413973300804735_n.jpg_bmqtyc.jpg")
-event7 = Event.new(title: "Société de Musique de Chambre de Marseille", date: Date.new(2023, 10, 18), location: "Auditorium Maurice Toga Faculté de Médecine La Timone 27 Boulevard Jean Moulin 13005 Marseille", description: "Rejoins-nous pour notre événement Bouge ton Réseau ! Le principe est simple, te permettre de rencontrer un maximum de Bougeuses (membres du réseau) et d&#x27;entrepreneur.e.s du département dans une ambiance fun et dynamique ! #inspiration #reseautage #entrepreneuriat", capacity: 120, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user3)
+event7 = Event.new(title: "Société de Musique de Chambre de Marseille", date: Date.new(2023, 10, 18), location: "Auditorium Maurice Toga Faculté de Médecine La Timone 27 Boulevard Jean Moulin 13005 Marseille", description: "Rejoins-nous pour notre événement Bouge ton Réseau ! Le principe est simple, te permettre de rencontrer un maximum de Bougeuses (membres du réseau) et d'entrepreneur.e.s du département dans une ambiance fun et dynamique ! #inspiration #reseautage #entrepreneuriat", capacity: 120, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user3)
 event7.photo.attach(io: file_event7, filename: "event7.jpg", content_type: "image/jpg")
 event7.save
 
 file_event8 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678696921/soco/SISTINE-CHAPEL_LYON-013-scaled-1_oyl6nv.jpg")
-event8 = Event.new(title: "Exposition", date: Date.new(2023, 8, 24), location: "30 quai de rive neuve 13007 Marseille", description: "Notre galerie expose un artiste populaire italien. Ces scultures ont eu un grand succée à Vienne et Milan. Il nous fait le privilége de venir sur Marseille pour une durée de 2 jours.", capacity: 80, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user2)
+event8 = Event.new(title: "Exposition", date: Date.new(2023, 8, 24), location: "Palais de la Bourse 9 La Canebière 13001 Marseille", description: "Notre galerie expose un artiste italien populaire. Ces scultures ont eu un grand succès à Vienne et Milan. Il nous fait le privilége de venir sur Marseille pour une durée de 2 jours.", capacity: 80, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user2)
 event8.photo.attach(io: file_event8, filename: "event8.jpg", content_type: "image/jpg")
 event8.save
 
 file_event9 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678696887/soco/danseuse_orientale_b12_pss7ta.jpg")
-event9 = Event.new(title: "Spectacle danse oriental", date: Date.new(2023, 6, 14), location: "29 rue désirée clary 13002 Marseille", description: "La danseuse star Didem vient nous rendre visite avec toute sa troupe. Elle sera en representation toute la journée, plusieurs activités seront proposés afin de vous faire vivre toutes les joies de l'orient.", capacity: 100, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user4)
+event9 = Event.new(title: "Spectacle danse orientale", date: Date.new(2023, 6, 14), location: "29 rue Désirée Clary 13002 Marseille", description: "La danseuse star Didem vient nous rendre visite avec toute sa troupe. Elle sera en représentation toute la journée. Plusieurs activités seront proposées afin de vous faire vivre toutes les joies de l'Orient.", capacity: 100, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user4)
 event9.photo.attach(io: file_event9, filename: "event9.jpg", content_type: "image/jpg")
 event9.save
 
 file_event10 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678696903/soco/so-57eb934066a4bd7760c21969-ph0_cj1oof.jpg")
-event10 = Event.new(title: "Gay pride!", date: Date.new(2023, 5, 11), location: "Vieux Port Marseille", description: "Hello, le char partira a partir du Vieux port en face du restaurant de l'OM, veuillez prévoir vos meilleures tenues et accéssoires. Les 20 premières personnes a s'inscrire pourront monter avec toute l'équipe", capacity: 100, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user2)
+event10 = Event.new(title: "Gay pride!", date: Date.new(2023, 5, 11), location: "Ombrière du Vieux Port Quai de Rive Neuve 13001 Marseille", description: "Hello, le char partira du Vieux port, sous l'Ombrière. Prévoyez vos meilleurs tenues et accessoires. Les 20 premiers inscrits pourront monter sur un char avec toute l'équipe !", capacity: 100, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user2)
 event10.photo.attach(io: file_event10, filename: "event10.jpg", content_type: "image/jpg")
 event10.save
 
 file_event11 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697371/soco/image-black-angus-restaurant-viande-marseille-la-valentine-26_20200219172622_m59gf4.jpg")
-event11 = Event.new(title: "Soirée Billard!", date: Date.new(2023, 3, 18), location: "Queen victoria 1 place aux huiles 13001 Marseille", description: "Bonjour, bienvenue a notre soirée billard, venez profiter avec toute notre équipe. Un turnoi sera mis en place, le gagnant aura droit a une belle surprise.", capacity: 100, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user1)
+event11 = Event.new(title: "Soirée Billard!", date: Date.new(2023, 3, 18), location: "Queen Victoria 1 place aux Huiles 13001 Marseille", description: "Bonjour, bienvenue à notre soirée billard. Venez profiter, avec toute notre équipe, d'un turnoi de billard. Le gagnant aura droit à une belle surprise !", capacity: 100, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user1)
 event11.photo.attach(io: file_event11, filename: "event11.jpg", content_type: "image/jpg")
 event11.save
 
 file_event12 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697402/soco/pique-nique-piscine_dnmdgi.jpg")
-event12 = Event.new(title: "Pique Nique en face de la piscine", date: Date.new(2023, 7, 4), location: "Chemin de l'impasse Villa Karthy 13012 Marseille", description: "Nous vous proposons une incroyable après-midi, devant la piscine et un barbecue. Mon épouse et moi nous ferons un plaisir de festoyer avec vous. Serviette de plage exigée !", capacity: 12, status: "privé", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user3)
+event12 = Event.new(title: "Pique Nique en face de la piscine", date: Date.new(2023, 7, 4), location: "25 bd de la Comtesse 13012 Marseille", description: "Nous vous proposons une incroyable après-midi, devant la piscine et un barbecue. Mon épouse et moi nous ferons un plaisir de festoyer avec vous. Serviette de plage exigée !", capacity: 12, status: "privé", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user3)
 event12.photo.attach(io: file_event12, filename: "event12.jpg", content_type: "image/jpg")
 event12.save
 
 file_event13 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697385/soco/8fbb4f36b3641433d38bfc79cb60990d_o7gxak.jpg")
-event13 = Event.new(title: "Séminaire pop art", date: Date.new(2023, 11, 3), location: "Parc Chanot 13008 Marseille", description: "Pour ce séminaire nous avons décidé de reunir plusieurs artistes du monde entier. Ce rassemblement permet de proumouvoir toute influence artistique que notre mordernité peut connaitre.", capacity: 100, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user3)
+event13 = Event.new(title: "Séminaire pop art", date: Date.new(2023, 11, 3), location: "Parc Chanot 114 Rond-Point-du-Prado 13008 Marseille", description: "Pour ce séminaire nous avons décidés de reunir plusieurs artistes du monde entier. Ce rassemblement permet de proumouvoir toute influence artistique que notre mordernité peut connaitre.", capacity: 100, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user3)
 event13.photo.attach(io: file_event13, filename: "event13.jpg", content_type: "image/jpg")
 event13.save
 
 file_event14 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697420/soco/image-102_fwfg9j.jpg")
-event14 = Event.new(title: "Pool party", date: Date.new(2023, 6, 22), location: "Place du Prado 13008 Marseille", description: "Pool party phénomenal sur Marseille, notre Dj star sera la pour la journée. En soirée nous aurons le privilége de recevoir Biyouna grande actrice vietnamienne qui chantera son tube international"  , capacity: 100, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user1)
+event14 = Event.new(title: "Pool party", date: Date.new(2023, 6, 22), location: "148 Av Pierre Mendès France 13008 Marseille", description: "Pool party phénoménale sur Marseille ! Notre Dj star sera là pour la journée. En soirée nous aurons le privilège de recevoir Biyouna, grande actrice Algérienne qui interpètera l'un de ses grands tubes !", capacity: 100, status: "public", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user1)
 event14.photo.attach(io: file_event14, filename: "event14.jpg", content_type: "image/jpg")
 event14.save
 
 file_event15 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678697436/soco/image_rb16ob.jpg")
-event15 = Event.new(title: "Soirée Rencontre", date: Date.new(2023, 5, 5), location: "Place de la timone 13010 Marseille", description: "Une soirée entre amis afin de faire de nouvelles rencontres. Accompagné de ma compagne et de mon chien Youyou, nous serons ravi de vous acceuillir à la maison. Tenue correct exigé merci !", capacity: 10, status: "privé", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user5)
+event15 = Event.new(title: "Soirée Rencontre", date: Date.new(2023, 5, 5), location: "10 av de la Timone 13010 Marseille", description: "Une soirée entre amis afin de faire de nouvelles rencontres. Accompagné de ma compagne et de mon chien Youyou, nous serons ravis de vous acceuillir à la maison. Tenue correcte exigée merci !", capacity: 10, status: "privé", tricount: "https://www.tricount.com/fr/creer-des-comptes-nouveau-tricount", password: "123456", user: user5)
 event15.photo.attach(io: file_event15, filename: "event15.jpg", content_type: "image/jpg")
 event15.save
 
@@ -228,26 +228,26 @@ puts "chatrooms successfully created!"
 
 Message.create!(content: "coucou", chatroom_id: chat5.id, event_id: event5.id, user_id: user5.id)
 
-event1_rating1 = EventRating.create(comment: "event au top", rating: 4, user: user1, event: event1)
+event1_rating1 = EventRating.create(comment: "C'était incroyable de voir toutes les couleurs et les costumes différents pendant le défilé. Je me suis vraiment senti immergé dans la culture latino-américaine !", rating: 4, user: user1, event: event1)
 event1_rating1.save
-event1_rating2 = EventRating.create(comment: "evenement agréable, la musique était bonne", rating: 3, user: user2, event: event1)
+event1_rating2 = EventRating.create(comment: "La musique était tellement entraînante que je ne pouvais pas m'empêcher de danser tout au long du défilé. C'était comme une grande fête dans les rues de la ville.", rating: 3, user: user2, event: event1)
 event1_rating2.save
-event1_rating3 = EventRating.create(comment: "J'y suis aller avec mon époux, nous avons passer un bon moment et rencontré de belles personnes", rating: 4, user: user3, event: event1)
+event1_rating3 = EventRating.create(comment: "J'ai été impressionné par les acrobaties et les danses que j'ai vues pendant le carnaval. Les danseurs avaient vraiment l'air de s'amuser et de faire partie d'une grande communauté.", rating: 4, user: user3, event: event1)
 event1_rating3.save
-event1_rating4 = EventRating.create(comment: "Mes amis m'ont partagé cette soirée, j'étais un peu rétissante mais finalement assez surprise", rating: 4, user: user3, event: event1)
+event1_rating4 = EventRating.create(comment: "Je me suis senti très fier de faire partie de la communauté latino-américaine, même si je ne suis pas né ici. Le carnaval était un rappel de la richesse et de la diversité de nos cultures.", rating: 4, user: user3, event: event1)
 event1_rating4.save
-event1_rating5 = EventRating.create(comment: "Super event, j'ai pu faire de belles rencontres. ", rating: 4, user: user4, event: event1)
+event1_rating5 = EventRating.create(comment: "Le carnaval a vraiment fait ressortir l'esprit de communauté dans les rues. Tout le monde était heureux et avait l'air de s'amuser ensemble, peu importe d'où il venait ou ce à quoi il ressemblait.", rating: 4, user: user4, event: event1)
 event1_rating5.save
 
-event2_rating1 = EventRating.create(comment: "La soirée était vraiment stimulante et j'ai aimé l'ambiance générale de l'événement. J'ai rencontré des personnes passionnées et j'ai passé un bon moment à discuter avec eux.", rating: 5, user: user1, event: event2)
+event2_rating1 = EventRating.create(comment: "La soirée était vraiment stimulante et j'ai aimé l'ambiance générale de l'événement. J'ai rencontré des personnes passionnées et j'ai passé un bon moment à discuter avec elles.", rating: 5, user: user1, event: event2)
 event2_rating1.save
-event2_rating2 = EventRating.create(comment: "La soirée était vraiment bien organisée et j'ai apprécié l'atmosphère chaleureuse et accueillante. J'ai rencontré des gens très engagés et j'ai passé un bon moment.", rating: 3, user: user2, event: event2)
+event2_rating2 = EventRating.create(comment: "La soirée était vraiment bien organisée et j'ai apprécié l'atmosphère chaleureuse et accueillante. J'ai rencontré des gens très engagés et ai passé un bon moment.", rating: 3, user: user2, event: event2)
 event2_rating2.save
 event2_rating3 = EventRating.create(comment: "L'after work de la communauté des engagés était une soirée vraiment inspirante. J'ai rencontré des personnes qui font une réelle différence et qui m'ont donné envie de m'engager davantage dans les causes qui me tiennent à cœur", rating: 5, user: user4, event: event2)
 event2_rating3.save
-event2_rating4 = EventRating.create(comment: "La soirée était vraiment bien organisée et j'ai apprécié l'atmosphère chaleureuse et accueillante. J'ai rencontré des gens très engagés et j'ai passé un bon moment.", rating: 4, user: user4, event: event2)
+event2_rating4 = EventRating.create(comment: "L'after work était génial. J'ai eu des discussions enrichissantes avec des personnes passionnantes et engagées pour des causes qui me tiennent à cœur.", rating: 4, user: user4, event: event2)
 event2_rating4.save
-event2_rating5 = EventRating.create(comment: "J'y suis aller spontanément et agréablement surprise. J'ai eu l'occasion de rencontrer des gens inspirants et j'ai appris beaucoup de choses nouvelles sur les enjeux sociaux et environnementaux.", rating: 5, user: user5, event: event2)
+event2_rating5 = EventRating.create(comment: "J'y suis allée spontanément et ai été agréablement surprise. J'ai eu l'occasion de rencontrer des gens inspirants et j'ai appris beaucoup de choses nouvelles sur les enjeux sociaux et environnementaux.", rating: 5, user: user5, event: event2)
 event2_rating5.save
 
 event3_rating1 = EventRating.create(comment: "Bonne soirée, les humoristes étaient très agreable", rating: 4, user: user6, event: event3)
@@ -290,9 +290,9 @@ event10_rating1.save
 event10_rating2 = EventRating.create(comment: "La journée s'est extrement bien passé, et les décorations du char étaient sublimes", rating: 5, user: user19, event: event10)
 event10_rating2.save
 
-event11_rating1 = EventRating.create(comment: "J'y suis aller spontanément et agréablement surprise", rating: 5, user: user12, event: event11)
+event11_rating1 = EventRating.create(comment: "La soirée billard était géniale. Nous avons tous joué de manière compétitive, mais nous avons également ri et passé un bon moment. C'était une soirée vraiment amusante.", rating: 5, user: user12, event: event11)
 event11_rating1.save
-event11_rating2 = EventRating.create(comment: "J'y suis aller spontanément et agréablement surprise", rating: 5, user: user13, event: event11)
+event11_rating2 = EventRating.create(comment: "La soirée billard était l'un des meilleurs moments de ma semaine. J'ai apprécié la compétition amicale et j'ai passé un bon moment à socialiser avec mes amis.", rating: 5, user: user13, event: event11)
 event11_rating2.save
 
 event12_rating1 = EventRating.create(comment: "Le cadre était magnifique et relaxant, et la nourriture était incroyable. J'ai vraiment apprécié la variété de plats et de boissons proposés, ainsi que l'atmosphère conviviale.", rating: 5, user: user14, event: event12)
@@ -305,12 +305,12 @@ event13_rating1.save
 event13_rating2 = EventRating.create(comment: "C'était génial de voir autant de personnes réunies pour discuter de l'art et de la culture populaire. Le séminaire a suscité des débats intéressants et m'a permis de voir les choses sous un nouvel angle.", rating: 5, user: user17, event: event13)
 event13_rating2.save
 
-event14_rating1 = EventRating.create(comment: "C'était une soirée incroyable ! Tout le monde était tellement détendu et heureux de se baigner dans la piscine. Nous avons dansé, ri et passé un moment inoubliable ensemble.", rating: 5, user: user18, event: event14)
+event14_rating1 = EventRating.create(comment: "C'était une soirée incroyable ! Tout le monde était tellement détendu et heureux de se baigner dans la piscine. Nous avons dansé, ri et passé un moment inoubliable.", rating: 5, user: user18, event: event14)
 event14_rating1.save
-event14_rating2 = EventRating.create(comment: "C'était tellement amusant de rencontrer de nouvelles personnes à la pool party. Tout le monde était si sympathique et accueillant, et nous avons fini par passer toute la soirée ensemble", rating: 5, user: user19, event: event14)
+event14_rating2 = EventRating.create(comment: "C'était tellement amusant de rencontrer de nouvelles personnes à la pool party. Tout le monde était si sympathique et accueillant, et nous avons fini par passer toute la soirée ensemble.", rating: 5, user: user19, event: event14)
 event14_rating2.save
 
-event15_rating1 = EventRating.create(comment:"La soirée rencontres était très bien organisée et l'atmosphère était accueillante et amicale. J'ai eu la chance de rencontrer des personnes fascinantes et j'ai passé un bon moment.", rating: 5, user: user10, event: event15)
+event15_rating1 = EventRating.create(comment: "La soirée rencontres était très bien organisée et l'atmosphère était accueillante et amicale. J'ai eu la chance de rencontrer des personnes fascinantes et j'ai passé un bon moment.", rating: 5, user: user10, event: event15)
 event15_rating1.save
 event15_rating2 = EventRating.create(comment: "La soirée rencontres était fantastique. J'ai eu l'occasion de rencontrer des personnes intéressantes et j'ai vraiment apprécié l'atmosphère détendue et amicale de la soirée.", rating: 5, user: user11, event: event15)
 event15_rating2.save
