@@ -11,8 +11,8 @@ Category.destroy_all
 
 puts "Creating events, users, categories, chatrooms, etc."
 
-file_user1 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678700558/soco/lucas-gouvea-aoEwuEH7YAs-unsplash_jiaume.jpg")
-user1 = User.create(first_name: "Jaime", last_name: "Sortir", gender: "H", birth_date: Date.new(1996, 3, 3), city: "Marseille", phone_number: "0756432354", hobbies: " Dessin", email: "jaime.sortir@gmail.com", username: "Jaime_Sortir", password: "123456")
+file_user1 = URI.open("https://res.cloudinary.com/dqu1mk3mq/image/upload/v1678967723/soco/T02NE0241-U04JXAW2DC6-288d878798a1-512_mqb23a.jpg")
+user1 = User.create(first_name: "Yacine", last_name: "Volvic", gender: "H", birth_date: Date.new(1997, 3, 29), city: "Marseille", phone_number: "0756432354", hobbies: "Design", email: "yacine.volvic@gmail.com", username: "yass01", password: "123456")
 user1.photo.attach(io: file_user1, filename: "user1.jpg", content_type: "image/jpg")
 user1.save
 
