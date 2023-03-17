@@ -2,12 +2,12 @@ require "open-uri"
 
 puts "Cleaning database..."
 
-EventRating.destroy_all
-User.destroy_all
-Event.destroy_all
 Chatroom.destroy_all
 Message.destroy_all
+Event.destroy_all
 Category.destroy_all
+EventRating.destroy_all
+User.destroy_all
 
 puts "Creating events, users, categories, chatrooms, etc."
 

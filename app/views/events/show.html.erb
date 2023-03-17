@@ -15,7 +15,7 @@
         <%= cl_image_tag @event.user.photo.key, class: "card-trip-user position-absolute avatar-bordered" %>
       </div>
       <div class="card-trip-infos color-font text-center pb-2">
-        <div>
+        <div class="container">
           <div class="color-font text-center">
             <h2 class="text-center mb-3"><%= @event.title %></h2>
             <i class="fa-solid fa-calendar color-icon"></i>
@@ -66,7 +66,7 @@
           <% end %>
         </div>
       </div>
-      <div>
+      <div class="container">
         <%= render "shared/formulaireimages"%>
         <div class="row m-2">
           <% @event.images.each do |image| %>
