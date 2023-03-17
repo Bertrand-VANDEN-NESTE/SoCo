@@ -100,8 +100,7 @@ button span {
   transition: 0.5s ease all;
 }
 
-button span:before,
-button span:after {
+button span:before {
   content: "";
   position: absolute;
   bottom: 0;
