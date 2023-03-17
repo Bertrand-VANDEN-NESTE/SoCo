@@ -37,8 +37,8 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.user = current_user
     if @event.save
+      Chatroom.create!(event: @event)
       redirect_to events_path
-      Chatroom.create!(event_id: @event)
 
     else
       @event.participant
@@ -57,7 +57,7 @@ class EventsController < ApplicationController
     @event.destroy
     redirect_to events_path, status: :see_other
   end
-  
+
   private
 
   def event_params
