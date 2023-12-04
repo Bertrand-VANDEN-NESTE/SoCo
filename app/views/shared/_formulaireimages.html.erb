@@ -1,4 +1,4 @@
-<% if @event.participants.find_by(user_id: current_user.id) %>
+<% if current_user && @event.participants.find_by(user_id: current_user.id) %>
   <div class="container">
     <%= simple_form_for(@event) do |f| %>
       <div class="text-center">

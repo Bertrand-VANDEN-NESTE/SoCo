@@ -42,7 +42,7 @@
             data-map-markers-value="<%= @event_marker.to_json %>"
             data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
           </div>
-          <% if @event.participants.find_by(user_id: current_user.id) %>
+          <% if current_user && @event.participants.find_by(user_id: current_user.id) %>
             <%= simple_form_for([@event, @event_rating]) do |f| %>
               <%= f.input :comment, placeholder:"Commentaire" %>
               <%= f.input :rating, placeholder:"Votre note Entre 0 et 5" %>
